@@ -68,7 +68,7 @@ public class RemoteService extends Service {
 
         @Override
         public void wakeUp(String title, String description, int iconRes) throws RemoteException {
-            Log.e(TAG, "wakeUp: ");
+            Log.e(TAG, "wakeUp: " + title);
         }
     }
 
