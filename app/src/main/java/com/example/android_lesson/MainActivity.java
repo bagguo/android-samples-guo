@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.android_lesson.retrofit.RetrofitTest;
 import com.example.android_lesson.rxjava.RxJavaTest;
+import com.example.android_lesson.rxjavaretrofit.RxjavaRetrofitTest;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -22,5 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         new RxJavaTest().test(this);
+        new RetrofitTest().test();
+        new RxjavaRetrofitTest().test();
     }
 }

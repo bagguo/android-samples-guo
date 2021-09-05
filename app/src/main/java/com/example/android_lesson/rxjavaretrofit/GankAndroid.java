@@ -1,4 +1,4 @@
-package home.smart.fly.http.model;
+package com.example.android_lesson.rxjavaretrofit;
 
 import java.util.List;
 
