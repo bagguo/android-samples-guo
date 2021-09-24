@@ -33,7 +33,13 @@ public class RetrofitTest {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 //                loading.dismiss();
                 try {
-                    String result = response.body().string();
+                    ResponseBody body = response.body();
+                    if (body == null) {
+                        Log.d(TAG, "onResponse: body null========");
+                        return;
+                    }
+
+                    String result = body.string();
                     Log.d(TAG, "onResponse: ========" + result);
 //                    Gson gson = new Gson();
 //                    GithubUserBean bean = gson.fromJson(result, GithubUserBean.class);

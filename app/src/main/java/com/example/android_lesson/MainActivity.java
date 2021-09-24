@@ -2,8 +2,11 @@ package com.example.android_lesson;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import com.example.android_lesson.animation.AnimationActivity;
 import com.example.android_lesson.retrofit.RetrofitTest;
 import com.example.android_lesson.rxjava.RxJavaTest;
 import com.example.android_lesson.rxjavaretrofit.RxjavaRetrofitTest;
@@ -26,5 +29,14 @@ public class MainActivity extends AppCompatActivity {
         new RxJavaTest().test(this);
         new RetrofitTest().test();
         new RxjavaRetrofitTest().test();
+
+
+        findViewById(R.id.main_animation_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AnimationActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
