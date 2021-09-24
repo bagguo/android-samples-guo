@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dispatcheventdemo.DispatchEventDemoActivity">
+
+    <com.example.android_lesson.dispatcheventdemo.dispatch.MyRootLinearLayout
+        android:id="@+id/root_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.android_lesson.dispatcheventdemo.dispatch.MyLinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="30dp"
+            android:background="@color/purple_200"
+            android:gravity="center">
+
+            <com.example.android_lesson.dispatcheventdemo.dispatch.MyView
+                android:id="@+id/view"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:background="@color/teal_200" />
+        </com.example.android_lesson.dispatcheventdemo.dispatch.MyLinearLayout>
+    </com.example.android_lesson.dispatcheventdemo.dispatch.MyRootLinearLayout>
+
+    <Button
+        android:id="@+id/dispatch_go_card_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="go new card activity"/>
+
+
+</LinearLayout>
