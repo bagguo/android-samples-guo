@@ -8,5 +8,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Android-lesson"
 include ':app'
+include ':materialdesign2'
 include ':recyclerviewdemo'
 include ':push'
