@@ -2,25 +2,21 @@ package com.example.android_lesson;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.util.Log;
 
 import com.example.android_lesson.animation.AnimationActivity;
 import com.example.android_lesson.dispatcheventdemo.DispatchEventDemoActivity;
 import com.example.android_lesson.retrofit.RetrofitTest;
 import com.example.android_lesson.rxjava.RxJavaTest;
 import com.example.android_lesson.rxjavaretrofit.RxjavaRetrofitTest;
-
-import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Function;
-import io.reactivex.schedulers.Schedulers;
+import com.example.ui.UIMainActivity;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +36,19 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.main_dispatch_event_btn).setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, DispatchEventDemoActivity.class);
             startActivity(intent);
+        });
+
+        findViewById(R.id.main_ui_btn).setOnClickListener(view -> {
+            Log.d(TAG, "onCreate: ====click");
+            Intent intent = new Intent();
+            intent.setAction("com.example.action.ui.moudle");
+//            intent.setClassName("com.example.ui", "com.example.ui.UIMainActivity");
+//            intent.setComponent(new ComponentName("com.example.ui", "com.example.ui.UIMainActivity"));
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                Log.d(TAG, "onCreate: ========resolve activity");
+                startActivity(intent);
+                finish();
+            }
         });
     }
 }
