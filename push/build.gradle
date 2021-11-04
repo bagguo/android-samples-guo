@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdkVersion rootProject.compileSdkVersion
 
     defaultConfig {
         applicationId "com.example.push"
-        minSdk 21
-        targetSdk 31
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
