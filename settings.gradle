@@ -1,6 +1,7 @@
-rootProject.name = "Android-lesson"
-include ':app'
+include ':banner'
+include ':push'
 include ':materialdesign2'
 include ':recyclerviewdemo'
-include ':push'
 include ':ui'
+include ':app'
+rootProject.name = "Android-lesson"
