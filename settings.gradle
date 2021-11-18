@@ -1,9 +1,9 @@
-include ':base'
 include ':elevation'
 include ':banner'
 //include ':push'
 include ':materialdesign2'
 include ':recyclerviewdemo'
 include ':ui'
+include ':base'
 include ':app'
 rootProject.name = "Android-lesson"

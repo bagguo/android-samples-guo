@@ -12,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
+        <activity android:name=".communication.eventbus.BActivity"></activity>
+        <activity android:name=".communication.eventbus.AActivity" />
+        <activity android:name=".communication.CommunicateActivity" />
         <activity
             android:name=".dispatcheventdemo.customview.NewCardTestActivity"
             android:exported="true" />

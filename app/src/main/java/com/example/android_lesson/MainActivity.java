@@ -2,17 +2,16 @@ package com.example.android_lesson;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.example.android_lesson.animation.AnimationActivity;
+import com.example.android_lesson.communication.CommunicateActivity;
 import com.example.android_lesson.dispatcheventdemo.DispatchEventDemoActivity;
 import com.example.android_lesson.retrofit.RetrofitTest;
 import com.example.android_lesson.rxjava.RxJavaTest;
 import com.example.android_lesson.rxjavaretrofit.RxjavaRetrofitTest;
-import com.example.ui.UIMainActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
+        });
+
+        findViewById(R.id.btn_communication).setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, CommunicateActivity.class);
+            startActivity(intent);
         });
     }
 }
