@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
+import com.example.ui.gridview.GridViewDemoActivity;
+import com.example.ui.toolbar.ToolbarSimpleActivity;
 
 public class UIMainActivity extends AppCompatActivity {
 
@@ -15,6 +17,11 @@ public class UIMainActivity extends AppCompatActivity {
 
         findViewById(R.id.toolbar_simple).setOnClickListener(view -> {
             Intent intent = new Intent(UIMainActivity.this, ToolbarSimpleActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btn_grid_view).setOnClickListener(view -> {
+            Intent intent = new Intent(UIMainActivity.this, GridViewDemoActivity.class);
             startActivity(intent);
         });
     }

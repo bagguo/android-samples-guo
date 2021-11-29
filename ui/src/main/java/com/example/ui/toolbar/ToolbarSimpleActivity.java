@@ -1,10 +1,12 @@
-package com.example.ui;
+package com.example.ui.toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.ui.R;
 
 public class ToolbarSimpleActivity extends AppCompatActivity implements View.OnClickListener {
 

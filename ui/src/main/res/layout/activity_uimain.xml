@@ -13,4 +13,12 @@
         android:layout_height="wrap_content"
         android:text="toolbar simple" />
 
+    <Button
+        android:id="@+id/btn_grid_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="grid_view" />
+
+
+
 </LinearLayout>
