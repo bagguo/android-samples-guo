@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
-        <activity android:name=".tablayout.TabLayoutDemoActivity"></activity>
+        <activity
+            android:name=".multitype.normal.NormalActivity"
+            android:exported="true" />
+        <activity android:name=".tablayout.TabLayoutDemoActivity" />
         <activity android:name=".gridview.GridViewDemoActivity" />
         <activity
             android:name=".UIMainActivity"
