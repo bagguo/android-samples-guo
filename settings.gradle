@@ -8,3 +8,4 @@ include ':ui'
 include ':base'
 include ':app'
 rootProject.name = "Android-lesson"
+include ':dbdemo'
