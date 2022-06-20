@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.example.dbdemo.R;
 
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 public class SqliteTestActivity extends AppCompatActivity {
 
     private static final String TAG = SqliteTestActivity.class.getSimpleName();
+    private SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,21 +23,28 @@ public class SqliteTestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sqlite_test);
 
         //创建库
-        MySqLiteHelper myFirstDb = new MySqLiteHelper(this, "myfirstdb", null, 1);
-
+        MySqLiteOpenHelper myFirstDb = new MySqLiteOpenHelper(this, "myfirstdb", null, 2);
         //打开数据库并进行写入操作
-        SQLiteDatabase db = myFirstDb.getWritableDatabase();
+        db = myFirstDb.getWritableDatabase();
 
-        //增
-        insert(db);
+        findViewById(R.id.btn_insert).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                insert(db);
+            }
+        });
 
-        //query
-        query(db);
+        findViewById(R.id.btn_query).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                query(db);
+            }
+        });
     }
 
     private void insert(SQLiteDatabase db) {
         String name = "Tony";
-        String address = "皇后大道";
+        String address = "皇后大道, insert time:" + System.currentTimeMillis();
         String insert = new StringBuilder()
                 .append("insert into SqliteDemo (name,address) values('")
                 .append(name).append("','").append(address).append("')")
