@@ -1,4 +1,4 @@
-package com.example.android_lesson.ipc.utils;
+package com.example.android_lesson.service.ipc.utils;
 
 import android.app.ActivityManager;
 import android.content.Context;

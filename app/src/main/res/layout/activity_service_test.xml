@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".service.start.ServiceTestActivity">
+
+    <Button
+        android:id="@+id/btn_start_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start service" />
+
+    <Button
+        android:id="@+id/btn_stop_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stop service" />
+
+    <Button
+        android:id="@+id/btn_bind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start bind service test activity" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

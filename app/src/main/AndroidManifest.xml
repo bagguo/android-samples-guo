@@ -12,7 +12,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
-        <activity android:name=".communication.eventbus.BActivity"></activity>
+        <activity
+            android:name=".service.bind.BIndServiceTestActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".service.start.MusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".service.start.ServiceTestActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".service.bind.MyBindService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".communication.eventbus.BActivity" />
         <activity android:name=".communication.eventbus.AActivity" />
         <activity android:name=".communication.CommunicateActivity" />
         <activity
@@ -34,9 +52,9 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".ipc.LocalService" />
+        <service android:name=".service.ipc.LocalService" />
         <service
-            android:name=".ipc.RemoteService"
+            android:name=".service.ipc.RemoteService"
             android:process=":remote" />
     </application>
 

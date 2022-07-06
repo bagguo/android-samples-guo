@@ -12,6 +12,7 @@ import com.example.android_lesson.dispatcheventdemo.DispatchEventDemoActivity;
 import com.example.android_lesson.retrofit.RetrofitTest;
 import com.example.android_lesson.rxjava.RxJavaTest;
 import com.example.android_lesson.rxjavaretrofit.RxjavaRetrofitTest;
+import com.example.android_lesson.service.start.ServiceTestActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.btn_service).setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, ServiceTestActivity.class);
+            startActivity(intent);
+        });
 
         new RxJavaTest().test(this);
         new RetrofitTest().test();
@@ -54,5 +60,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, CommunicateActivity.class);
             startActivity(intent);
         });
+
+
     }
 }

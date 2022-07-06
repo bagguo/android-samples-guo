@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Android-lesson</string>
+
+    <string name="heading">Services In Android</string>
+    <string name="startButtonText">Start the Service</string>
+    <string name="stopButtonText">Stop the Service</string>
 </resources>
