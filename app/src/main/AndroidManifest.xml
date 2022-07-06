@@ -52,10 +52,6 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".service.ipc.LocalService" />
-        <service
-            android:name=".service.ipc.RemoteService"
-            android:process=":remote" />
     </application>
 
 </manifest>
