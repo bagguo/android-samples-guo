@@ -12,6 +12,7 @@ import com.example.android_lesson.dispatcheventdemo.DispatchEventDemoActivity;
 import com.example.android_lesson.retrofit.RetrofitTest;
 import com.example.android_lesson.rxjava.RxJavaTest;
 import com.example.android_lesson.rxjavaretrofit.RxjavaRetrofitTest;
+import com.example.android_lesson.service.ipc.IPCActivity;
 import com.example.android_lesson.service.start.ServiceTestActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,10 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.btn_service).setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, ServiceTestActivity.class);
-            startActivity(intent);
-        });
+
 
         new RxJavaTest().test(this);
         new RetrofitTest().test();
@@ -61,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        findViewById(R.id.btn_service).setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, ServiceTestActivity.class);
+            startActivity(intent);
+        });
 
+        findViewById(R.id.btn_ipc).setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, IPCActivity.class);
+            startActivity(intent);
+        });
     }
 }

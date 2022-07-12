@@ -35,4 +35,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="service" />
+
+    <Button
+        android:id="@+id/btn_ipc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IPC" />
 </androidx.appcompat.widget.LinearLayoutCompat>
