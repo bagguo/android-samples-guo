@@ -26,6 +26,12 @@
         android:text="TabLayout" />
 
     <Button
+        android:id="@+id/btn_butter_knife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="butter knife" />
+
+    <Button
         android:id="@+id/btn_multi_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'com.jakewharton.butterknife'
 }
 
 android {
@@ -36,4 +37,7 @@ dependencies {
 
     implementation 'me.drakeet.multitype:multitype:3.4.4'
     implementation 'com.google.code.gson:gson:2.8.8'
+
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
 }

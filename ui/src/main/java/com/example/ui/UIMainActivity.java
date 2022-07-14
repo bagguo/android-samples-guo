@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.ui.butterknife.ButterKnifeTestActivity;
 import com.example.ui.gridview.GridViewDemoActivity;
 import com.example.ui.multitype.normal.NormalActivity;
 import com.example.ui.tablayout.TabLayoutDemoActivity;
@@ -29,6 +30,11 @@ public class UIMainActivity extends AppCompatActivity {
 
         findViewById(R.id.btn_tab_layout).setOnClickListener(view -> {
             Intent intent = new Intent(UIMainActivity.this, TabLayoutDemoActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btn_butter_knife).setOnClickListener(view -> {
+            Intent intent = new Intent(UIMainActivity.this, ButterKnifeTestActivity.class);
             startActivity(intent);
         });
 
