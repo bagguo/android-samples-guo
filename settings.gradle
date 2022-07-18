@@ -9,3 +9,5 @@ include ':base'
 include ':app'
 rootProject.name = "Android-lesson"
 include ':dbdemo'
+include ':myandroidlibrary'
+include ':myjavalib'
