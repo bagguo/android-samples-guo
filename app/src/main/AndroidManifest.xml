@@ -13,12 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson" >
         <activity
-            android:name=".service.ipc.IPCActivity"
+            android:name=".ipc.IPCTestActivity"
             android:exported="true" />
-        <activity android:name=".service.ipc.aidl.ClientActivity" />
+        <activity android:name=".ipc.aidl.AIDLClientActivity" />
 
         <service
-            android:name=".service.ipc.aidl.RemoteService"
+            android:name=".ipc.aidl.RemoteService"
             android:enabled="true" />
 
         <activity

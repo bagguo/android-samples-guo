@@ -1,4 +1,4 @@
-package com.example.android_lesson.service.ipc.aidl;
+package com.example.android_lesson.ipc.aidl;
 
 import android.app.Service;
 import android.content.Intent;

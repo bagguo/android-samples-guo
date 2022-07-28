@@ -1,4 +1,4 @@
-package com.example.android_lesson.service.ipc.aidl;
+package com.example.android_lesson.ipc.aidl;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,6 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -18,9 +17,9 @@ import android.widget.TextView;
 import com.example.android_lesson.IMyAidlInterface;
 import com.example.android_lesson.R;
 
-public class ClientActivity extends AppCompatActivity {
+public class AIDLClientActivity extends AppCompatActivity {
 
-    private static final String TAG = ClientActivity.class.getSimpleName();
+    private static final String TAG = AIDLClientActivity.class.getSimpleName();
 
     private IMyAidlInterface iMyAidlInterface;
 
@@ -46,7 +45,7 @@ public class ClientActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_client);
+        setContentView(R.layout.activity_aidl_client);
         bindService2();
         initView();
     }

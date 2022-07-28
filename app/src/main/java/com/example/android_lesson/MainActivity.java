@@ -12,7 +12,7 @@ import com.example.android_lesson.dispatcheventdemo.DispatchEventDemoActivity;
 import com.example.android_lesson.retrofit.RetrofitTest;
 import com.example.android_lesson.rxjava.RxJavaTest;
 import com.example.android_lesson.rxjavaretrofit.RxjavaRetrofitTest;
-import com.example.android_lesson.service.ipc.IPCActivity;
+import com.example.android_lesson.ipc.IPCTestActivity;
 import com.example.android_lesson.service.start.ServiceTestActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.btn_ipc).setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, IPCActivity.class);
+            Intent intent = new Intent(MainActivity.this, IPCTestActivity.class);
             startActivity(intent);
         });
     }
