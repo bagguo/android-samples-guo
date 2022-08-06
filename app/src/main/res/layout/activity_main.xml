@@ -25,6 +25,12 @@
         android:text="UI" />
 
     <Button
+        android:id="@+id/main_btn_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VIDEO" />
+
+    <Button
         android:id="@+id/btn_communication"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

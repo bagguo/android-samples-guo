@@ -9,6 +9,6 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         //启动优化－开始抓取TraceView
-        Debug.startMethodTracing("trace_view_start");
+//        Debug.startMethodTracing("trace_view_start");
     }
 }

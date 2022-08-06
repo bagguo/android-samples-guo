@@ -3,6 +3,8 @@
     package="com.example.android_lesson">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApplication"
@@ -13,8 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".video.VideoDemoActivity"
+            android:exported="true" />
+        <activity
             android:name=".ipc.binder.bigbitmap.ReceiverBigBitmapActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".ipc.IPCTestActivity"
             android:exported="true" />
@@ -30,8 +35,7 @@
 
         <service
             android:name=".service.start.MusicService"
-            android:enabled="true"
-            android:exported="true" />
+            android:enabled="true"/>
 
         <activity
             android:name=".service.start.ServiceTestActivity"
@@ -39,8 +43,7 @@
 
         <service
             android:name=".service.bind.MyBindService"
-            android:enabled="true"
-            android:exported="true" />
+            android:enabled="true"/>
 
         <activity android:name=".communication.eventbus.BActivity" />
         <activity android:name=".communication.eventbus.AActivity" />

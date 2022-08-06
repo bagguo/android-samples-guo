@@ -1,11 +1,16 @@
 package com.example.android_lesson;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
-import android.os.Debug;
 import android.util.Log;
+import android.view.View;
 
 import com.example.android_lesson.animation.AnimationActivity;
 import com.example.android_lesson.communication.CommunicateActivity;
@@ -15,17 +20,21 @@ import com.example.android_lesson.rxjava.RxJavaTest;
 import com.example.android_lesson.rxjavaretrofit.RxjavaRetrofitTest;
 import com.example.android_lesson.ipc.IPCTestActivity;
 import com.example.android_lesson.service.start.ServiceTestActivity;
+import com.example.android_lesson.video.VideoDemoActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
+    private Context mContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mContext = this;
 
-
+        checkPermission();
 
         new RxJavaTest().test(this);
         new RetrofitTest().test();
@@ -55,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.main_btn_video).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, VideoDemoActivity.class);
+                startActivity(intent);
+            }
+        });
         findViewById(R.id.btn_communication).setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, CommunicateActivity.class);
             startActivity(intent);
@@ -75,6 +91,16 @@ public class MainActivity extends AppCompatActivity {
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         //启动优化－抓取TraceView结束点
-        Debug.stopMethodTracing();
+//        Debug.stopMethodTracing();
+    }
+
+
+    private void checkPermission() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
+                    != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+            }
+        }
     }
 }
