@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Debug;
 import android.util.Log;
 
 import com.example.android_lesson.animation.AnimationActivity;
@@ -68,5 +69,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, IPCTestActivity.class);
             startActivity(intent);
         });
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        //启动优化－抓取TraceView结束点
+        Debug.stopMethodTracing();
     }
 }
