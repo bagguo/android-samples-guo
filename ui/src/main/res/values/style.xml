@@ -6,5 +6,12 @@
         <item name="android:windowBackground">@android:color/white</item>
     </style>
 
+    <style name="CustomAlertDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item><!--是否去除边框-->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
 
 </resources>
