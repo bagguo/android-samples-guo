@@ -18,6 +18,14 @@ public class DialogDemoActivity extends AppCompatActivity {
         findViewById(R.id.btn_custom_alert_dialog).setOnClickListener(view -> {
             showDialog("这是一个自定义弹窗");
         });
+
+        findViewById(R.id.btn_show_custom_progress_dialog).setOnClickListener(view -> {
+            CustomProgressDialog.showLoading(DialogDemoActivity.this);
+        });
+
+        findViewById(R.id.btn_stop_custom_progress_dialog).setOnClickListener(view -> {
+            CustomProgressDialog.stopLoading();
+        });
     }
 
 
@@ -33,16 +41,19 @@ public class DialogDemoActivity extends AppCompatActivity {
 
             }
         });
-//        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                Toast.makeText(DialogDemoActivity.this, "cancle click", Toast.LENGTH_LONG).show();
-//
-//                dialog.dismiss();
-//                //直接关闭
-////                finish();
-//            }
-//        });
+
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(DialogDemoActivity.this, "cancle click", Toast.LENGTH_LONG).show();
+
+                dialog.dismiss();
+                //直接关闭
+//                finish();
+            }
+        });
         builder.create().show();
     }
+
+
 }
