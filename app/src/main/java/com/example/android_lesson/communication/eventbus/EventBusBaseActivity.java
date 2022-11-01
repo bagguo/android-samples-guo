@@ -9,12 +9,16 @@ public class EventBusBaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (EventBus.getDefault().isRegistered(this)) {
-            EventBus.getDefault().unregister(this);
-        }
+        unregisterEventBus();
     }
 
     public void initEventBus() {
         EventBus.getDefault().register(this);
+    }
+
+    private void unregisterEventBus() {
+        if (EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().unregister(this);
+        }
     }
 }

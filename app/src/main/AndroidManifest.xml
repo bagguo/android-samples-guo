@@ -15,6 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".webview.WebViewDemoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".video.VideoDemoActivity"
             android:exported="true" />
         <activity
@@ -35,7 +42,7 @@
 
         <service
             android:name=".service.start.MusicService"
-            android:enabled="true"/>
+            android:enabled="true" />
 
         <activity
             android:name=".service.start.ServiceTestActivity"
@@ -43,7 +50,7 @@
 
         <service
             android:name=".service.bind.MyBindService"
-            android:enabled="true"/>
+            android:enabled="true" />
 
         <activity android:name=".communication.eventbus.BActivity" />
         <activity android:name=".communication.eventbus.AActivity" />
