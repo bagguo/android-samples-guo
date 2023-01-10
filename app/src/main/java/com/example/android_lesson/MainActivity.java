@@ -21,6 +21,7 @@ import com.example.android_lesson.rxjavaretrofit.RxjavaRetrofitTest;
 import com.example.android_lesson.ipc.IPCTestActivity;
 import com.example.android_lesson.service.start.ServiceTestActivity;
 import com.example.android_lesson.video.VideoDemoActivity;
+import com.example.android_lesson.wallet.WalletActivity;
 import com.example.android_lesson.webview.WebViewDemoActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -89,6 +90,11 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.btn_web_view).setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, WebViewDemoActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btn_wallet).setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, WalletActivity.class);
             startActivity(intent);
         });
     }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_create_bip39_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="创建bip39钱包"/>
+
+    <Button
+        android:id="@+id/btn_get_mnemonic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示助记词"/>
+
+    <TextView
+        android:id="@+id/tv_show_mnemonic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"/>
+
+    <Button
+        android:id="@+id/btn_get_private_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="显示私钥"/>
+
+    <TextView
+        android:id="@+id/tv_show_private_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"/>
+
+    <Button
+        android:id="@+id/btn_connect_ganache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="连接ganache"/>
+
+    <Button
+        android:id="@+id/btn_get_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="查询余额"/>
+
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_import_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="导入钱包"/>
+
+    <Button
+        android:id="@+id/btn_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="store"/>
+
+    <Button
+        android:id="@+id/btn_retrieve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="retrieve"/>
+
+    <TextView
+        android:id="@+id/tv_call_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
