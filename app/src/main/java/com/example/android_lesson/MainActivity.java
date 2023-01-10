@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        findViewById(R.id.btn_ipc).setOnClickListener(view -> {
+        findViewById(R.id.btn_web_view).setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, WebViewDemoActivity.class);
             startActivity(intent);
         });
