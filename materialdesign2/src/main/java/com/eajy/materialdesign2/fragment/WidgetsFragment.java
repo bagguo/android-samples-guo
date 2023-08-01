@@ -1,12 +1,17 @@
 package com.eajy.materialdesign2.fragment;
 
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.eajy.materialdesign2.R;
 import com.google.android.gms.ads.AdRequest;
@@ -33,6 +38,27 @@ public class WidgetsFragment extends Fragment {
         NestedScrollView nestedScrollView = (NestedScrollView) inflater.inflate(R.layout.fragment_widgets, container, false);
         ad_view_widget = nestedScrollView.findViewById(R.id.ad_view_widget);
         card_ad_widget = nestedScrollView.findViewById(R.id.card_ad_widget);
+
+        RadioGroup radioGroup = nestedScrollView.findViewById(R.id.radioGroup);
+        radioGroup.clearCheck(); //默认不选中
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radioButton = nestedScrollView.findViewById(checkedId);
+
+                //设置字体
+                String fontPath = "fonts/DINNextLTPro-Regular.otf";
+                if (!TextUtils.isEmpty(fontPath)) {
+                    Typeface typeFace = Typeface.createFromAsset(getContext().getAssets(), fontPath);
+                    radioButton.setTypeface(typeFace);
+                }
+
+                CharSequence text = radioButton.getText();//获取radiobutton的文字
+                Toast.makeText(getContext(), text, Toast.LENGTH_LONG).show();
+            }
+        });
+
         return nestedScrollView;
     }
 
