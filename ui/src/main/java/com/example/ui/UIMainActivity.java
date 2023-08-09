@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.example.ui.butterknife.ButterKnifeTestActivity;
 import com.example.ui.dialog.DialogDemoActivity;
+import com.example.ui.dynamic.DynamicLayoutActivity;
 import com.example.ui.gridview.GridViewDemoActivity;
 import com.example.ui.listview.ListViewDemoActivity;
 import com.example.ui.multitype.normal.NormalActivity;
@@ -52,6 +53,11 @@ public class UIMainActivity extends AppCompatActivity {
 
         findViewById(R.id.btn_dialog).setOnClickListener(view -> {
             Intent intent = new Intent(UIMainActivity.this, DialogDemoActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.btn_dynamic_layout).setOnClickListener(view -> {
+            Intent intent = new Intent(UIMainActivity.this, DynamicLayoutActivity.class);
             startActivity(intent);
         });
     }

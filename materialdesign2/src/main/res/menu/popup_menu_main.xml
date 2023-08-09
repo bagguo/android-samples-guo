@@ -13,6 +13,7 @@
         android:id="@+id/popup_menu_action_2"
         android:orderInCategory="100"
         android:title="action 2"
+        android:visible="false"
         app:showAsAction="never" />
     <item
         android:id="@+id/popup_menu_action_3"
