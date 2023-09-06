@@ -29,4 +29,14 @@ public class AnimationActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {//activity不可见
+        super.onResume();
+    }
 }
