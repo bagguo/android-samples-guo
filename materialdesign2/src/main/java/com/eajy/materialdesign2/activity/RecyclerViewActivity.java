@@ -2,15 +2,19 @@ package com.eajy.materialdesign2.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 
 import com.eajy.materialdesign2.R;
 import com.eajy.materialdesign2.adapter.RecyclerViewAdapter;
+import com.eajy.materialdesign2.track.HomePageExposeUtil;
+import com.eajy.materialdesign2.track.OnItemExposeListener;
 import com.eajy.materialdesign2.util.AppUtils;
 import com.eajy.materialdesign2.view.ItemTouchHelperCallback;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -24,7 +28,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 public class RecyclerViewActivity extends BaseActivity {
 
     private SwipeRefreshLayout swipeRefreshLayout;
-    private RecyclerView mRecyclerView;
+    public RecyclerView mRecyclerView;
     private ExtendedFloatingActionButton efab;
     private RecyclerViewAdapter adapter;
     private int color = 0;
@@ -93,7 +97,19 @@ public class RecyclerViewActivity extends BaseActivity {
         }, 2000));
 
         mRecyclerView.addOnScrollListener(scrollListener);
+
+        new HomePageExposeUtil().setRecyclerItemExposeListener(mRecyclerView, new OnItemExposeListener() {
+            @Override
+            public void onItemViewVisible(boolean visible, int position) {
+                Log.d("TAG", "onItemViewVisible: ======position" + position + " visible:" + visible);
+                if (visible) {
+                    map.put(position, "");
+                }
+            }
+        });
     }
+
+    HashMap<Integer, String> map = new HashMap<>();
 
     RecyclerView.OnScrollListener scrollListener = new RecyclerView.OnScrollListener() {
         @Override
