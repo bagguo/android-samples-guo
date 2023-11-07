@@ -22,6 +22,7 @@ import com.example.android_lesson.ipc.IPCTestActivity;
 import com.example.android_lesson.service.start.ServiceTestActivity;
 import com.example.android_lesson.video.VideoDemoActivity;
 import com.example.android_lesson.wallet.WalletActivity;
+import com.example.android_lesson.webview.JavaJSCallActivity;
 import com.example.android_lesson.webview.WebViewDemoActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate: ======");
         setContentView(R.layout.activity_main);
         mContext = this;
 
@@ -93,6 +95,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        findViewById(R.id.btn_java_js_call).setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, JavaJSCallActivity.class);
+            startActivity(intent);
+        });
+
         findViewById(R.id.btn_wallet).setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, WalletActivity.class);
             startActivity(intent);
@@ -102,12 +109,40 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        Log.d(TAG, "onStart: ======");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "onRestart:========");
     }
 
     @Override
     protected void onResume() {//activity不可见
         super.onResume();
+        Log.d(TAG, "onResume: =======");
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause: ======");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop: ======");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy: ========");
+    }
+
+
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {

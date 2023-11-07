@@ -26,6 +26,9 @@
             android:name=".wallet.ImportWalletActivity"
             android:exported="false" />
         <activity
+            android:name=".webview.JavaJSCallActivity"
+            android:exported="false" />
+        <activity
             android:name=".webview.WebViewDemoActivity"
             android:exported="false">
             <meta-data
