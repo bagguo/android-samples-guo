@@ -14,6 +14,7 @@ import android.view.View;
 
 import com.example.android_lesson.animation.AnimationActivity;
 import com.example.android_lesson.communication.CommunicateActivity;
+import com.example.android_lesson.dagger.DaggerActivity;
 import com.example.android_lesson.dispatcheventdemo.DispatchEventDemoActivity;
 import com.example.android_lesson.retrofit.RetrofitTest;
 import com.example.android_lesson.rxjava.RxJavaTest;
@@ -83,6 +84,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_service).setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, ServiceTestActivity.class);
             startActivity(intent);
+        });
+
+        findViewById(R.id.btn_dagger).setOnClickListener(view -> {
+            DaggerActivity.start(MainActivity.this);
         });
 
         findViewById(R.id.btn_ipc).setOnClickListener(view -> {

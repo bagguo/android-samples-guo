@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".dagger.DaggerActivity"
+            android:exported="false" />
+        <activity
             android:name=".wallet.WalletActivity"
             android:exported="false">
             <meta-data
