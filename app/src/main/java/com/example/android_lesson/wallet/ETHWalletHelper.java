@@ -60,6 +60,7 @@ public class ETHWalletHelper {
 
     public static File PATH = new File(Environment.getExternalStorageDirectory().getPath());
 
+    // Environment.getExternalStorageDirectory().getPath()  // /storage/emulated/0
 
     public static volatile ETHWalletHelper instance;
 
@@ -73,12 +74,50 @@ public class ETHWalletHelper {
         }
         return instance;
     }
-
+    /**
+     * WalletUtils.generateBip39Wallet(PASSWORD, ETHWalletHelper.PATH)
+     * web3j.ethGetBalance //查询余额
+     * web3j.ethSendRawTransaction //发送交易，调用合约
+     * web3j.ethCall //调用合约的只读方法
+     *
+     * web3j.ethGasPrice()
+     * web3j.ethGetBalance
+     * web3j.ethGetTransactionCount 查询nonce
+     * web3j.ethCall 请求Contract nonce, 查询某代币余额
+     *
+     * Secp256k1创建公私钥
+     * priKey: 64
+     * pubKey: 128位 priKey椭圆曲线算法得到
+     * address: 40位 公钥keccak256公钥得到的hash值，取后40位
+     */
     private final ObjectMapper objectMapper = ObjectMapperFactory.getObjectMapper();
     private Bip39Wallet mWallet = null;
 
     //**************创建钱包*****************
-
+    /**
+     * Bip39Wallet json文件：
+     * {
+     *   "address": "a6faefea289235d5678bb089e2ea4cdfbbc4da1b",
+     *   "id": "a074d861-fde4-46c6-9c61-92ebd12c54f2",
+     *   "version": 3,
+     *   "crypto": {
+     *     "cipher": "aes-128-ctr",
+     *     "cipherparams": {
+     *       "iv": "c81fe91c4db8ae9540295eb67f986c78"
+     *     },
+     *     "ciphertext": "bcc218740012b1215d56e50256ced9e9a33930c4006a492d36f774984663d5cf",
+     *     "kdf": "scrypt",
+     *     "kdfparams": {
+     *       "dklen": 32,
+     *       "n": 4096,
+     *       "p": 6,
+     *       "r": 8,
+     *       "salt": "8fc94081b875d187692f2e8f5c6e2c223687627db9e0a18bcffb03308d6553ac"
+     *     },
+     *     "mac": "bd8c06c184541dd2e2735aec17e752a6366e596b703309c0af605a26db182a08"
+     *   }
+     * }
+     */
     public void generateBip39Wallets() {
 
         try {
