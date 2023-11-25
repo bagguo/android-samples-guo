@@ -4,7 +4,7 @@ include ':banner'
 //include ':push'
 include ':materialdesign2'
 include ':recyclerviewdemo'
-include ':ui'
+include ':jump_action_test'
 include ':base'
 include ':app'
 rootProject.name = "Android-lesson"

@@ -21,6 +21,7 @@ import com.example.android_lesson.rxjava.RxJavaTest;
 import com.example.android_lesson.rxjavaretrofit.RxjavaRetrofitTest;
 import com.example.android_lesson.ipc.IPCTestActivity;
 import com.example.android_lesson.service.start.ServiceTestActivity;
+import com.example.android_lesson.ui.UIEntryActivity;
 import com.example.android_lesson.video.VideoDemoActivity;
 import com.example.android_lesson.wallet.WalletActivity;
 import com.example.android_lesson.webview.JavaJSCallActivity;
@@ -57,9 +58,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.main_ui_btn).setOnClickListener(view -> {
+            UIEntryActivity.start(MainActivity.this);
+        });
+
+        findViewById(R.id.main_jump_action).setOnClickListener(view -> {
             Log.d(TAG, "onCreate: ====click");
             Intent intent = new Intent();
-            intent.setAction("com.example.action.ui.moudle");
+            intent.setAction("com.example.action.ui.moudle");//隐式跳转
 //            intent.setClassName("com.example.ui", "com.example.ui.UIMainActivity");
 //            intent.setComponent(new ComponentName("com.example.ui", "com.example.ui.UIMainActivity"));
             if (intent.resolveActivity(getPackageManager()) != null) {
@@ -68,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-
         findViewById(R.id.main_btn_video).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

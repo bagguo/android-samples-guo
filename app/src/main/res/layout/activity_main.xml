@@ -20,9 +20,15 @@
 
     <Button
         android:id="@+id/main_ui_btn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UI" />
+
+    <Button
+        android:id="@+id/main_jump_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐式跳转activity" />
 
     <Button
         android:id="@+id/main_btn_video"

@@ -1,10 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.UIEntryActivity">
+
+    <Button
+        android:id="@+id/toolbar_simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="toolbar simple" />
+
+    <Button
+        android:id="@+id/btn_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="list_view" />
+
+    <Button
+        android:id="@+id/btn_grid_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="grid_view" />
+
+    <Button
+        android:id="@+id/btn_tab_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TabLayout" />
+
+    <Button
+        android:id="@+id/btn_butter_knife"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="butter knife" />
+
+    <Button
+        android:id="@+id/btn_multi_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="multi_type_adapter" />
+
+    <Button
+        android:id="@+id/btn_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dialog" />
+
+    <Button
+        android:id="@+id/btn_dynamic_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn_dynamic_layout" />
 
     <Button
         android:id="@+id/btn_constraint_layout"
@@ -41,4 +90,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_custom_view_simple"
         />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
