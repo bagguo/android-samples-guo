@@ -33,9 +33,18 @@ public class ImportWalletActivity extends BaseActivity {
     TextView privateKeyAddressTv;
 
     @Override
+    protected int getLayoutId() {
+        return R.layout.activity_import_wallet;
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_import_wallet);
 
         editText = findViewById(R.id.et);
         addressTv = findViewById(R.id.tv_address);

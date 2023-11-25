@@ -16,6 +16,68 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".memory.MemorySamplesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.chapter_3.TestActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="standard" />
+        <activity
+            android:name=".ui.chapter_3.DemoActivity_1"
+            android:configChanges="screenLayout"
+            android:label="@string/title_scene_1"
+            android:launchMode="standard" />
+        <activity
+            android:name=".ui.chapter_3.DemoActivity_2"
+            android:configChanges="screenLayout"
+            android:label="@string/title_scene_1"
+            android:launchMode="standard" />
+        <activity
+            android:name=".ui.chapter_3.ThirdActivity"
+            android:configChanges="screenLayout"
+            android:label="@string/app_name" />
+        <activity android:name=".ui.chapter_3.ViewActivity" />
+        <activity
+            android:name=".ui.custom.CustomViewSimpleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.UIEntryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.circleprogress.CircleViewSampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".ui.live.HeartFlowActivity" />
+        <activity
+            android:name=".ui.constraintlayout.ConstraintLayoutSampleActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".input.SoftInputSampleActivityJava"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".input.SoftInputSampleActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".jetpack.JetpackSampleActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".dagger.DaggerActivity"
             android:exported="false" />
         <activity

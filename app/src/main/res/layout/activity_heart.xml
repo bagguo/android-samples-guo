@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
+    <com.example.android_lesson.ui.live.HeartLayout
+        android:id="@+id/heart"
+        android:layout_width="100dp"
+        android:layout_height="240dp"
+        app:scale="0.8">
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_heart"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_margin="30dp"-->
+<!--            android:background="@drawable/selector_like"-->
+<!--        />-->
+    </com.example.android_lesson.ui.live.HeartLayout>
+</FrameLayout>
