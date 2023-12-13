@@ -2,6 +2,8 @@ package com.example.android_lesson.retrofit;
 
 import android.util.Log;
 
+import com.example.android_lesson.util.JsonFormatUtil;
+
 import java.io.IOException;
 
 import okhttp3.OkHttpClient;
@@ -40,7 +42,7 @@ public class RetrofitTest {
                     }
 
                     String result = body.string();
-                    Log.d(TAG, "onResponse: ========" + result);
+                    Log.d(TAG, "<--onResponse: \n" + JsonFormatUtil.INSTANCE.formatDataFromJson(result));
 //                    Gson gson = new Gson();
 //                    GithubUserBean bean = gson.fromJson(result, GithubUserBean.class);
 //                    setUserView(bean);
