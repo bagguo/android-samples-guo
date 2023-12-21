@@ -1,81 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/main_animation_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="animation" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/main_dispatch_event_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="dispatch event demo" />
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/main_ui_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="UI" />
+        <Button
+            android:id="@+id/btn_jetpack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jetpack demo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv" />
 
-    <Button
-        android:id="@+id/main_jump_action"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="隐式跳转activity" />
+        <Button
+            android:id="@+id/btnLive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="live"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_jetpack" />
 
-    <Button
-        android:id="@+id/main_btn_video"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="VIDEO" />
+        <Button
+            android:id="@+id/btn_soft_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="soft input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnLive" />
 
-    <Button
-        android:id="@+id/btn_communication"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="communication" />
+        <Button
+            android:id="@+id/btn_ui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ui"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_soft_input" />
 
-    <Button
-        android:id="@+id/btn_service"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="service" />
+        <Button
+            android:id="@+id/btn_memory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="memory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_ui" />
 
-    <Button
-        android:id="@+id/btn_dagger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="dagger" />
+        <Button
+            android:id="@+id/btn_main_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="animation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_memory" />
 
-    <Button
-        android:id="@+id/btn_ipc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="IPC" />
+        <Button
+            android:id="@+id/btn_main_dispatch_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dispatch event demo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_main_animation" />
 
-    <Button
-        android:id="@+id/btn_web_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="web view" />
+        <Button
+            android:id="@+id/btn_main_jump_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐式跳转activity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_main_dispatch_event" />
 
-    <Button
-        android:id="@+id/btn_java_js_call"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="java js call" />
+        <Button
+            android:id="@+id/btn_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIDEO"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_main_jump_action" />
 
-    <Button
-        android:id="@+id/btn_wallet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="wallet" />
+        <Button
+            android:id="@+id/btn_communication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="communication"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_video" />
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <Button
+            android:id="@+id/btn_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="service"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_communication" />
+
+        <Button
+            android:id="@+id/btn_dagger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dagger"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_service" />
+
+        <Button
+            android:id="@+id/btn_ipc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IPC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_dagger" />
+
+        <Button
+            android:id="@+id/btn_web_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="web view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_ipc" />
+
+        <Button
+            android:id="@+id/btn_java_js_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="java js call"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_web_view" />
+
+        <Button
+            android:id="@+id/btn_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wallet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_java_js_call" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

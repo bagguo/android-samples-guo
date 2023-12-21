@@ -1,39 +1,124 @@
 package com.example.android_lesson
 
+import android.Manifest
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.android_lesson.databinding.ActivityMain2Binding
-
+import androidx.core.app.ActivityCompat
+import com.example.android_lesson.animation.AnimationActivity
+import com.example.android_lesson.communication.CommunicateActivity
+import com.example.android_lesson.dagger.DaggerActivity
+import com.example.android_lesson.databinding.ActivityMainBinding
+import com.example.android_lesson.dispatcheventdemo.DispatchEventDemoActivity
 import com.example.android_lesson.input.SoftInputSampleActivity
+import com.example.android_lesson.ipc.IPCTestActivity
 import com.example.android_lesson.jetpack.JetpackSampleActivity
 import com.example.android_lesson.memory.MemorySamplesActivity
+import com.example.android_lesson.net.retrofit.RetrofitTest
+import com.example.android_lesson.net.rxjava.RxJavaTest
+import com.example.android_lesson.net.rxjavaretrofit.RxjavaRetrofitTest
+import com.example.android_lesson.service.start.ServiceTestActivity
 import com.example.android_lesson.ui.UIEntryActivity
 import com.example.android_lesson.ui.live.HeartFlowActivity
+import com.example.android_lesson.video.VideoDemoActivity
+import com.example.android_lesson.wallet.WalletActivity
+import com.example.android_lesson.webview.JavaJSCallActivity
+import com.example.android_lesson.webview.WebViewDemoActivity
 
-class MainActivity2 : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
+    private val TAG = "MainActivity2"
 
-    private lateinit var binding: ActivityMain2Binding
+    private lateinit var binding: ActivityMainBinding
     private lateinit var tv: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d(TAG, "onCreate: ======")
 
-        binding = ActivityMain2Binding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
         binding.tv.text = "ViewBinding绑定的view"
+
+        checkPermission()
+
+        RxJavaTest().test(this)
+        RetrofitTest().test()
+        RxjavaRetrofitTest().test()
 
         binding.btnJetpack.setOnClickListener { JetpackSampleActivity.start(this) }
         binding.btnLive.setOnClickListener { HeartFlowActivity.createIntent(this) }
         binding.btnSoftInput.setOnClickListener { SoftInputSampleActivity.start(this) }
         binding.btnUi.setOnClickListener { UIEntryActivity.start(this) }
         binding.btnMemory.setOnClickListener { MemorySamplesActivity.start(this) }
+        binding.btnMainAnimation.setOnClickListener { AnimationActivity.start(this) }
+        binding.btnMainDispatchEvent.setOnClickListener { DispatchEventDemoActivity.start(this) }
+        binding.btnMainJumpAction.setOnClickListener {
+            Log.d(TAG, "onCreate: ====click")
+            val intent = Intent()
+            intent.action = "com.example.action.ui.moudle" //隐式跳转
+//            intent.setClassName("com.example.ui", "com.example.ui.UIMainActivity");
+//            intent.setComponent(new ComponentName("com.example.ui", "com.example.ui.UIMainActivity"));
+            if (intent.resolveActivity(packageManager) != null) {
+                Log.d(TAG, "onCreate: ========resolve activity")
+                startActivity(intent)
+                finish()
+            }
+        }
+        binding.btnVideo.setOnClickListener { VideoDemoActivity.start(this) }
+        binding.btnCommunication.setOnClickListener { CommunicateActivity.start(this) }
+        binding.btnService.setOnClickListener { ServiceTestActivity.start(this) }
+        binding.btnDagger.setOnClickListener { DaggerActivity.start(this) }
+        binding.btnIpc.setOnClickListener { IPCTestActivity.start(this) }
+        binding.btnWebView.setOnClickListener { WebViewDemoActivity.start(this) }
+        binding.btnJavaJsCall.setOnClickListener { JavaJSCallActivity.start(this) }
+        findViewById<View>(R.id.btn_wallet).setOnClickListener { WalletActivity.start(this@MainActivity) }
+
         yufa()
 
         hanshu()
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d(TAG, "onStart: =====")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(TAG, "onRestart: ======")
+    }
+
+    override fun onResume() { //activity不可见
+        super.onResume()
+        Log.d(TAG, "onResume: =======")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d(TAG, "onPause: ======")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG, "onStop: ======")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG, "onDestroy: ======")
+    }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        //启动优化－抓取TraceView结束点
+//        Debug.stopMethodTracing();
     }
 
     //let、with、run、apply、also函数
@@ -167,8 +252,22 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
 
-    val stringLengthFunc: (String) -> Int = {input ->
+    val stringLengthFunc: (String) -> Int = { input ->
         input.length
     }
-    val stringLength:Int = stringLengthFunc("Android")
+    val stringLength: Int = stringLengthFunc("Android")
+
+    private fun checkPermission() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                    1
+                )
+            }
+        }
+    }
 }

@@ -3,6 +3,7 @@ package com.example.android_lesson.ipc;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -12,8 +13,15 @@ import com.example.android_lesson.R;
 import com.example.android_lesson.ipc.aidl.AIDLClientActivity;
 import com.example.android_lesson.ipc.binder.bigbitmap.ImageBinder;
 import com.example.android_lesson.ipc.binder.bigbitmap.ReceiverBigBitmapActivity;
+import com.example.android_lesson.webview.WebViewDemoActivity;
 
 public class IPCTestActivity extends AppCompatActivity {
+
+    public static void start(Context context){
+        Intent intent = new Intent(context, IPCTestActivity.class);
+        context.startActivity(intent);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

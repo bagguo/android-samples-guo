@@ -2,6 +2,8 @@ package com.example.android_lesson.animation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -9,8 +11,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.example.android_lesson.R;
+import com.example.android_lesson.dispatcheventdemo.DispatchEventDemoActivity;
 
 public class AnimationActivity extends AppCompatActivity {
+
+    public static void start(Context context){
+        Intent intent = new Intent(context, AnimationActivity.class);
+        context.startActivity(intent);
+    }
 
     private Animation mLargeAnimation;
 

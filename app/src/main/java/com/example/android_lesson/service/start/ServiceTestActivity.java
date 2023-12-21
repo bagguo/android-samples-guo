@@ -2,13 +2,19 @@ package com.example.android_lesson.service.start;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.android_lesson.R;
+import com.example.android_lesson.ipc.IPCTestActivity;
 import com.example.android_lesson.service.bind.BIndServiceTestActivity;
 
 public class ServiceTestActivity extends AppCompatActivity {
+    public static void start(Context context){
+        Intent intent = new Intent(context, ServiceTestActivity.class);
+        context.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

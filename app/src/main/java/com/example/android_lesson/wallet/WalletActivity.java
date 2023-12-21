@@ -2,19 +2,23 @@ package com.example.android_lesson.wallet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.android_lesson.MainActivity;
 import com.example.android_lesson.MyApplication;
 import com.example.android_lesson.R;
 
 public class WalletActivity extends AppCompatActivity {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = WalletActivity.class.getSimpleName();
 
+    public static void start(Context context){
+        Intent intent = new Intent(context, WalletActivity.class);
+        context.startActivity(intent);
+    }
 
     private String mAddress;
     private TextView mCallResultTv;

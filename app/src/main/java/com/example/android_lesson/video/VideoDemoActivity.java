@@ -3,6 +3,8 @@ package com.example.android_lesson.video;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -10,9 +12,14 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 import com.example.android_lesson.R;
+import com.example.android_lesson.communication.CommunicateActivity;
 
 public class VideoDemoActivity extends AppCompatActivity {
 
+    public static void start(Context context){
+        Intent intent = new Intent(context, VideoDemoActivity.class);
+        context.startActivity(intent);
+    }
 
     private String mFilePath;
     private MediaPlayer mMediaPlayer;

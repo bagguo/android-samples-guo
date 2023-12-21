@@ -1,5 +1,7 @@
 package com.example.android_lesson.webview;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.os.Build;
@@ -22,6 +24,10 @@ import java.lang.reflect.Method;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class WebViewDemoActivity extends AppCompatActivity {
+    public static void start(Context context){
+        Intent intent = new Intent(context, WebViewDemoActivity.class);
+        context.startActivity(intent);
+    }
 
     private WebView webView;
 

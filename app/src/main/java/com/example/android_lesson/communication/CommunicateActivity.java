@@ -2,13 +2,21 @@ package com.example.android_lesson.communication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.android_lesson.R;
 import com.example.android_lesson.communication.eventbus.AActivity;
+import com.example.android_lesson.service.start.ServiceTestActivity;
 
 public class CommunicateActivity extends AppCompatActivity {
+
+    public static void start(Context context){
+        Intent intent = new Intent(context, CommunicateActivity.class);
+        context.startActivity(intent);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

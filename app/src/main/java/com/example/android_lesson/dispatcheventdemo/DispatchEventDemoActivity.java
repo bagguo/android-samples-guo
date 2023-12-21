@@ -2,6 +2,7 @@ package com.example.android_lesson.dispatcheventdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,10 +10,16 @@ import android.widget.LinearLayout;
 
 import com.example.android_lesson.R;
 import com.example.android_lesson.dispatcheventdemo.customview.NewCardTestActivity;
+import com.example.android_lesson.video.VideoDemoActivity;
 
 public class DispatchEventDemoActivity extends AppCompatActivity {
 
     public static final String TAG = DispatchEventDemoActivity.class.getSimpleName();
+
+    public static void start(Context context){
+        Intent intent = new Intent(context, DispatchEventDemoActivity.class);
+        context.startActivity(intent);
+    }
 
     private LinearLayout rootLl;
     private LinearLayout linearLayout;

@@ -7,7 +7,7 @@ include ':recyclerviewdemo'
 include ':jump_action_test'
 include ':base'
 include ':app'
-rootProject.name = "Android-lesson"
+rootProject.name = "android-samples-guo"
 include ':dbdemo'
 include ':myandroidlibrary'
 include ':myjavalib'

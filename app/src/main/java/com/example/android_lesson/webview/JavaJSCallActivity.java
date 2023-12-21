@@ -2,6 +2,8 @@ package com.example.android_lesson.webview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.JavascriptInterface;
@@ -9,10 +11,14 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.TextView;
 
-import com.example.android_lesson.MainActivity;
 import com.example.android_lesson.R;
+import com.example.android_lesson.wallet.WalletActivity;
 
 public class JavaJSCallActivity extends AppCompatActivity {
+    public static void start(Context context){
+        Intent intent = new Intent(context, JavaJSCallActivity.class);
+        context.startActivity(intent);
+    }
 
     private WebView webview;
     private TextView tvJs;
