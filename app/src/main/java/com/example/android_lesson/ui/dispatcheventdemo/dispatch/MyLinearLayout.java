@@ -1,4 +1,4 @@
-package com.example.android_lesson.dispatcheventdemo.dispatch;
+package com.example.android_lesson.ui.dispatcheventdemo.dispatch;
 
 import android.content.Context;
 import android.util.AttributeSet;

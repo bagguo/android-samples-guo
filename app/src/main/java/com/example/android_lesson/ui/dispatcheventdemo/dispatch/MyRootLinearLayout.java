@@ -1,4 +1,4 @@
-package com.example.android_lesson.dispatcheventdemo.dispatch;
+package com.example.android_lesson.ui.dispatcheventdemo.dispatch;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.LinearLayout;
 
-import androidx.annotation.LongDef;
 import androidx.annotation.Nullable;
 
 public class MyRootLinearLayout extends LinearLayout {

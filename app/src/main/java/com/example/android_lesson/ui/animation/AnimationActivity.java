@@ -1,4 +1,4 @@
-package com.example.android_lesson.animation;
+package com.example.android_lesson.ui.animation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.example.android_lesson.R;
-import com.example.android_lesson.dispatcheventdemo.DispatchEventDemoActivity;
 
 public class AnimationActivity extends AppCompatActivity {
 

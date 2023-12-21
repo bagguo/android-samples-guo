@@ -1,4 +1,6 @@
-package com.example.android_lesson
+package com.example.android_lesson.repository
+
+import com.example.android_lesson.model.User
 
 object Repository
 // keeping the constructor private to enforce the usage of getInstance

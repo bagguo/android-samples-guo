@@ -1,4 +1,4 @@
-package com.example.android_lesson.dispatcheventdemo;
+package com.example.android_lesson.ui.dispatcheventdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +9,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.android_lesson.R;
-import com.example.android_lesson.dispatcheventdemo.customview.NewCardTestActivity;
-import com.example.android_lesson.video.VideoDemoActivity;
+import com.example.android_lesson.ui.dispatcheventdemo.customview.NewCardTestActivity;
 
 public class DispatchEventDemoActivity extends AppCompatActivity {
 

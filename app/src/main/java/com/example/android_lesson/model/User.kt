@@ -1,4 +1,4 @@
-package com.example.android_lesson
+package com.example.android_lesson.model
 
 data class User(var firstName: String?, var lastName: String?)
 

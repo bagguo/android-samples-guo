@@ -1,4 +1,4 @@
-package com.example.android_lesson.dispatcheventdemo.customview;
+package com.example.android_lesson.ui.dispatcheventdemo.customview;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;

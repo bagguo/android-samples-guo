@@ -1,4 +1,4 @@
-package com.example.android_lesson.video;
+package com.example.android_lesson.ui.video;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +12,6 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 import com.example.android_lesson.R;
-import com.example.android_lesson.communication.CommunicateActivity;
 
 public class VideoDemoActivity extends AppCompatActivity {
 

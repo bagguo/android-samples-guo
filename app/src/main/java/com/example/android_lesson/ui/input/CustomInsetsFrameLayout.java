@@ -1,4 +1,4 @@
-package com.example.android_lesson.input;
+package com.example.android_lesson.ui.input;
 
 import android.content.Context;
 import android.graphics.Rect;

@@ -16,6 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".async.rxjava.RxjavaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".async.AsyncActivity"
+            android:exported="false" />
+        <activity
             android:name=".memory.MemorySamplesActivity"
             android:exported="false" />
         <activity
@@ -52,16 +58,6 @@
         <activity
             android:name=".ui.circleprogress.CircleViewSampleActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".ui.live.HeartFlowActivity" />
         <activity
             android:name=".ui.constraintlayout.ConstraintLayoutSampleActivity"
@@ -71,12 +67,12 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".input.SoftInputSampleActivityJava"
+            android:name=".ui.input.SoftInputSampleActivityJava"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".input.SoftInputSampleActivity"
+            android:name=".ui.input.SoftInputSampleActivity"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustResize" />
@@ -111,7 +107,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".video.VideoDemoActivity"
+            android:name=".ui.video.VideoDemoActivity"
             android:exported="true" />
         <activity
             android:name=".ipc.binder.bigbitmap.ReceiverBigBitmapActivity"
@@ -145,14 +141,24 @@
         <activity android:name=".communication.eventbus.AActivity" />
         <activity android:name=".communication.CommunicateActivity" />
         <activity
-            android:name=".dispatcheventdemo.customview.NewCardTestActivity"
+            android:name=".ui.dispatcheventdemo.customview.NewCardTestActivity"
             android:exported="true" />
         <activity
-            android:name=".dispatcheventdemo.DispatchEventDemoActivity"
+            android:name=".ui.dispatcheventdemo.DispatchEventDemoActivity"
             android:exported="true" />
         <activity
-            android:name=".animation.AnimationActivity"
+            android:name=".ui.animation.AnimationActivity"
             android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

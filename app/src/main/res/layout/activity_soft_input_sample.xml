@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:isScrollContainer="true"
-    tools:context=".input.SoftInputSampleActivity">
+    tools:context=".ui.input.SoftInputSampleActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

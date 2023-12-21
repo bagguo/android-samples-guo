@@ -1,4 +1,4 @@
-package com.example.android_lesson.coroutine
+package com.example.android_lesson.async.coroutine
 
 import kotlinx.coroutines.*
 
