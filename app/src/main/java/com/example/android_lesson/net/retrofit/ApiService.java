@@ -1,4 +1,4 @@
-package com.example.android_lesson.retrofit;
+package com.example.android_lesson.net.retrofit;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;

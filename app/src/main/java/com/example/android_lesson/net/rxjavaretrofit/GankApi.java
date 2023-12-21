@@ -1,4 +1,4 @@
-package com.example.android_lesson.rxjavaretrofit;
+package com.example.android_lesson.net.rxjavaretrofit;
 
 
 import io.reactivex.Observable;

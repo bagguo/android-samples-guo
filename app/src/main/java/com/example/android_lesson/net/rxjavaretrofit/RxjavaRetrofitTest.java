@@ -1,16 +1,10 @@
-package com.example.android_lesson.rxjavaretrofit;
+package com.example.android_lesson.net.rxjavaretrofit;
 
 import android.util.Log;
 
-import com.example.android_lesson.retrofit.ApiService;
-
-import org.reactivestreams.Subscriber;
-
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -20,7 +14,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.ResponseBody;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class RxjavaRetrofitTest {

@@ -1,4 +1,4 @@
-package com.example.android_lesson.rxjava;
+package com.example.android_lesson.net.rxjava;
 
 import android.content.Context;
 import android.util.Log;
