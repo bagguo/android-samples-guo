@@ -19,6 +19,10 @@ public class RxjavaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rxjava);
-        new RxjavaTest().helloWorld();
+        RxjavaSample rxjava = new RxjavaSample();
+        rxjava.helloWorld();
+        rxjava.chainCall();
+//        rxjava.test();
+        rxjava.simpleObserve();
     }
 }

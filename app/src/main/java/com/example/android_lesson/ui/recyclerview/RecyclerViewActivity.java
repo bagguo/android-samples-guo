@@ -49,7 +49,11 @@ public class RecyclerViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
+        initView();
+        initData();
+    }
 
+    private void initView() {
         mSwipeRefreshLayout = findViewById(R.id.swiperefreshlayout);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.purple_700
                 , R.color.purple_200, R.color.white, R.color.teal_200);
@@ -66,7 +70,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
         mRecyclerview.setLayoutManager(new LinearLayoutManager(this));
         myAdapter = new MyAdapter(this, mList);
         mRecyclerview.setAdapter(myAdapter);
+    }
 
+    private void initData() {
         requestData();
     }
 
