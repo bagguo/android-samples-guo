@@ -8,16 +8,22 @@
     tools:context=".ui.UIEntryActivity">
 
     <Button
-        android:id="@+id/toolbar_simple"
+        android:id="@+id/btn_recycler_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="toolbar simple" />
+        android:text="recycler_view" />
 
     <Button
         android:id="@+id/btn_list_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="list_view" />
+
+    <Button
+        android:id="@+id/toolbar_simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="toolbar simple" />
 
     <Button
         android:id="@+id/btn_grid_view"

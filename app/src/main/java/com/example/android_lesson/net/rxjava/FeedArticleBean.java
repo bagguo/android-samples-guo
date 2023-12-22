@@ -1,6 +1,6 @@
 package com.example.android_lesson.net.rxjava;
 
-class FeedArticleBean {
+public class FeedArticleBean {
     /**
      * apkLink: "",
      * audit: 1,

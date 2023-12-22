@@ -16,6 +16,7 @@ import com.example.android_lesson.ui.dynamic.DynamicLayoutActivity
 import com.example.android_lesson.ui.gridview.GridViewDemoActivity
 import com.example.android_lesson.ui.listview.ListViewDemoActivity
 import com.example.android_lesson.ui.multitype.normal.NormalActivity
+import com.example.android_lesson.ui.recyclerview.RecyclerViewActivity
 import com.example.android_lesson.ui.tablayout.TabLayoutDemoActivity
 import com.example.android_lesson.ui.toolbar.ToolbarSimpleActivity
 
@@ -36,6 +37,7 @@ class UIEntryActivity : AppCompatActivity() {
         mBinding = ActivityUiEntryBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
+        mBinding.btnRecyclerView.setOnClickListener { RecyclerViewActivity.start(this) }
         mBinding.btnConstraintLayout.setOnClickListener { ConstraintLayoutSampleActivity.start(this) }
         mBinding.btnCircleView.setOnClickListener { CircleViewSampleActivity.start(this) }
         mBinding.btnCustomViewSimple.setOnClickListener { CustomViewSimpleActivity.start(this) }

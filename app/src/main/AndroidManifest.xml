@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".ui.recyclerview.RecyclerViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".async.rxjava.RxjavaActivity"
             android:exported="false" />
         <activity
