@@ -74,6 +74,12 @@ public class TabLayoutDemoActivity extends AppCompatActivity {
 
             }
         });
+
+        //默认选中index 2
+        TabLayout.Tab tab = mTabLayout.getTabAt(2);
+        if (tab != null) {
+            tab.select();
+        }
     }
 
     public View getTabView(int position) {
