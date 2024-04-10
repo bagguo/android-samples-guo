@@ -1,4 +1,4 @@
-package com.example.android_lesson.ui.recyclerview;
+package com.example.android_lesson.ui.recyclerview.general;
 
 
 import android.content.Context;

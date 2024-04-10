@@ -1,4 +1,4 @@
-package com.example.android_lesson.ui.recyclerview;
+package com.example.android_lesson.ui.recyclerview.general;
 
 import android.content.Context;
 import android.content.Intent;
@@ -43,7 +43,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     List<FeedArticleBean> mList = new ArrayList<>();
 
-    private MyHandler myHandler = new MyHandler(this);
+    private final MyHandler myHandler = new MyHandler(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

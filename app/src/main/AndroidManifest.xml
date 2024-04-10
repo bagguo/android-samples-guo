@@ -15,12 +15,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
-        <activity android:name=".ui.toolbar.ToolbarSimpleActivity"/>
+        <activity android:name=".ui.recyclerview.headerfooter.HeaderAndFooterUseActivity"/>
+        <activity
+            android:name=".ui.recyclerview.RecyclerViewEntryActivity"
+            android:exported="false" />
+        <activity android:name=".ui.recyclerview.expandable.ExpandableUseActivity" />
+        <activity
+            android:name=".ui.recyclerview.expandable.BaseRecyclerViewActivity"
+            android:exported="false" />
+        <activity android:name=".ui.toolbar.ToolbarSimpleActivity" />
         <activity
             android:name=".ui.tablayout.TabLayoutDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.recyclerview.RecyclerViewActivity"
+            android:name=".ui.recyclerview.general.RecyclerViewActivity"
             android:exported="false" />
         <activity
             android:name=".async.rxjava.RxjavaActivity"
