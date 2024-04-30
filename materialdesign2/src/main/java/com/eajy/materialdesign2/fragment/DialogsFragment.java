@@ -14,6 +14,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -43,7 +44,8 @@ import static android.content.Context.MODE_PRIVATE;
 public class DialogsFragment extends Fragment implements View.OnClickListener {
 
     private MaterialButton btn_dialog_1, btn_dialog_2, btn_dialog_3, btn_dialog_4, btn_dialog_5,
-            btn_dialog_6, btn_dialog_7, btn_dialog_8, btn_dialog_9, btn_dialog_10, btn_dialog_11;
+            btn_dialog_6, btn_dialog_7, btn_dialog_8, btn_dialog_9, btn_dialog_10, btn_dialog_11,
+            btn_pop_window;
     private Calendar calendar;
     private int progress = 0;
 
@@ -65,6 +67,7 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
         btn_dialog_9 = nestedScrollView.findViewById(R.id.btn_dialog_9);
         btn_dialog_10 = nestedScrollView.findViewById(R.id.btn_dialog_10);
         btn_dialog_11 = nestedScrollView.findViewById(R.id.btn_dialog_11);
+        btn_pop_window = nestedScrollView.findViewById(R.id.btn_pop_window);
         ad_view_dialog = nestedScrollView.findViewById(R.id.ad_view_dialog);
         card_ad_dialog = nestedScrollView.findViewById(R.id.card_ad_dialog);
         return nestedScrollView;
@@ -85,6 +88,7 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
         btn_dialog_9.setOnClickListener(this);
         btn_dialog_10.setOnClickListener(this);
         btn_dialog_11.setOnClickListener(this);
+        btn_pop_window.setOnClickListener(this);
         showAd();
     }
 
@@ -215,6 +219,16 @@ public class DialogsFragment extends Fragment implements View.OnClickListener {
                 popupMenu.getMenuInflater().inflate(R.menu.popup_menu_main, popupMenu.getMenu());
                 popupMenu.setOnMenuItemClickListener(item -> false);
                 popupMenu.show();
+                break;
+
+            case R.id.btn_pop_window:
+                View view1 = LayoutInflater.from(getContext()).inflate(R.layout.dialog_pop_window, null);
+                PopupWindow popupWindow = new PopupWindow(view1);
+                popupWindow.setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
+                popupWindow.setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
+                popupWindow.showAsDropDown(btn_pop_window);
+//                Button btnConfirm = view1.findViewById(R.id.btnConform);
+//                btnConfirm.setOnClickListener(listener);
                 break;
         }
     }

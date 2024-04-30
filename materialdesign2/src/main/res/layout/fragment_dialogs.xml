@@ -123,6 +123,16 @@
             android:textColor="@color/white"
             app:cornerRadius="24dp" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_pop_window"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="@dimen/dimen_common"
+            android:backgroundTint="#607D8B"
+            android:text="pop window"
+            android:textColor="@color/white"
+            app:cornerRadius="24dp" />
+
         <include layout="@layout/ad_banner_main_dialog" />
 
     </LinearLayout>
