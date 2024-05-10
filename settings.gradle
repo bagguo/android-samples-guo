@@ -1,5 +1,3 @@
-include ':algorithm'
-include ':elevation'
 include ':banner'
 //include ':push'
 include ':materialdesign2'
