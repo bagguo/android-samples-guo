@@ -15,6 +15,7 @@ import com.example.android_lesson.ui.animation.AnimationActivity
 import com.example.android_lesson.communication.CommunicateActivity
 import com.example.android_lesson.dagger.DaggerActivity
 import com.example.android_lesson.databinding.ActivityMainBinding
+import com.example.android_lesson.db.sqllite.SqliteTestActivity
 import com.example.android_lesson.ui.dispatcheventdemo.DispatchEventDemoActivity
 import com.example.android_lesson.ui.input.SoftInputSampleActivity
 import com.example.android_lesson.ipc.IPCTestActivity
@@ -32,7 +33,7 @@ import com.example.android_lesson.webview.JavaJSCallActivity
 import com.example.android_lesson.webview.WebViewDemoActivity
 
 class MainActivity : AppCompatActivity() {
-    private val TAG = "MainActivity2"
+    private val TAG = "MainActivity"
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var tv: TextView
@@ -60,23 +61,12 @@ class MainActivity : AppCompatActivity() {
         binding.btnMemory.setOnClickListener { MemorySamplesActivity.start(this) }
         binding.btnMainAnimation.setOnClickListener { AnimationActivity.start(this) }
         binding.btnMainDispatchEvent.setOnClickListener { DispatchEventDemoActivity.start(this) }
-        binding.btnMainJumpAction.setOnClickListener {
-            Log.d(TAG, "onCreate: ====click")
-            val intent = Intent()
-            intent.action = "com.example.action.ui.moudle" //隐式跳转
-//            intent.setClassName("com.example.ui", "com.example.ui.UIMainActivity");
-//            intent.setComponent(new ComponentName("com.example.ui", "com.example.ui.UIMainActivity"));
-            if (intent.resolveActivity(packageManager) != null) {
-                Log.d(TAG, "onCreate: ========resolve activity")
-                startActivity(intent)
-                finish()
-            }
-        }
         binding.btnVideo.setOnClickListener { VideoDemoActivity.start(this) }
         binding.btnCommunication.setOnClickListener { CommunicateActivity.start(this) }
         binding.btnService.setOnClickListener { ServiceTestActivity.start(this) }
         binding.btnDagger.setOnClickListener { DaggerActivity.start(this) }
         binding.btnIpc.setOnClickListener { IPCTestActivity.start(this) }
+        binding.btnDb.setOnClickListener { SqliteTestActivity.start(this) }
         binding.btnWebView.setOnClickListener { WebViewDemoActivity.start(this) }
         binding.btnJavaJsCall.setOnClickListener { JavaJSCallActivity.start(this) }
         findViewById<View>(R.id.btn_wallet).setOnClickListener { WalletActivity.start(this@MainActivity) }

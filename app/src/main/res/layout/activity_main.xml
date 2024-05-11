@@ -82,13 +82,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_main_animation" />
 
-        <Button
-            android:id="@+id/btn_main_jump_action"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="隐式跳转activity"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_main_dispatch_event" />
 
         <Button
             android:id="@+id/btn_video"
@@ -96,7 +89,7 @@
             android:layout_height="wrap_content"
             android:text="VIDEO"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_main_jump_action" />
+            app:layout_constraintTop_toBottomOf="@id/btn_main_dispatch_event" />
 
         <Button
             android:id="@+id/btn_communication"
@@ -131,12 +124,20 @@
             app:layout_constraintTop_toBottomOf="@id/btn_dagger" />
 
         <Button
+            android:id="@+id/btn_db"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="db"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_ipc" />
+
+        <Button
             android:id="@+id/btn_web_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="web view"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_ipc" />
+            app:layout_constraintTop_toBottomOf="@id/btn_db" />
 
         <Button
             android:id="@+id/btn_java_js_call"
