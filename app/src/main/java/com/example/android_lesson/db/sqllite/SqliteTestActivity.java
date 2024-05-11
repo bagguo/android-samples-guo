@@ -57,7 +57,7 @@ public class SqliteTestActivity extends AppCompatActivity {
         String name = "Tony";
         String address = "皇后大道, insert time:" + System.currentTimeMillis();
         String insert = new StringBuilder()
-                .append("insert into SqliteDemo (name,address) values('")
+                .append("insert into User (name,address) values('")
                 .append(name).append("','").append(address).append("')")
                 .toString();
         //或是
@@ -66,7 +66,7 @@ public class SqliteTestActivity extends AppCompatActivity {
     }
 
     private void query(SQLiteDatabase db) {
-        String query = "select * from SqliteDemo";
+        String query = "select * from User";
         Cursor cursor = db.rawQuery(query, null);
 
         //拿到Cursor后获取数据
@@ -74,21 +74,21 @@ public class SqliteTestActivity extends AppCompatActivity {
     }
 
     private void getDataFromCursor(Cursor cursor) {
-        ArrayList<SqliteDemo> list = new ArrayList<>();
+        ArrayList<User> list = new ArrayList<>();
 
         while (cursor.moveToNext()) {
             long id = cursor.getLong(cursor.getColumnIndex("id"));
             String name = cursor.getString(cursor.getColumnIndex("name"));
             String address = cursor.getString(cursor.getColumnIndex("address"));
 
-            SqliteDemo sqliteDemo = new SqliteDemo();
-            sqliteDemo.id = id;
-            sqliteDemo.name = name;
-            sqliteDemo.address = address;
+            User user = new User();
+            user.id = id;
+            user.name = name;
+            user.address = address;
 
-            list.add(sqliteDemo);
+            list.add(user);
         }
-        for (SqliteDemo bean : list) {
+        for (User bean : list) {
             Log.w(TAG, "getDataFromCursor: =====list:"
                     + " id:" + bean.id
                     + " name:" + bean.name
