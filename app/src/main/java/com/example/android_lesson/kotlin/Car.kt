@@ -1,4 +1,4 @@
-package com.example.android_lesson.oop
+package com.example.android_lesson.kotlin
 
 class Car(val wheels: List<Wheel>) {
     var num:Int = 15

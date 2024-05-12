@@ -5,6 +5,10 @@ class RunWith {
 }
 
 fun main() {
+
+    /**
+     * with inline函数，把传入的对象作为接受者，在该函数内可使用this指代该对象
+     */
     val person: Person = Person("hzh", 23)
     val result = with(person) {
         age = 24
