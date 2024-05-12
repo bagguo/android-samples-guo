@@ -1,4 +1,4 @@
-package com.example.android_lesson.oop.delegation;
+package com.example.android_lesson.kotlin.delegation;
 
 /**
  * 委托：把自己要做的事委托给别人做
