@@ -1,6 +1,5 @@
 package com.example.android_lesson.java.queue.messagequeue;
 
-import javax.swing.plaf.synth.SynthLookAndFeel;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
