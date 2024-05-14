@@ -46,7 +46,11 @@ HD 钱包包含以树结构派生的密钥
 # Hierarchical Deterministic Wallets (BIP-32/BIP-44)
 
 # Seeds and Mnemonic Codes (BIP-39)
-
+# 创建公私钥
+ * Secp256k1创建公私钥
+ * priKey: 64
+ * pubKey: 128位 priKey椭圆曲线算法得到
+ * address: 40位 公钥keccak256公钥得到的hash值，取后40位
 # bip-44
 
 # Wallet Best Practices
