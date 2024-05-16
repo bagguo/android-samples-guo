@@ -1,4 +1,4 @@
-package com.example.android_lesson.java.algorithm.traverse_reverse;
+package com.example.android_lesson.algorithm.traverse_reverse;
 
 public class MyLinkedList {
 

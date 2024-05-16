@@ -1,4 +1,4 @@
-package com.example.android_lesson.java.algorithm.sort
+package com.example.android_lesson.algorithm.sort
 
 fun main() {
     bubbleSort()

@@ -1,4 +1,4 @@
-package com.example.android_lesson.java.algorithm.linked;
+package com.example.android_lesson.algorithm.linked;
 
 public class TraversalLinkedList {
 

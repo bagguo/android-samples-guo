@@ -1,8 +1,5 @@
 package com.example.android_lesson.kotlin.extensions
 
-class Test {
-}
-
 fun main() {
     "adb".hello("test hello")
 

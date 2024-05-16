@@ -1,4 +1,4 @@
-package com.example.android_lesson.java.algorithm.creat_traverse;
+package com.example.android_lesson.algorithm.creat_traverse;
 
 public class TestLinked {
     public static void main(String[] args) {  

@@ -1,4 +1,4 @@
-package com.example.android_lesson.java.algorithm.regex;
+package com.example.android_lesson.algorithm.regex;
 
 import java.util.*;
 import java.util.regex.Matcher;

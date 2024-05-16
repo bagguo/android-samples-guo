@@ -1,4 +1,4 @@
-package com.example.android_lesson.java.algorithm;
+package com.example.android_lesson.algorithm;
 
 import java.util.Arrays;
 import java.util.HashMap;
