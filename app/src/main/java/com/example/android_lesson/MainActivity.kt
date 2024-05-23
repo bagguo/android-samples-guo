@@ -1,7 +1,6 @@
 package com.example.android_lesson
 
 import android.Manifest
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -10,14 +9,13 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.alibaba.android.arouter.launcher.ARouter
 import com.example.android_lesson.async.AsyncActivity
-import com.example.android_lesson.ui.animation.AnimationActivity
 import com.example.android_lesson.communication.CommunicateActivity
+import com.example.android_lesson.constant.RouterTable
 import com.example.android_lesson.dagger.DaggerActivity
 import com.example.android_lesson.databinding.ActivityMainBinding
 import com.example.android_lesson.db.sqllite.SqliteTestActivity
-import com.example.android_lesson.ui.dispatcheventdemo.DispatchEventDemoActivity
-import com.example.android_lesson.ui.input.SoftInputSampleActivity
 import com.example.android_lesson.ipc.IPCTestActivity
 import com.example.android_lesson.jetpack.JetpackSampleActivity
 import com.example.android_lesson.memory.MemorySamplesActivity
@@ -26,11 +24,15 @@ import com.example.android_lesson.net.rxjava.RxJavaTest
 import com.example.android_lesson.net.rxjavaretrofit.RxjavaRetrofitTest
 import com.example.android_lesson.service.start.ServiceTestActivity
 import com.example.android_lesson.ui.UIEntryActivity
+import com.example.android_lesson.ui.animation.AnimationActivity
+import com.example.android_lesson.ui.dispatcheventdemo.DispatchEventDemoActivity
+import com.example.android_lesson.ui.input.SoftInputSampleActivity
 import com.example.android_lesson.ui.live.HeartFlowActivity
 import com.example.android_lesson.ui.video.VideoDemoActivity
 import com.example.android_lesson.wallet.WalletActivity
 import com.example.android_lesson.webview.JavaJSCallActivity
 import com.example.android_lesson.webview.WebViewDemoActivity
+
 
 class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivity"
@@ -53,7 +55,11 @@ class MainActivity : AppCompatActivity() {
         RetrofitTest().test()
         RxjavaRetrofitTest().test()
 
-        binding.btnAsync.setOnClickListener { AsyncActivity.start(this) }
+        binding.btnAsync.setOnClickListener {
+            ARouter.getInstance().build(RouterTable.MAIN.ASYNC_ENTRY)
+                .navigation()
+//            AsyncActivity.start(this)
+        }
         binding.btnJetpack.setOnClickListener { JetpackSampleActivity.start(this) }
         binding.btnLive.setOnClickListener { HeartFlowActivity.createIntent(this) }
         binding.btnSoftInput.setOnClickListener { SoftInputSampleActivity.start(this) }

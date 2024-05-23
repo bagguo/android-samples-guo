@@ -4,11 +4,12 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.android_lesson.R
-import com.example.android_lesson.R2.id.view
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.example.android_lesson.async.rxjava.RxjavaActivity
+import com.example.android_lesson.constant.RouterTable
 import com.example.android_lesson.databinding.ActivityAsyncBinding
 
+@Route(path = RouterTable.MAIN.ASYNC_ENTRY)
 class AsyncActivity : AppCompatActivity() {
 
     companion object {
