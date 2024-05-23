@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
+        <activity android:name=".ui.dialog.DialogSampleActivity"/>
         <activity
             android:name=".communication.intent.JumpActionActivity"
             android:exported="true">

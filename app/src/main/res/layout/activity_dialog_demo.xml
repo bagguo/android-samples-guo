@@ -3,14 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".dialog.DialogDemoActivity">
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_custom_alert_dialog"
+        android:id="@+id/btn_common_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="show custom alert dialog" />
+        android:text="common dialog" />
 
     <Button
         android:id="@+id/btn_show_custom_progress_dialog"
