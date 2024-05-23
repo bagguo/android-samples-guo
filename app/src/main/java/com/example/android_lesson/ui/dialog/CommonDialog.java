@@ -7,19 +7,18 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.android_lesson.R;
 
 @SuppressWarnings("unused")
-public class CustomAlertDialog extends Dialog {
+public class CommonDialog extends Dialog {
 
-    public CustomAlertDialog(Context context) {
+    public CommonDialog(Context context) {
         super(context);
     }
 
-    public CustomAlertDialog(Context context, int theme) {
+    public CommonDialog(Context context, int theme) {
         super(context, theme);
     }
 
@@ -103,9 +102,9 @@ public class CustomAlertDialog extends Dialog {
         }
 
 
-        public CustomAlertDialog create() {
-            final CustomAlertDialog dialog = new CustomAlertDialog(context, R.style.CustomAlertDialog);
-            View layout = LayoutInflater.from(context).inflate(R.layout.layout_custom_alert_dialog, null);
+        public CommonDialog create() {
+            final CommonDialog dialog = new CommonDialog(context, R.style.CommonAlertDialog);
+            View layout = LayoutInflater.from(context).inflate(R.layout.dialog_common, null);
             ViewGroup.LayoutParams params1 = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             dialog.addContentView(layout, params1);
 
@@ -115,9 +114,9 @@ public class CustomAlertDialog extends Dialog {
             TextView messageTv = layout.findViewById(R.id.dialog_message);
             messageTv.setText(message);
 
-            Button confirmBtn = layout.findViewById(R.id.btn_dialog_ok);
+            TextView confirmBtn = layout.findViewById(R.id.btn_dialog_ok);
             confirmBtn.setText(positiveButtonText);
-            Button cancelBtn = layout.findViewById(R.id.btn_dialog_cancel);
+            TextView cancelBtn = layout.findViewById(R.id.btn_dialog_cancel);
             cancelBtn.setText(negativeButtonText);
 
 

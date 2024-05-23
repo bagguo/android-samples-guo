@@ -11,7 +11,7 @@ import com.example.android_lesson.ui.chapter_3.ViewActivity
 import com.example.android_lesson.ui.circleprogress.CircleViewSampleActivity
 import com.example.android_lesson.ui.constraintlayout.ConstraintLayoutSampleActivity
 import com.example.android_lesson.ui.custom.CustomViewSimpleActivity
-import com.example.android_lesson.ui.dialog.DialogDemoActivity
+import com.example.android_lesson.ui.dialog.DialogSampleActivity
 import com.example.android_lesson.ui.dynamic.DynamicLayoutActivity
 import com.example.android_lesson.ui.gridview.GridViewDemoActivity
 import com.example.android_lesson.ui.listview.ListViewDemoActivity
@@ -94,7 +94,7 @@ class UIEntryActivity : AppCompatActivity() {
         findViewById<View>(R.id.btn_dialog).setOnClickListener { view: View? ->
             val intent = Intent(
                 this@UIEntryActivity,
-                DialogDemoActivity::class.java
+                DialogSampleActivity::class.java
             )
             startActivity(intent)
         }

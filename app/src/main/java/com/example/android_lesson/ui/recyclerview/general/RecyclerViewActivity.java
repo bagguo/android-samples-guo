@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -22,6 +24,7 @@ import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
@@ -68,6 +71,11 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         mRecyclerview = findViewById(R.id.recyclerview);
         mRecyclerview.setLayoutManager(new LinearLayoutManager(this));
+
+        DividerItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
+        itemDecoration.setDrawable(Objects.requireNonNull(AppCompatResources.getDrawable(this, R.drawable.inset_line_left88)));
+        mRecyclerview.addItemDecoration(itemDecoration);
+
         myAdapter = new MyAdapter(this, mList);
         mRecyclerview.setAdapter(myAdapter);
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_content"
     android:gravity="center_horizontal"
@@ -11,10 +11,11 @@
         android:id="@+id/dialog_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="14dp"
         android:text="title"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:id="@+id/dialog_content"
@@ -32,32 +33,46 @@
             android:textSize="15sp" />
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:alpha="0.08"
+
+        android:background="@color/black" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:orientation="horizontal">
 
-        <Button
+        <TextView
             android:id="@+id/btn_dialog_cancel"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:background="#00000000"
+            android:gravity="center"
+            android:paddingVertical="14dp"
             android:text="取消"
             android:textAllCaps="false"
             android:textColor="#888888"
             android:textSize="18sp" />
 
-        <Button
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:alpha="0.08"
+            android:background="@color/black" />
+
+        <TextView
             android:id="@+id/btn_dialog_ok"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
             android:layout_weight="1"
             android:background="#00000000"
+            android:gravity="center"
+            android:paddingVertical="14dp"
             android:text="确定"
             android:textAllCaps="false"
             android:textColor="#1885ff"
