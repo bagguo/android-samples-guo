@@ -19,12 +19,20 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="route login page"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv" />
+
+        <Button
             android:id="@+id/btn_async"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="async"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv" />
+            app:layout_constraintTop_toBottomOf="@id/loginBtn" />
 
         <Button
             android:id="@+id/btn_jetpack"

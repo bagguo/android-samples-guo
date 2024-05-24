@@ -1,4 +1,4 @@
-package com.example.base;
+package com.bagguo.login;
 
 import org.junit.Test;
 

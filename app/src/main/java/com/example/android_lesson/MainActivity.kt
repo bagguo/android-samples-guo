@@ -1,7 +1,6 @@
 package com.example.android_lesson
 
 import android.Manifest
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -10,6 +9,8 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.alibaba.android.arouter.launcher.ARouter
+import com.bagguo.lib_base.RouterTable2
 import com.example.android_lesson.async.AsyncActivity
 import com.example.android_lesson.ui.animation.AnimationActivity
 import com.example.android_lesson.communication.CommunicateActivity
@@ -53,7 +54,18 @@ class MainActivity : AppCompatActivity() {
         RetrofitTest().test()
         RxjavaRetrofitTest().test()
 
-        binding.btnAsync.setOnClickListener { AsyncActivity.start(this) }
+        binding.loginBtn.setOnClickListener {
+            ARouter.getInstance().build(RouterTable2.Login.LOGIN)
+                .navigation()
+        }
+
+        binding.btnAsync.setOnClickListener {
+            // TODO: 组件内router失败
+//            ARouter.getInstance().build(RouterTable2.Main.ASYNC)
+//                .navigation()
+
+            AsyncActivity.start(this)
+        }
         binding.btnJetpack.setOnClickListener { JetpackSampleActivity.start(this) }
         binding.btnLive.setOnClickListener { HeartFlowActivity.createIntent(this) }
         binding.btnSoftInput.setOnClickListener { SoftInputSampleActivity.start(this) }

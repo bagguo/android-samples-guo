@@ -1,7 +1,8 @@
 rootProject.name = "android-samples-guo"
 
 include ':app'
-include ':base'
+include ':lib_base'
+include ':lib_login'
 
 include ':banner'
 //include ':push'
