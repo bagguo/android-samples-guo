@@ -1,6 +1,6 @@
-package com.bagguo.lib_base;
+package com.bagguo.lib_base.constan;
 
-public class RouterTable2 {
+public class RouterTable {
     public static class Main{
         public static final String MAIN = "/main/entry";
         public static final String ASYNC = "/main/async";
