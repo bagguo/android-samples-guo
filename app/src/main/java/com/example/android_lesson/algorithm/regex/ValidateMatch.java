@@ -8,6 +8,16 @@ import java.util.regex.Pattern;
 public class ValidateMatch {
 
     /**
+     * 正则：全球手机号
+     *
+     * 最短：加拿大7位
+     * 最长：中国、日本等11位
+     * 美国手机号和电话号一样
+     */
+    private static final String REGEX_MOBILE_GLOBAL = "^\\d{7,11}$";
+    private static final Pattern PATTERN_REGEX_MOBILE_GLOBAL = Pattern.compile(REGEX_MOBILE_GLOBAL);
+
+    /**
      * 正则：手机号（简单）, 1字头＋10位数字即可.
      */
     private static final String REGEX_MOBILE_SIMPLE = "^[1]\\d{10}$";
@@ -103,6 +113,12 @@ public class ValidateMatch {
 
 
     //封装方法：
+    /**
+     * 验证手机号（全球）
+     */
+    public static boolean isMobileGlobal(String str) {
+        return isMatch(PATTERN_REGEX_MOBILE_GLOBAL, str);
+    }
 
     /**
      * 验证手机号（简单）
@@ -196,6 +212,13 @@ public class ValidateMatch {
         String tel = "0101234567";//pass
 //            String tel = "010 1234567";//pass
 //            String tel = "(010)1234567";//pass
+
+        //global phone NO
+        System.out.println("" + isMobileGlobal(""));
+        System.out.println("" + isMobileGlobal("123"));
+        System.out.println("" + isMobileGlobal("1234567"));
+        System.out.println("" + isMobileGlobal("12345678901"));
+        System.out.println("" + isMobileGlobal("123456789012"));
 
         //邮箱测试
 //                String mail = "jinlin@cib.com.cn"; //pass
