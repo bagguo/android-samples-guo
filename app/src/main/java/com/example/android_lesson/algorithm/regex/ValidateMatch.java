@@ -41,7 +41,8 @@ public class ValidateMatch {
      * 虚拟运营商：170
      * </p>
      */
-    private static final String REGEX_MOBILE_EXACT = "^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|(147))\\d{8}$";
+    private static final String REGEX_MOBILE_EXACT = "^((13[0-9])|(14[0-9])|(15[^4,\\D])|(16[0-9])|(17[0-9])|" +
+            "(18[0-9]))\\d{8}$";
     private static final Pattern PATTERN_REGEX_MOBILE_EXACT = Pattern.compile(REGEX_MOBILE_EXACT);
 
     /**
