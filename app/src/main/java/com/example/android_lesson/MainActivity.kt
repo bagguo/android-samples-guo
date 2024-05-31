@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.alibaba.android.arouter.launcher.ARouter
-import com.bagguo.lib_base.RouterTable2
+import com.bagguo.lib_base.constan.RouterTable
 import com.example.android_lesson.async.AsyncActivity
 import com.example.android_lesson.ui.animation.AnimationActivity
 import com.example.android_lesson.communication.CommunicateActivity
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         RxjavaRetrofitTest().test()
 
         binding.loginBtn.setOnClickListener {
-            ARouter.getInstance().build(RouterTable2.Login.LOGIN)
+            ARouter.getInstance().build(RouterTable.Login.LOGIN)
                 .navigation()
         }
 

@@ -5,9 +5,9 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.bagguo.lib_base.RouterTable2;
+import com.bagguo.lib_base.constan.RouterTable;
 
-@Route(path = RouterTable2.Login.LOGIN)
+@Route(path = RouterTable.Login.LOGIN)
 public class LoginActivity extends AppCompatActivity {
 
     @Override
