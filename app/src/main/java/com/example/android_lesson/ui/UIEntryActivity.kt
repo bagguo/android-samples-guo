@@ -17,7 +17,7 @@ import com.example.android_lesson.ui.gridview.GridViewDemoActivity
 import com.example.android_lesson.ui.listview.ListViewDemoActivity
 import com.example.android_lesson.ui.multitype.normal.NormalActivity
 import com.example.android_lesson.ui.recyclerview.RecyclerViewEntryActivity
-import com.example.android_lesson.ui.tablayout.TabLayoutDemoActivity
+import com.example.android_lesson.ui.tablayout.customtab.TabLayoutDemoActivity
 import com.example.android_lesson.ui.toolbar.ToolbarSimpleActivity
 
 class UIEntryActivity : AppCompatActivity() {

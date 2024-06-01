@@ -15,6 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
+        <activity
+            android:name=".ui.tablayout.TablayoutSimpleActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="design_width_in_dp"
@@ -23,13 +26,15 @@
             android:name="design_height_in_dp"
             android:value="812" />
 
-        <activity android:name=".ui.dialog.DialogSampleActivity"/>
+        <activity android:name=".ui.dialog.DialogSampleActivity" />
         <activity
             android:name=".communication.intent.JumpActionActivity"
             android:exported="true">
             <intent-filter>
-                <!--隐式跳转action-->
+
+                <!-- 隐式跳转action -->
                 <action android:name="com.example.action.ui.moudle" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -50,7 +55,7 @@
             android:exported="false" />
         <activity android:name=".ui.toolbar.ToolbarSimpleActivity" />
         <activity
-            android:name=".ui.tablayout.TabLayoutDemoActivity"
+            android:name=".ui.tablayout.customtab.TabLayoutDemoActivity"
             android:exported="false" />
         <activity
             android:name=".ui.recyclerview.general.RecyclerViewActivity"

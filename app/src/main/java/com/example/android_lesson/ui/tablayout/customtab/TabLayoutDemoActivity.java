@@ -1,4 +1,4 @@
-package com.example.android_lesson.ui.tablayout;
+package com.example.android_lesson.ui.tablayout.customtab;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
