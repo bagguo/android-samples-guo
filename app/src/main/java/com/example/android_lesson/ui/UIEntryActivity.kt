@@ -17,6 +17,8 @@ import com.example.android_lesson.ui.gridview.GridViewDemoActivity
 import com.example.android_lesson.ui.listview.ListViewDemoActivity
 import com.example.android_lesson.ui.multitype.normal.NormalActivity
 import com.example.android_lesson.ui.recyclerview.RecyclerViewEntryActivity
+import com.example.android_lesson.ui.tablayout.IndicatorActivity
+import com.example.android_lesson.ui.tablayout.TabLayoutSimpleActivity
 import com.example.android_lesson.ui.tablayout.customtab.TabLayoutDemoActivity
 import com.example.android_lesson.ui.toolbar.ToolbarSimpleActivity
 
@@ -67,12 +69,20 @@ class UIEntryActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        findViewById<View>(R.id.btn_tab_layout).setOnClickListener { view: View? ->
+        findViewById<View>(R.id.btn_tab_layout).setOnClickListener {
+            TabLayoutSimpleActivity.start(this@UIEntryActivity)
+        }
+
+        findViewById<View>(R.id.btn_tab_layout_custom).setOnClickListener { view: View? ->
             val intent = Intent(
                 this@UIEntryActivity,
                 TabLayoutDemoActivity::class.java
             )
             startActivity(intent)
+        }
+
+        findViewById<View>(R.id.btn_tab_indicator).setOnClickListener {
+            IndicatorActivity.start(this@UIEntryActivity)
         }
 
         findViewById<View>(R.id.btn_butter_knife).setOnClickListener { view: View? ->

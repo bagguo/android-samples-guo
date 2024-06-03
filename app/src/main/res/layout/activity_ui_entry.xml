@@ -38,6 +38,18 @@
         android:text="TabLayout" />
 
     <Button
+        android:id="@+id/btn_tab_layout_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TabLayout custom" />
+
+    <Button
+        android:id="@+id/btn_tab_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tab indicator" />
+
+    <Button
         android:id="@+id/btn_butter_knife"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,8 +88,7 @@
         android:layout_height="wrap_content"
         android:text="circle_view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_constraint_layout"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btn_constraint_layout" />
 
     <Button
         android:id="@+id/btn_custom_view_simple"
@@ -85,8 +96,7 @@
         android:layout_height="wrap_content"
         android:text="custom_view_simple"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_circle_view"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btn_circle_view" />
 
     <Button
         android:id="@+id/btn_view"
@@ -94,6 +104,5 @@
         android:layout_height="wrap_content"
         android:text="btn_view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_custom_view_simple"
-        />
+        app:layout_constraintTop_toBottomOf="@id/btn_custom_view_simple" />
 </androidx.appcompat.widget.LinearLayoutCompat>
