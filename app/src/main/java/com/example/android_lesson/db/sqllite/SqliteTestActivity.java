@@ -1,8 +1,6 @@
 package com.example.android_lesson.db.sqllite;
 
 
-
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -14,14 +12,16 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.android_lesson.R;
+import com.example.android_lesson.util.MMKVUtils;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class SqliteTestActivity extends AppCompatActivity {
 
     private static final String TAG = SqliteTestActivity.class.getSimpleName();
 
-    public static void start(Context context){
+    public static void start(Context context) {
         Intent intent = new Intent(context, SqliteTestActivity.class);
         context.startActivity(intent);
     }
@@ -51,6 +51,17 @@ public class SqliteTestActivity extends AppCompatActivity {
                 query(db);
             }
         });
+
+
+        // test mmkv
+        for (int i = 0; i < 100000; i++) {
+            MMKVUtils.getInstance().putString("key" + i, "value" + i);
+        }
+
+        for (int i = 0; i < 10000; i++) {
+            int k = new Random().nextInt() % 100000;
+            Log.d(TAG, "onCreate: "+k + " " + MMKVUtils.getInstance().getString("key" + k));
+        }
     }
 
     private void insert(SQLiteDatabase db) {

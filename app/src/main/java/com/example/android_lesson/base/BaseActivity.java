@@ -2,6 +2,7 @@ package com.example.android_lesson.base;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+        Log.d("TAG", "onCreate: ----" + this.getClass().getName());
         mContext = this;
         initData();
         initView();
