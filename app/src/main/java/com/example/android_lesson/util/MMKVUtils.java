@@ -11,15 +11,15 @@ public class MMKVUtils {
         return mKv.encode(key, value);
     }
 
-    public boolean putDouble(String key, double value) {
+    public static boolean putDouble(String key, double value) {
         return mKv.encode(key, value);
     }
 
-    public int getInt(String key) {
+    public static int getInt(String key) {
         return getInt(key, 0);
     }
 
-    public int getInt(String key, Integer defaultValue) {
+    public static int getInt(String key, Integer defaultValue) {
         return mKv.decodeInt(key, defaultValue);
     }
 
@@ -27,11 +27,11 @@ public class MMKVUtils {
         return mKv.encode(key, value);
     }
 
-    public boolean putByte(String key, byte[] value) {
+    public static boolean putByte(String key, byte[] value) {
         return mKv.encode(key, value);
     }
 
-    public byte[] getByte(String key) {
+    public static byte[] getByte(String key) {
         return mKv.decodeBytes(key);
     }
 
@@ -43,36 +43,36 @@ public class MMKVUtils {
         return mKv.decodeString(key, defaultValue);
     }
 
-    public Double getDouble(String key) {
+    public static Double getDouble(String key) {
         return mKv.decodeDouble(key);
     }
 
 
-    public boolean putBoolean(String key, boolean value) {
+    public static boolean putBoolean(String key, boolean value) {
         return mKv.encode(key, value);
     }
 
-    public boolean getBoolean(String key, boolean defaultV) {
+    public static boolean getBoolean(String key, boolean defaultV) {
         return mKv.decodeBool(key, defaultV);
     }
 
-    public long getLong(String key, long defaultValue) {
+    public static long getLong(String key, long defaultValue) {
         return mKv.decodeLong(key, defaultValue);
     }
 
-    public boolean putLong(String key, long value) {
+    public static boolean putLong(String key, long value) {
         return mKv.encode(key, value);
     }
 
-    public boolean putFloat(String key, float value) {
+    public static boolean putFloat(String key, float value) {
         return mKv.encode(key, value);
     }
 
-    public float getFloat(String key, float defaultValue) {
+    public static float getFloat(String key, float defaultValue) {
         return mKv.decodeFloat(key, defaultValue);
     }
 
-    public boolean clear(String key) {
+    public static boolean clear(String key) {
         return mKv.encode(key, "");
     }
 
