@@ -141,4 +141,6 @@ dependencies {
 
     implementation("org.web3j:core:4.8.7-android")
 
+    //tool
+    implementation("com.googlecode.libphonenumber:libphonenumber:8.13.38")
 }
