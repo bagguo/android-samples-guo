@@ -1,4 +1,4 @@
-package com.example.android_lesson.db.sqllite;
+package com.example.android_lesson.storage.db.sqllite;
 
 import java.io.Serializable;
 

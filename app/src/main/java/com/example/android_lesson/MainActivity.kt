@@ -16,7 +16,7 @@ import com.example.android_lesson.ui.animation.AnimationActivity
 import com.example.android_lesson.communication.CommunicateActivity
 import com.example.android_lesson.dagger.DaggerActivity
 import com.example.android_lesson.databinding.ActivityMainBinding
-import com.example.android_lesson.db.sqllite.SqliteTestActivity
+import com.example.android_lesson.storage.db.sqllite.SqliteTestActivity
 import com.example.android_lesson.ui.dispatcheventdemo.DispatchEventDemoActivity
 import com.example.android_lesson.ui.input.SoftInputSampleActivity
 import com.example.android_lesson.ipc.IPCTestActivity

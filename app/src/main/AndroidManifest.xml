@@ -41,7 +41,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".db.sqllite.SqliteTestActivity" />
+        <activity android:name=".storage.db.sqllite.SqliteTestActivity" />
         <activity
             android:name=".ui.recyclerview.headerfooter.FooterActivity"
             android:exported="false" />

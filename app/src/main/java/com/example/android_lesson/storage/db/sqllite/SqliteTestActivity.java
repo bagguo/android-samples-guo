@@ -1,4 +1,4 @@
-package com.example.android_lesson.db.sqllite;
+package com.example.android_lesson.storage.db.sqllite;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,10 +12,9 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.android_lesson.R;
-import com.example.android_lesson.util.MMKVUtils;
+import com.example.android_lesson.storage.mmkv.MMKVTest;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class SqliteTestActivity extends AppCompatActivity {
 
@@ -52,16 +51,7 @@ public class SqliteTestActivity extends AppCompatActivity {
             }
         });
 
-
-        // test mmkv
-        for (int i = 0; i < 100000; i++) {
-            MMKVUtils.getInstance().putString("key" + i, "value" + i);
-        }
-
-        for (int i = 0; i < 10000; i++) {
-            int k = new Random().nextInt() % 100000;
-            Log.d(TAG, "onCreate: "+k + " " + MMKVUtils.getInstance().getString("key" + k));
-        }
+        new MMKVTest().test();
     }
 
     private void insert(SQLiteDatabase db) {
