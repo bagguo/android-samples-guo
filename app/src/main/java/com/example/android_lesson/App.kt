@@ -3,6 +3,7 @@ package com.example.android_lesson
 import android.app.Application
 import android.content.Context
 import com.alibaba.android.arouter.launcher.ARouter
+import com.tencent.mmkv.MMKV
 
 class App : Application() {
 
@@ -14,6 +15,8 @@ class App : Application() {
         super.onCreate()
         mContext = this
 
+        // /data/user/0/package/files/mmkv
+        MMKV.initialize(this)
         initARouter()
     }
 
