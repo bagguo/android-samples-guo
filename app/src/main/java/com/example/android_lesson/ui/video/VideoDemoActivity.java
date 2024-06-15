@@ -83,6 +83,7 @@ public class VideoDemoActivity extends AppCompatActivity {
     }
 
     private void play() {
+        // push file to phone
         mFilePath = "/mnt/sdcard/phone.mp4";//getExternalFilesDir().getAbsolutePath();
         try {
             mMediaPlayer.reset();
