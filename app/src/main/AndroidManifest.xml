@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".jni.JNISampleActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.tablayout.IndicatorActivity"
             android:exported="false" />
         <activity

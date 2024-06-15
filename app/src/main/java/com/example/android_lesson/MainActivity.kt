@@ -21,6 +21,7 @@ import com.example.android_lesson.ui.dispatcheventdemo.DispatchEventDemoActivity
 import com.example.android_lesson.ui.input.SoftInputSampleActivity
 import com.example.android_lesson.ipc.IPCTestActivity
 import com.example.android_lesson.jetpack.JetpackSampleActivity
+import com.example.android_lesson.jni.JNISampleActivity
 import com.example.android_lesson.memory.MemorySamplesActivity
 import com.example.android_lesson.net.retrofit.RetrofitTest
 import com.example.android_lesson.net.rxjava.RxJavaTest
@@ -81,6 +82,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnDb.setOnClickListener { SqliteTestActivity.start(this) }
         binding.btnWebView.setOnClickListener { WebViewDemoActivity.start(this) }
         binding.btnJavaJsCall.setOnClickListener { JavaJSCallActivity.start(this) }
+        binding.btnJni.setOnClickListener { JNISampleActivity.start(this) }
         findViewById<View>(R.id.btn_wallet).setOnClickListener { WalletActivity.start(this@MainActivity) }
 
         yufa()

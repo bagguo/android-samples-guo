@@ -156,11 +156,19 @@
             app:layout_constraintTop_toBottomOf="@id/btn_web_view" />
 
         <Button
+            android:id="@+id/btn_jni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jni"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_java_js_call" />
+
+        <Button
             android:id="@+id/btn_wallet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="wallet"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_java_js_call" />
+            app:layout_constraintTop_toBottomOf="@id/btn_jni" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
