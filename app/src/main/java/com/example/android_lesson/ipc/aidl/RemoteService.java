@@ -13,12 +13,10 @@ public class RemoteService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        // TODO: Return the communication channel to the service.
-//        throw new UnsupportedOperationException("Not yet implemented");
         return new MyBinder();
     }
 
-    class MyBinder extends IMyAidlInterface.Stub {
+    static class MyBinder extends IMyAidlInterface.Stub {
 
         @Override
         public int add(int num1, int num2) throws RemoteException {
