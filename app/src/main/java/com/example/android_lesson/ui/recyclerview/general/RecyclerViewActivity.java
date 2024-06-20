@@ -131,7 +131,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
     }
 
     static class MyHandler extends Handler {
-        private WeakReference<RecyclerViewActivity> weakReference;
+        private final WeakReference<RecyclerViewActivity> weakReference;
 
         public MyHandler(RecyclerViewActivity activity) {
             this.weakReference = new WeakReference<>(activity);
