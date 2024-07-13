@@ -2,8 +2,8 @@ package com.example.android_lesson.async
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.bagguo.lib_base.constan.RouterTable
 import com.example.android_lesson.async.rxjava.RxjavaActivity
@@ -27,5 +27,7 @@ class AsyncActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnRxjava.setOnClickListener { RxjavaActivity.start(this) }
+        binding.threadLocalBtn.setOnClickListener { ThreadLocalSamples()
+            .testThreadLocal() }
     }
 }
