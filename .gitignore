@@ -1,13 +1,12 @@
 *.iml
 .gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+
 /.idea
+# /.idea/gradle.xml内配置了as可直接运行java main函数
+# git add -f .idea/gradle.xml //强制添加
+!/.idea/gradle.xml
+
 .DS_Store
 /build
 /captures
