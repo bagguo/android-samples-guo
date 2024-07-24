@@ -12,6 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="actionModeStyle">@style/CustomActionMode</item>
     </style>
 
     <!--    <style name="Theme.Androidsamplesdarren" parent="android:Theme.Material.Light.NoActionBar" >-->

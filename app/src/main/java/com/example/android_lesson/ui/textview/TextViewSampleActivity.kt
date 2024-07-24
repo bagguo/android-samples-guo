@@ -9,8 +9,13 @@ import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.text.style.URLSpan
 import android.text.util.Linkify
+import android.view.ActionMode
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.android_lesson.R
 import com.example.android_lesson.databinding.ActivityTextViewSampleBinding
 import com.example.android_lesson.ui.textview.autolink.CustomURLSpan
 import com.example.android_lesson.webview.CustomWebViewActivity
@@ -38,32 +43,93 @@ class TextViewSampleActivity : AppCompatActivity() {
          * 自定义 TextView.autoLink 的url/phone/email/map点击事件
          */
 
-        /**
-         * 方式1
-         */
-        //  该属性与link点击事件不冲突
-        binding.textView.setTextIsSelectable(true)
-        val text =
-            "Visit https://www.example.com uniswap.org for more information. 18305917501 bagguo23@gmail.com"
-        val spannableString = SpannableString(text)
-        //只能添加一次Linkify
-        Linkify.addLinks(spannableString, Linkify.WEB_URLS)
+        binding.apply {
+
+            /**
+             * 方式1
+             */
+            //  该属性与link点击事件不冲突
+            binding.textView.setTextIsSelectable(true)
+            val text =
+                "Visit https://www.example.com uniswap.org for more information. 18305917501 bagguo23@gmail.com"
+            val spannableString = SpannableString(text)
+            //只能添加一次Linkify
+            Linkify.addLinks(spannableString, Linkify.WEB_URLS)
 //        Linkify.addLinks(spannableString, Linkify.PHONE_NUMBERS)
 //        Linkify.addLinks(spannableString, Linkify.EMAIL_ADDRESSES)
-        val spans = spannableString.getSpans(0, spannableString.length, URLSpan::class.java)
+            val spans = spannableString.getSpans(0, spannableString.length, URLSpan::class.java)
 
-        for (span in spans) {
-            val start = spannableString.getSpanStart(span)
-            val end = spannableString.getSpanEnd(span)
-            val flags = spannableString.getSpanFlags(span)
-            span.underlying
-            spannableString.removeSpan(span)
-            spannableString.setSpan(CustomURLSpan(span.url, this), start, end, flags)
+            for (span in spans) {
+                val start = spannableString.getSpanStart(span)
+                val end = spannableString.getSpanEnd(span)
+                val flags = spannableString.getSpanFlags(span)
+                span.underlying
+                spannableString.removeSpan(span)
+                spannableString.setSpan(
+                    CustomURLSpan(span.url, this@TextViewSampleActivity),
+                    start,
+                    end,
+                    flags
+                )
+            }
+
+            binding.textView.text = spannableString
+            binding.textView.movementMethod = LinkMovementMethod.getInstance()
+
+
+            /**
+             * TextView选中弹出的菜单中加入自定义菜单，不能替换系统menu
+             */
+            textView.customSelectionActionModeCallback = object : ActionMode.Callback {
+                override fun onCreateActionMode(mode: ActionMode?, menu: Menu?): Boolean {
+                    // 清空菜单
+                    menu?.clear()
+                    // 加载自定义菜单项
+                    mode?.menuInflater?.inflate(R.menu.custom_selection_menu, menu)
+                    return true
+                }
+
+                override fun onPrepareActionMode(mode: ActionMode?, menu: Menu?): Boolean {
+                    return false
+                }
+
+                override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
+                    when (item?.itemId) {
+                        R.id.menu_copy -> {
+                            val selectedText = textView.text.subSequence(
+                                textView.selectionStart,
+                                textView.selectionEnd
+                            ).toString()
+                            Toast.makeText(
+                                this@TextViewSampleActivity,
+                                selectedText,
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            // 处理复制逻辑，例如将文本复制到剪贴板
+                            return true
+                        }
+
+                        R.id.menu_share -> {
+                            val selectedText = textView.text.subSequence(
+                                textView.selectionStart,
+                                textView.selectionEnd
+                            ).toString()
+                            Toast.makeText(
+                                this@TextViewSampleActivity,
+                                selectedText,
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            // 处理分享逻辑，例如通过Intent分享文本
+                            return true
+                        }
+
+                        else -> return false
+                    }
+                }
+
+                override fun onDestroyActionMode(mode: ActionMode?) {}
+            }
         }
-
-        binding.textView.text = spannableString
-        binding.textView.movementMethod = LinkMovementMethod.getInstance()
-
         /**
          * 方式2
          */

@@ -96,4 +96,20 @@
         <item name="android:windowEnterAnimation">@anim/bottom_in</item>
         <item name="android:windowExitAnimation">@anim/bottom_out</item>
     </style>
+
+
+    <style name="CustomActionMode" parent="Widget.AppCompat.ActionMode">
+        <item name="background">@color/color_light_blue</item> <!-- 修改背景颜色 -->
+        <item name="titleTextStyle">@style/CustomActionModeTitleText</item>
+        <item name="subtitleTextStyle">@style/CustomActionModeSubtitleText</item>
+<!--        <item name="closeItemBackground">@android:color/transparent</item> &lt;!&ndash; 设置背景透明 &ndash;&gt;-->
+    </style>
+
+    <style name="CustomActionModeTitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item> <!-- 修改标题文字颜色 -->
+    </style>
+
+    <style name="CustomActionModeSubtitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">#FFFFFF</item> <!-- 修改子标题文字颜色 -->
+    </style>
 </resources>
