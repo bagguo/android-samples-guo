@@ -109,6 +109,12 @@
             android:text="btn_view"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_custom_view_simple" />
+
+        <Button
+            android:id="@+id/btnTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="textview"/>
     </LinearLayout>
 
 </ScrollView>

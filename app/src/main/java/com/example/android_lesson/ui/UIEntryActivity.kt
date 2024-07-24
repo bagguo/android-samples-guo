@@ -20,6 +20,7 @@ import com.example.android_lesson.ui.recyclerview.RecyclerViewEntryActivity
 import com.example.android_lesson.ui.tablayout.IndicatorActivity
 import com.example.android_lesson.ui.tablayout.TabLayoutSimpleActivity
 import com.example.android_lesson.ui.tablayout.customtab.TabLayoutDemoActivity
+import com.example.android_lesson.ui.textview.TextViewSampleActivity
 import com.example.android_lesson.ui.toolbar.ToolbarSimpleActivity
 
 class UIEntryActivity : AppCompatActivity() {
@@ -116,6 +117,8 @@ class UIEntryActivity : AppCompatActivity() {
             )
             startActivity(intent)
         }
+
+        mBinding.btnTextView.setOnClickListener { TextViewSampleActivity.start(this) }
 
     }
 }

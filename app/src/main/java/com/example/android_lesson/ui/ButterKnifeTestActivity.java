@@ -22,8 +22,9 @@ public class ButterKnifeTestActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R2.id.button) void click(){
-        Log.i("aaaaaaaaaa","点击了butter knife 绑定的view");
+    @OnClick(R2.id.button)
+    void click() {
+        Log.i("aaaaaaaaaa", "点击了butter knife 绑定的view");
         Toast.makeText(this, "点击了butter knife 绑定的view", Toast.LENGTH_SHORT).show();
     }
 }

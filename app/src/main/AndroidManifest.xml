@@ -16,6 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".webview.CustomWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.textview.TextViewSampleActivity"
+            android:exported="false" />
+        <activity
             android:name=".jni.JNISampleActivity"
             android:exported="false" />
         <activity
