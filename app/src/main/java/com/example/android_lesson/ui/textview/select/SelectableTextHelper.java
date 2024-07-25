@@ -25,7 +25,7 @@ import com.example.android_lesson.R;
  * Created by Jaeger on 16/8/30.
  *
  * Email: chjie.jaeger@gmail.com
- * GitHub: https://github.com/laobie
+ * GitHub: https://github.com/laobie/SelectableTextHelper
  */
 public class SelectableTextHelper {
 
@@ -44,6 +44,7 @@ public class SelectableTextHelper {
 
     private int mTouchX;
     private int mTouchY;
+    private int mTextViewMarginStart = 0; // textView的marginStart值
 
     private int mSelectedColor;
     private int mCursorHandleColor;
@@ -69,6 +70,9 @@ public class SelectableTextHelper {
         mTextView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
+                int[] location = new int[2];
+                mTextView.getLocationInWindow(location);
+                mTextViewMarginStart = location[0];
                 showSelectView(mTouchX, mTouchY);
                 return true;
             }
@@ -377,7 +381,8 @@ public class SelectableTextHelper {
                     mOperateWindow.dismiss();
                     int rawX = (int) event.getRawX();
                     int rawY = (int) event.getRawY();
-                    update(rawX + mAdjustX - mWidth, rawY + mAdjustY - mHeight);
+                    //TextView左边距有值时，减去该值
+                    update(rawX + mAdjustX - mWidth - mTextViewMarginStart, rawY + mAdjustY - mHeight);
                     break;
             }
             return true;
