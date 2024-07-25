@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".ui.textview.select.TextSelectSampleActivity"
+            android:exported="false" />
+        <activity
             android:name=".webview.CustomWebViewActivity"
             android:exported="false" />
         <activity
@@ -30,13 +33,6 @@
         <activity
             android:name=".ui.tablayout.TabLayoutSimpleActivity"
             android:exported="false" />
-
-        <meta-data
-            android:name="design_width_in_dp"
-            android:value="375" />
-        <meta-data
-            android:name="design_height_in_dp"
-            android:value="812" />
 
         <activity android:name=".ui.dialog.DialogSampleActivity" />
         <activity
@@ -190,10 +186,6 @@
             android:name=".service.start.ServiceTestActivity"
             android:exported="true" />
 
-        <service
-            android:name=".service.bind.MyBindService"
-            android:enabled="true" />
-
         <activity android:name=".communication.eventbus.BActivity" />
         <activity android:name=".communication.eventbus.AActivity" />
         <activity android:name=".communication.CommunicateActivity" />
@@ -216,6 +208,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".service.bind.MyBindService"
+            android:enabled="true" />
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="812" />
     </application>
 
 </manifest>

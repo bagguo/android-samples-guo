@@ -19,7 +19,13 @@
     <color name="hard_color">#48495f</color>
     <color name="clickspan_color">#00ddb6</color>
     <color name="dull_blue">#3B4BBF</color>
-
+    <color name="colorPrimary">#6e6e6e</color>
+    <color name="colorPrimaryDark">#505050</color>
+    <color name="gray">#c1c1c1</color>
+    <color name="text_gray">#888888</color>
+    <color name="text_dark">#454545</color>
+    <color name="cursor_handle_color">#0d7aff</color>
+    <color name="selected_blue">#afe1f4</color>
     <!-- 透明背景色-->
     <color name="transparent" tools:ignore="MissingDefaultResource">#00000000</color>
 </resources>
