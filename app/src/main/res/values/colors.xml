@@ -26,6 +26,10 @@
     <color name="text_dark">#454545</color>
     <color name="cursor_handle_color">#0d7aff</color>
     <color name="selected_blue">#afe1f4</color>
+    <color name="color_text_select_cursor">#95336DF4</color>
+
     <!-- 透明背景色-->
     <color name="transparent" tools:ignore="MissingDefaultResource">#00000000</color>
+    <color name="colorAccentTransparent">#4D39A6FF</color>
+
 </resources>

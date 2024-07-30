@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".ui.textview.select.im.MsgListTextSelectActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.textview.select.TextSelectSampleActivity"
             android:exported="false" />
         <activity
@@ -33,7 +36,6 @@
         <activity
             android:name=".ui.tablayout.TabLayoutSimpleActivity"
             android:exported="false" />
-
         <activity android:name=".ui.dialog.DialogSampleActivity" />
         <activity
             android:name=".communication.intent.JumpActionActivity"
@@ -185,7 +187,6 @@
         <activity
             android:name=".service.start.ServiceTestActivity"
             android:exported="true" />
-
         <activity android:name=".communication.eventbus.BActivity" />
         <activity android:name=".communication.eventbus.AActivity" />
         <activity android:name=".communication.CommunicateActivity" />

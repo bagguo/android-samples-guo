@@ -19,6 +19,7 @@ import com.example.android_lesson.R
 import com.example.android_lesson.databinding.ActivityTextViewSampleBinding
 import com.example.android_lesson.ui.textview.autolink.CustomURLSpan
 import com.example.android_lesson.ui.textview.select.TextSelectSampleActivity
+import com.example.android_lesson.ui.textview.select.im.MsgListTextSelectActivity
 import com.example.android_lesson.webview.CustomWebViewActivity
 
 class TextViewSampleActivity : AppCompatActivity() {
@@ -48,6 +49,10 @@ class TextViewSampleActivity : AppCompatActivity() {
 
             btnTextSelect.setOnClickListener {
                 TextSelectSampleActivity.start(this@TextViewSampleActivity)
+            }
+
+            btnTextSelect2.setOnClickListener {
+                MsgListTextSelectActivity.start(this@TextViewSampleActivity)
             }
             /**
              * 方式1

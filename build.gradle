@@ -22,6 +22,8 @@ allprojects {
         mavenCentral()
         maven { url 'https://repo1.maven.org/maven2/' }
         maven { url "https://jitpack.io" }
+        // 富文本 https://github.com/zzhoujay/RichText 需要jcenter
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
     }
 }
 
