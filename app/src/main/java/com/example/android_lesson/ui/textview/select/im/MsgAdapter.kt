@@ -245,25 +245,31 @@ class MsgAdapter(private val mContext: Context, private val mList: List<MsgBean>
                 .setSelectTextLength(2)// 首次选中文本的长度 default 2
                 .setPopDelay(100)// 弹窗延迟时间 default 100毫秒
                 .setPopAnimationStyle(R.style.Base_Animation_AppCompat_Dialog)// 弹窗动画 default 无动画
-                .addItem(R.drawable.ic_msg_copy,
+                .addItem(
+                    R.drawable.ic_msg_copy,
                     R.string.copy,
                     object : SelectTextHelper.Builder.onSeparateItemClickListener {
                         override fun onClick() {
                             copy(mSelectableTextHelper, selectedText)
                         }
-                    }).addItem(R.drawable.ic_msg_select_all,
+                    })
+                .addItem(
+                    R.drawable.ic_msg_select_all,
                     R.string.select_all,
                     object : SelectTextHelper.Builder.onSeparateItemClickListener {
                         override fun onClick() {
                             selectAll()
                         }
-                    }).addItem(R.drawable.ic_msg_forward,
+                    })
+                .addItem(
+                    R.drawable.ic_msg_forward,
                     R.string.forward,
                     object : SelectTextHelper.Builder.onSeparateItemClickListener {
                         override fun onClick() {
                             forward()
                         }
-                    }).setPopSpanCount(5) // 设置操作弹窗每行个数 default 5
+                    })
+                .setPopSpanCount(5) // 设置操作弹窗每行个数 default 5
                 .setPopStyle(
                     R.drawable.shape_color_4c4c4c_radius_8 /*操作弹窗背*/,
                     R.drawable.ic_arrow /*箭头图片*/
