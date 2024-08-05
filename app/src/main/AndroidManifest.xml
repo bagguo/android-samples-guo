@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".ui.textview.classifier.TextClassifierActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.textview.select.im.MsgListTextSelectActivity"
             android:exported="false" />
         <activity

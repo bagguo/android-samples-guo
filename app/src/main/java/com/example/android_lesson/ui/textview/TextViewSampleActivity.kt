@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.android_lesson.R
 import com.example.android_lesson.databinding.ActivityTextViewSampleBinding
 import com.example.android_lesson.ui.textview.autolink.CustomURLSpan
+import com.example.android_lesson.ui.textview.classifier.TextClassifierActivity
 import com.example.android_lesson.ui.textview.select.TextSelectSampleActivity
 import com.example.android_lesson.ui.textview.select.im.MsgListTextSelectActivity
 import com.example.android_lesson.webview.CustomWebViewActivity
@@ -54,6 +55,11 @@ class TextViewSampleActivity : AppCompatActivity() {
             btnTextSelect2.setOnClickListener {
                 MsgListTextSelectActivity.start(this@TextViewSampleActivity)
             }
+
+            btnTextClassifier.setOnClickListener {
+                TextClassifierActivity.start(this@TextViewSampleActivity)
+            }
+
             /**
              * 方式1
              */
