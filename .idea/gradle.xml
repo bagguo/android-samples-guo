@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/lib_base" />
             <option value="$PROJECT_DIR$/lib_login" />
             <option value="$PROJECT_DIR$/materialdesign2" />
+            <option value="$PROJECT_DIR$/react_native_sample" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

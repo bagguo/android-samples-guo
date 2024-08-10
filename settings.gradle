@@ -8,3 +8,4 @@ include ':banner'
 //include ':push'
 include ':materialdesign2'
 
+include ':react_native_sample'
