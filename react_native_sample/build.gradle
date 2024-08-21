@@ -30,9 +30,24 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+
+        pickFirst 'lib/x86/libfbjni.so'
+        pickFirst 'lib/x86_64/libfbjni.so'
+        pickFirst 'lib/armeabi-v7a/libfbjni.so'
+        pickFirst 'lib/arm64-v8a/libfbjni.so'
+
+    }
 }
 
 dependencies {
+
+    api fileTree(dir: 'libs', include: ['*.jar','*.aar'])
 
     implementation 'androidx.core:core-ktx:1.13.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -42,4 +57,27 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
+
+    /******************************** React Native 相关依赖 ********************************/
+    // The version of react-native is set by the React Native Gradle Plugin
+    debugApi("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
+    api("com.facebook.react:react-android:0.72.6")
+    debugApi("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
+        exclude group:'com.squareup.okhttp3', module:'okhttp'
+    }
+
+    debugApi("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}")
+    if (hermesEnabled.toBoolean()) {
+        api("com.facebook.react:hermes-android:0.72.6")
+    } else {
+        api 'org.webkit:android-jsc:+'
+    }
+
+//    api(name: 'rn_wallet-release', ext: 'aar')
+    api 'com.koushikdutta.async:androidasync:2.1.6'
+
+    // RN工程依赖rn-videoview依赖scalablevideoview，却没把scalablevideoview打进来，给rn-videoview做补丁
+    api "com.yqritc:android-scalablevideoview:1.0.4"
+    /******************************** React Native 相关依赖 ********************************/
 }
