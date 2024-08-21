@@ -14,12 +14,13 @@ import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
 import java.security.Provider;
 import java.security.Security;
+import java.util.Objects;
 
 public class WalletActivity extends AppCompatActivity {
 
     private static final String TAG = WalletActivity.class.getSimpleName();
 
-    public static void start(Context context){
+    public static void start(Context context) {
         Intent intent = new Intent(context, WalletActivity.class);
         context.startActivity(intent);
     }
@@ -50,10 +51,11 @@ public class WalletActivity extends AppCompatActivity {
                 privateKeyTv.setText(ETHWalletHelper.getInstance().getPrivateKey())
         );
 
-        findViewById(R.id.btn_connect_ganache).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn_connect_rpc).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAddress = ETHWalletHelper.getInstance().connectWallet(ETHWalletHelper.GANACHE_SERVER_URL,
+                mAddress = ETHWalletHelper.getInstance().connectWallet(
+                        ETHWalletHelper.RPC_SEPOLIA,
                         ETHWalletHelper.PASSWORD,
                         ETHWalletHelper.MNEMONIC);
             }
@@ -95,6 +97,15 @@ public class WalletActivity extends AppCompatActivity {
                 }).start();
             }
         });
+
+        findViewById(R.id.btnGetTxStatus).setOnClickListener(view -> new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String hash = "0x9a7968a806025d32c9126c7cb652513346dd041289e6b3ed4104115c422b6e1c";
+
+                int balance = Objects.requireNonNull(ETHWalletHelper.getInstance()).getTxStatus(hash);
+            }
+        }).start());
 
         findViewById(R.id.btn_import_wallet).setOnClickListener(new View.OnClickListener() {
             @Override
