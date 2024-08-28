@@ -87,6 +87,7 @@ dependencies {
 
     //ui
     implementation 'com.jakewharton:butterknife:10.1.0'
+    implementation 'androidx.activity:activity:1.9.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
     implementation(files("libs/nineoldandroids.jar"))
     implementation 'me.drakeet.multitype:multitype:3.4.4'

@@ -14,6 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".activity.task.Activity4"
+            android:exported="false"
+            android:taskAffinity="com.darren.affinity.sample" />
+        <activity
+            android:name=".activity.task.Activity3"
+            android:exported="true"
+            android:taskAffinity="com.darren.affinity.sample">
+            <!-- for test  -->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+        <activity
             android:name=".activity.StartActivity"
             android:theme="@style/StartActivityTheme">
             <intent-filter>
