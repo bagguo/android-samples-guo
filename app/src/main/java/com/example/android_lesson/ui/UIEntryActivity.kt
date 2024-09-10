@@ -15,8 +15,10 @@ import com.example.android_lesson.ui.dialog.DialogSampleActivity
 import com.example.android_lesson.ui.dynamic.DynamicLayoutActivity
 import com.example.android_lesson.ui.gridview.GridViewDemoActivity
 import com.example.android_lesson.ui.listview.ListViewDemoActivity
+import com.example.android_lesson.ui.loading.LoadingActivity
 import com.example.android_lesson.ui.multitype.normal.NormalActivity
 import com.example.android_lesson.ui.recyclerview.RecyclerViewEntryActivity
+import com.example.android_lesson.ui.sidebar.SideBarActivity
 import com.example.android_lesson.ui.tablayout.IndicatorActivity
 import com.example.android_lesson.ui.tablayout.TabLayoutSimpleActivity
 import com.example.android_lesson.ui.tablayout.customtab.TabLayoutDemoActivity
@@ -119,6 +121,8 @@ class UIEntryActivity : AppCompatActivity() {
         }
 
         mBinding.btnTextView.setOnClickListener { TextViewSampleActivity.start(this) }
+        mBinding.btnLoading.setOnClickListener { LoadingActivity.start(this) }
+        mBinding.btnSideBar.setOnClickListener { SideBarActivity.start(this) }
 
     }
 }
