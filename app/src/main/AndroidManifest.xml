@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".ui.textview.linehead.TextViewLineHeadActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.sidebar.SideBarActivity"
             android:exported="false" />
         <activity

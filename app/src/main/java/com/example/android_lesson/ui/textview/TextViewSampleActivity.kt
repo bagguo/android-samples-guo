@@ -19,6 +19,7 @@ import com.example.android_lesson.R
 import com.example.android_lesson.databinding.ActivityTextViewSampleBinding
 import com.example.android_lesson.ui.textview.autolink.CustomURLSpan
 import com.example.android_lesson.ui.textview.classifier.TextClassifierActivity
+import com.example.android_lesson.ui.textview.linehead.TextViewLineHeadActivity
 import com.example.android_lesson.ui.textview.select.TextSelectSampleActivity
 import com.example.android_lesson.ui.textview.select.im.MsgListTextSelectActivity
 import com.example.android_lesson.webview.CustomWebViewActivity
@@ -47,6 +48,9 @@ class TextViewSampleActivity : AppCompatActivity() {
          */
 
         binding.apply {
+            btnTextLineHead.setOnClickListener {
+                TextViewLineHeadActivity.start(this@TextViewSampleActivity)
+            }
 
             btnTextSelect.setOnClickListener {
                 TextSelectSampleActivity.start(this@TextViewSampleActivity)

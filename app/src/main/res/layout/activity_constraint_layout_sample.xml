@@ -70,4 +70,33 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvCircle"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:text="Tom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_ai_bot" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我在Tom右上角"
+        app:layout_constraintCircle="@id/tvCircle"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_ai_bot" />
+
+    <TextView
+        android:id="@+id/tvBias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="百分比偏移"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCircle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
