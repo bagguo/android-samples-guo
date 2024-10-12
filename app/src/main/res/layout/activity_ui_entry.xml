@@ -115,6 +115,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="textview"/>
+
+        <Button
+            android:id="@+id/btnLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="loading"/>
+
+        <Button
+            android:id="@+id/btnSideBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Side index Bar"/>
     </LinearLayout>
 
 </ScrollView>
