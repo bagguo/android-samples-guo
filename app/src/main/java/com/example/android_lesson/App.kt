@@ -1,5 +1,6 @@
 package com.example.android_lesson
 
+import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 import com.alibaba.android.arouter.launcher.ARouter
@@ -8,6 +9,7 @@ import com.tencent.mmkv.MMKV
 class App : Application() {
 
     companion object {
+        @SuppressLint("StaticFieldLeak")
         lateinit var mContext: Context
     }
 

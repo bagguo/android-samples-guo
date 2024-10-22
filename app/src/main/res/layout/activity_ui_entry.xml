@@ -127,6 +127,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Side index Bar"/>
+
+        <Button
+            android:id="@+id/btnSystemShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="call System Share"/>
     </LinearLayout>
 
 </ScrollView>

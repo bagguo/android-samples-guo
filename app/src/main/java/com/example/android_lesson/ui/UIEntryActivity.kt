@@ -24,6 +24,7 @@ import com.example.android_lesson.ui.tablayout.TabLayoutSimpleActivity
 import com.example.android_lesson.ui.tablayout.customtab.TabLayoutDemoActivity
 import com.example.android_lesson.ui.textview.TextViewSampleActivity
 import com.example.android_lesson.ui.toolbar.ToolbarSimpleActivity
+import com.example.android_lesson.util.callSystemShare
 
 class UIEntryActivity : AppCompatActivity() {
     companion object {
@@ -42,11 +43,16 @@ class UIEntryActivity : AppCompatActivity() {
         mBinding = ActivityUiEntryBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-        mBinding.btnRecyclerView.setOnClickListener { RecyclerViewEntryActivity.start(this) }
-        mBinding.btnConstraintLayout.setOnClickListener { ConstraintLayoutSampleActivity.start(this) }
-        mBinding.btnCircleView.setOnClickListener { CircleViewSampleActivity.start(this) }
-        mBinding.btnCustomViewSimple.setOnClickListener { CustomViewSimpleActivity.start(this) }
-        mBinding.btnView.setOnClickListener { ViewActivity.start(this) }
+        mBinding.initView()
+
+    }
+
+    private fun ActivityUiEntryBinding.initView() {
+        btnRecyclerView.setOnClickListener { RecyclerViewEntryActivity.start(this@UIEntryActivity) }
+        btnConstraintLayout.setOnClickListener { ConstraintLayoutSampleActivity.start(this@UIEntryActivity) }
+        btnCircleView.setOnClickListener { CircleViewSampleActivity.start(this@UIEntryActivity) }
+        btnCustomViewSimple.setOnClickListener { CustomViewSimpleActivity.start(this@UIEntryActivity) }
+        btnView.setOnClickListener { ViewActivity.start(this@UIEntryActivity) }
 
         findViewById<View>(R.id.toolbar_simple).setOnClickListener { view: View? ->
             val intent = Intent(
@@ -120,9 +126,12 @@ class UIEntryActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        mBinding.btnTextView.setOnClickListener { TextViewSampleActivity.start(this) }
-        mBinding.btnLoading.setOnClickListener { LoadingActivity.start(this) }
-        mBinding.btnSideBar.setOnClickListener { SideBarActivity.start(this) }
+        btnTextView.setOnClickListener { TextViewSampleActivity.start(this@UIEntryActivity) }
+        btnLoading.setOnClickListener { LoadingActivity.start(this@UIEntryActivity) }
+        btnSideBar.setOnClickListener { SideBarActivity.start(this@UIEntryActivity) }
 
+        btnSystemShare.setOnClickListener {
+            "www.baidu.com".callSystemShare(this@UIEntryActivity)
+        }
     }
 }
