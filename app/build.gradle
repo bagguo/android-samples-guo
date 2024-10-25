@@ -96,6 +96,8 @@ dependencies {
 //    implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.4"
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     implementation 'com.zzhoujay.richtext:richtext:3.0.8'
+    implementation 'com.github.princekin-f:EasyFloat:2.0.4'
+
 
     //=====
     implementation 'com.squareup.okhttp3:logging-interceptor:4.7.0'

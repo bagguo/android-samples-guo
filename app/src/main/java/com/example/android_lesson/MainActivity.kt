@@ -28,6 +28,7 @@ import com.example.android_lesson.net.rxjava.RxJavaTest
 import com.example.android_lesson.net.rxjavaretrofit.RxjavaRetrofitTest
 import com.example.android_lesson.service.start.ServiceTestActivity
 import com.example.android_lesson.ui.UIEntryActivity
+import com.example.android_lesson.debug.DebugToolsManager
 import com.example.android_lesson.ui.live.HeartFlowActivity
 import com.example.android_lesson.ui.video.VideoDemoActivity
 import com.example.android_lesson.wallet.WalletActivity
@@ -89,6 +90,7 @@ class MainActivity : AppCompatActivity() {
 
         hanshu()
 
+        setParams()
     }
 
     override fun onStart() {
@@ -125,6 +127,10 @@ class MainActivity : AppCompatActivity() {
         super.onWindowFocusChanged(hasFocus)
         //启动优化－抓取TraceView结束点
 //        Debug.stopMethodTracing();
+    }
+
+    private fun setParams() {
+        DebugToolsManager.createDebugFloat(this)
     }
 
     //let、with、run、apply、also函数
