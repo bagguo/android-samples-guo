@@ -16,6 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".ui.immersive.ImmersiveStatusBarActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="true" >
+        </activity>
+        <activity
             android:name=".ui.textview.linehead.TextViewLineHeadActivity"
             android:exported="false" />
         <activity
@@ -156,11 +161,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".ui.input.SoftInputSampleActivityJava"
-            android:configChanges="orientation|screenSize"
-            android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.input.SoftInputSampleActivity"
             android:configChanges="orientation|screenSize"

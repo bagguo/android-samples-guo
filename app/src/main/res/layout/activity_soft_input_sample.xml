@@ -8,28 +8,33 @@
     android:isScrollContainer="true"
     tools:context=".ui.input.SoftInputSampleActivity">
 
-    <RelativeLayout
+    <!--fillViewport 充满视窗-->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="iuooldc,toooo" />
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="iuooldc,dlkcpokcpold" />
-
-        <EditText
-            android:id="@+id/thread_et"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:hint="input" />
-    </RelativeLayout>
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iuooldc,toooo" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="iuooldc,dlkcpokcpold" />
 
+            <EditText
+                android:id="@+id/thread_et"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:hint="input" />
+        </RelativeLayout>
+    </ScrollView>
 </FrameLayout>

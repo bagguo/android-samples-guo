@@ -114,25 +114,37 @@
             android:id="@+id/btnTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="textview"/>
+            android:text="textview" />
 
         <Button
             android:id="@+id/btnLoading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="loading"/>
+            android:text="loading" />
 
         <Button
             android:id="@+id/btnSideBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Side index Bar"/>
+            android:text="Side index Bar" />
+
+        <Button
+            android:id="@+id/btn_soft_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="soft input" />
+
+        <Button
+            android:id="@+id/btnImmersiveStatusBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ImmersiveStatusBar" />
 
         <Button
             android:id="@+id/btnSystemShare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="call System Share"/>
+            android:text="call System Share" />
     </LinearLayout>
 
 </ScrollView>

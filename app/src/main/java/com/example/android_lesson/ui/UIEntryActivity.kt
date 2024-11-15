@@ -1,12 +1,15 @@
 package com.example.android_lesson.ui
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android_lesson.R
 import com.example.android_lesson.databinding.ActivityUiEntryBinding
+import com.example.android_lesson.ui.immersive.ImmersiveStatusBarActivity
 import com.example.android_lesson.ui.chapter_3.ViewActivity
 import com.example.android_lesson.ui.circleprogress.CircleViewSampleActivity
 import com.example.android_lesson.ui.constraintlayout.ConstraintLayoutSampleActivity
@@ -14,6 +17,7 @@ import com.example.android_lesson.ui.custom.CustomViewSimpleActivity
 import com.example.android_lesson.ui.dialog.DialogSampleActivity
 import com.example.android_lesson.ui.dynamic.DynamicLayoutActivity
 import com.example.android_lesson.ui.gridview.GridViewDemoActivity
+import com.example.android_lesson.ui.input.SoftInputSampleActivity
 import com.example.android_lesson.ui.listview.ListViewDemoActivity
 import com.example.android_lesson.ui.loading.LoadingActivity
 import com.example.android_lesson.ui.multitype.normal.NormalActivity
@@ -28,6 +32,9 @@ import com.example.android_lesson.util.callSystemShare
 
 class UIEntryActivity : AppCompatActivity() {
     companion object {
+
+        private const val TAG = "UIEntryActivity"
+
         @JvmStatic
         fun start(context: Context) {
             val intent = Intent(context, UIEntryActivity::class.java)
@@ -59,7 +66,7 @@ class UIEntryActivity : AppCompatActivity() {
                 this@UIEntryActivity,
                 ToolbarSimpleActivity::class.java
             )
-            startActivity(intent)
+            startActivityForResult(intent, 1)
         }
 
         findViewById<View>(R.id.btn_list_view).setOnClickListener { view: View? ->
@@ -129,9 +136,21 @@ class UIEntryActivity : AppCompatActivity() {
         btnTextView.setOnClickListener { TextViewSampleActivity.start(this@UIEntryActivity) }
         btnLoading.setOnClickListener { LoadingActivity.start(this@UIEntryActivity) }
         btnSideBar.setOnClickListener { SideBarActivity.start(this@UIEntryActivity) }
+        btnSoftInput.setOnClickListener { SoftInputSampleActivity.start(this@UIEntryActivity) }
+        btnImmersiveStatusBar.setOnClickListener { ImmersiveStatusBarActivity.start(this@UIEntryActivity) }
+
 
         btnSystemShare.setOnClickListener {
             "www.baidu.com".callSystemShare(this@UIEntryActivity)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
+            finish()
+            Log.d(TAG, "onActivityResult: ====")
         }
     }
 }

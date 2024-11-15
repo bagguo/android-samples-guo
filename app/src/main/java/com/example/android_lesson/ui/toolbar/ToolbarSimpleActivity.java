@@ -1,6 +1,7 @@
 package com.example.android_lesson.ui.toolbar;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.example.android_lesson.R;
@@ -9,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class ToolbarSimpleActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String TAG = "ToolbarSimpleActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +27,9 @@ public class ToolbarSimpleActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.toolbar_iv_back) {
-            finish();
+            Log.i(TAG, "onClick: ====");
+            setResult(RESULT_OK);
+//            finish();
         }
     }
 

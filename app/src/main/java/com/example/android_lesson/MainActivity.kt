@@ -36,7 +36,10 @@ import com.example.android_lesson.webview.JavaJSCallActivity
 import com.example.android_lesson.webview.WebViewDemoActivity
 
 class MainActivity : AppCompatActivity() {
-    private val TAG = "MainActivity"
+    companion object {
+        private const val TAG = "MainActivity"
+
+    }
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var tv: TextView
@@ -70,7 +73,6 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnJetpack.setOnClickListener { JetpackSampleActivity.start(this) }
         binding.btnLive.setOnClickListener { HeartFlowActivity.createIntent(this) }
-        binding.btnSoftInput.setOnClickListener { SoftInputSampleActivity.start(this) }
         binding.btnUi.setOnClickListener { UIEntryActivity.start(this) }
         binding.btnMemory.setOnClickListener { MemorySamplesActivity.start(this) }
         binding.btnMainAnimation.setOnClickListener { AnimationActivity.start(this) }
