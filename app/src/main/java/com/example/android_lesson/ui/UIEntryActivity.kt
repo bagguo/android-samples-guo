@@ -17,6 +17,7 @@ import com.example.android_lesson.ui.custom.CustomViewSimpleActivity
 import com.example.android_lesson.ui.dialog.DialogSampleActivity
 import com.example.android_lesson.ui.dynamic.DynamicLayoutActivity
 import com.example.android_lesson.ui.gridview.GridViewDemoActivity
+import com.example.android_lesson.ui.input.SoftInputActivity
 import com.example.android_lesson.ui.input.SoftInputSampleActivity
 import com.example.android_lesson.ui.listview.ListViewDemoActivity
 import com.example.android_lesson.ui.loading.LoadingActivity
@@ -137,6 +138,7 @@ class UIEntryActivity : AppCompatActivity() {
         btnLoading.setOnClickListener { LoadingActivity.start(this@UIEntryActivity) }
         btnSideBar.setOnClickListener { SideBarActivity.start(this@UIEntryActivity) }
         btnSoftInput.setOnClickListener { SoftInputSampleActivity.start(this@UIEntryActivity) }
+        btnSoftInput2.setOnClickListener { SoftInputActivity.launch(this@UIEntryActivity) }
         btnImmersiveStatusBar.setOnClickListener { ImmersiveStatusBarActivity.start(this@UIEntryActivity) }
 
 

@@ -33,7 +33,7 @@ class SoftInputActivity : AppCompatActivity() {
 
 
     /**
-     * 键盘本质上时一个dialog
+     * 键盘本质上是一个dialog
      * 弹出隐藏键盘activity不会销毁重建
      */
     override fun onStart() {
