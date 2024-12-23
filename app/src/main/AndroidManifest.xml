@@ -16,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".ui.recyclerview.nested.NestedRecyclerViewActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
             android:name=".ui.immersive.ImmersiveStatusBarActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
@@ -99,9 +108,6 @@
             android:name=".ui.recyclerview.RecyclerViewEntryActivity"
             android:exported="false" />
         <activity android:name=".ui.recyclerview.expandable.ExpandableUseActivity" />
-        <activity
-            android:name=".ui.recyclerview.expandable.BaseRecyclerViewActivity"
-            android:exported="false" />
         <activity android:name=".ui.toolbar.ToolbarSimpleActivity" />
         <activity
             android:name=".ui.tablayout.customtab.TabLayoutDemoActivity"
@@ -164,8 +170,7 @@
             android:name=".ui.input.SoftInputActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            android:windowSoftInputMode="adjustResize">
-        </activity>
+            android:windowSoftInputMode="adjustResize"></activity>
         <activity
             android:name=".ui.input.SoftInputSampleActivity"
             android:configChanges="orientation|screenSize"

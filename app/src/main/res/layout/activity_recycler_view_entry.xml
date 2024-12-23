@@ -23,5 +23,11 @@
         android:id="@+id/headerFooterRyBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="expandable_ry" />
+        android:text="header Footer RecyclerView" />
+
+    <Button
+        android:id="@+id/nestedRvBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nested RecyclerView" />
 </androidx.appcompat.widget.LinearLayoutCompat>
