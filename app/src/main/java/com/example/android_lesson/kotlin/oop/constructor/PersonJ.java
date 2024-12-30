@@ -1,15 +1,15 @@
-package com.example.android_lesson.kotlin.constructor;
+package com.example.android_lesson.kotlin.oop.constructor;
 
-public class Person2 {
+public class PersonJ {
 
     String name;
     String age;
 
-    public Person2(String name) {
+    public PersonJ(String name) {
         this.name = name;
     }
 
-    public Person2(String name, String age) {
+    public PersonJ(String name, String age) {
         this.name = name;
         this.age = age;
     }

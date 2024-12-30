@@ -1,4 +1,4 @@
-package com.example.android_lesson.kotlin.constructor
+package com.example.android_lesson.kotlin.oop.constructor
 
 
 class Person {
