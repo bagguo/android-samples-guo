@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.constraintlayout.ConstraintSampleActivity">
+
+    <!-- 百分比偏移
+        layout_constraintHorizontal_bias
+        bias:偏差
+        元素中心相对于父布局的偏移量
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvBias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的中心在父类的横向0.3百分比位置处"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 链式约束
+    layout_constraintHorizontal_chainStyle
+
+    chainStyle:
+        packed: “紧凑”的水平链，使它们紧密相连并整体居中。
+        spread: 等间距分布。
+        spread_inside: 两端有边距，内部等间距。
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clChain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/clBias">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF5722"
+            android:padding="8dp"
+            android:text="TV1"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#3F51B5"
+            android:padding="8dp"
+            android:text="TV2"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv1"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 角度约束
+    app:layout_constraintCircle="@id/tvBase" // 基于哪个元素
+    app:layout_constraintCircleAngle="45" // 对于目标的角度(0-360)
+    app:layout_constraintCircleRadius="80dp" // 到目标中心的距离
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCircle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/clChain">
+
+        <TextView
+            android:id="@+id/tvBase"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="100dp"
+            android:text="Tom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我在Tom右上角"
+            app:layout_constraintCircle="@id/tvBase"
+            app:layout_constraintCircleAngle="45"
+            app:layout_constraintCircleRadius="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvBase" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

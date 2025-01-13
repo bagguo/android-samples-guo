@@ -13,7 +13,7 @@ import com.example.android_lesson.fragment.StickyBottomSheetFragment
 import com.example.android_lesson.ui.immersive.ImmersiveStatusBarActivity
 import com.example.android_lesson.ui.chapter_3.ViewActivity
 import com.example.android_lesson.ui.circleprogress.CircleViewSampleActivity
-import com.example.android_lesson.ui.constraintlayout.ConstraintLayoutSampleActivity
+import com.example.android_lesson.ui.textview.spannable.SpannableSampleActivity
 import com.example.android_lesson.ui.custom.CustomViewSimpleActivity
 import com.example.android_lesson.ui.dialog.DialogSampleActivity
 import com.example.android_lesson.ui.dynamic.DynamicLayoutActivity
@@ -62,7 +62,7 @@ class UIEntryActivity : AppCompatActivity() {
                 .show(supportFragmentManager, "StickyBottomSheetFragment")
         }
         btnRecyclerView.setOnClickListener { RecyclerViewEntryActivity.start(this@UIEntryActivity) }
-        btnConstraintLayout.setOnClickListener { ConstraintLayoutSampleActivity.start(this@UIEntryActivity) }
+        btnConstraintLayout.setOnClickListener { SpannableSampleActivity.start(this@UIEntryActivity) }
         btnCircleView.setOnClickListener { CircleViewSampleActivity.start(this@UIEntryActivity) }
         btnCustomViewSimple.setOnClickListener { CustomViewSimpleActivity.start(this@UIEntryActivity) }
         btnView.setOnClickListener { ViewActivity.start(this@UIEntryActivity) }

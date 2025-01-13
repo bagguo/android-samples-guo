@@ -1,4 +1,4 @@
-package com.example.android_lesson.ui.constraintlayout
+package com.example.android_lesson.ui.textview.spannable
 
 import android.graphics.Color
 import android.text.TextPaint

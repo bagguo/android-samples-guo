@@ -1,4 +1,4 @@
-package com.example.android_lesson.ui.constraintlayout
+package com.example.android_lesson.ui.textview.spannable
 
 import android.content.Context
 import android.content.Intent
@@ -9,24 +9,24 @@ import android.text.method.LinkMovementMethod
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android_lesson.R
-import com.example.android_lesson.databinding.ActivityConstraintLayoutSampleBinding
+import com.example.android_lesson.databinding.ActivitySpannableSampleBinding
 
 
-class ConstraintLayoutSampleActivity : AppCompatActivity() {
+class SpannableSampleActivity : AppCompatActivity() {
     companion object {
         @JvmStatic
         fun start(context: Context) {
-            val intent = Intent(context, ConstraintLayoutSampleActivity::class.java)
+            val intent = Intent(context, SpannableSampleActivity::class.java)
             context.startActivity(intent)
         }
     }
 
-    private lateinit var mBinding: ActivityConstraintLayoutSampleBinding
+    private lateinit var mBinding: ActivitySpannableSampleBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_constraint_layout_sample)
-        mBinding = ActivityConstraintLayoutSampleBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_spannable_sample)
+        mBinding = ActivitySpannableSampleBinding.inflate(layoutInflater)
 
         val tvAnswer = findViewById<TextView>(R.id.tv_answer)
         var answer = "web3 is decent web3 is decent web3 is decentweb3 is decentweb3 is decent "
