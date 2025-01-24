@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMode="scrollable"
-        />
+        app:tabMode="scrollable" />
+
+    <!--
+android:background="?attr/colorPrimary"   背景色
+app:tabIndicatorColor="@color/white"      指示器颜色
+app:tabIndicatorHeight="4dp"             指示器高度
+app:tabSelectedTextColor="@color/white"  选中状态的文本颜色
+app:tabTextColor="@color/gray"           未选中状态的文本颜色
+app:tabMode="scrollable"                 布局模式，fixed 或 scrollable
+app:tabGravity="fill"                    标签的对齐方式，center 或 fill
+app:tabIndicatorFullWidth="false"        指示器是否占满整个标签
+app:tabRippleColor="@color/ripple"       点击波纹颜色
+app:tabContentStart="16dp"               Tab 内容起始位置的偏移量
+app:tabPaddingStart="8dp"                Tab 起始内边距
+app:tabPaddingEnd="8dp"                  Tab 结束内边距
+app:tabPaddingTop="4dp"                  Tab 顶部内边距
+app:tabPaddingBottom="4dp"               Tab 底部内边距
+app:tabInlineLabel="true"                是否标签在一行显示
+app:tabMinWidth="72dp"                   Tab 的最小宽度
+app:tabMaxWidth="200dp"                  Tab 的最大宽度
+tools:targetApi="lollipop">              指定目标 API
+
+tabMode
+
+fixed: 标签均匀分布，适合标签数量较少的情况。
+scrollable: 标签可以滚动，适合标签数量较多的情况。
+tabGravity
+
+center: 标签居中显示。
+fill: 标签填充整个宽度。
+tabIndicatorColor
+
+设置选中标签下方指示器的颜色。
+tabIndicatorHeight
+
+设置选中标签下方指示器的高度。
+tabSelectedTextColor 和 tabTextColor
+
+分别设置选中和未选中状态下的标签文本颜色。
+tabRippleColor
+
+设置点击 Tab 时的水波纹效果颜色。
+tabPadding*
+
+设置 Tab 的内边距。
+tabInlineLabel
+
+是否在一行中显示标签文字（不换行）。
+tabContentStart
+
+设置 Tab 内容起始的偏移量。
+tabIndicatorFullWidth
+
+是否让指示器占满整个标签的宽度。
+
+-->
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
