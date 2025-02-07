@@ -9,7 +9,8 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android_lesson.R
 import com.example.android_lesson.databinding.ActivityUiEntryBinding
-import com.example.android_lesson.fragment.StickyBottomSheetFragment
+import com.example.android_lesson.fragment.bottomsheet.StickyBottomSheetFragment
+import com.example.android_lesson.fragment.bottomsheet.TabVP2BottomSheetDialogFragment
 import com.example.android_lesson.ui.immersive.ImmersiveStatusBarActivity
 import com.example.android_lesson.ui.chapter_3.ViewActivity
 import com.example.android_lesson.ui.circleprogress.CircleViewSampleActivity
@@ -57,7 +58,12 @@ class UIEntryActivity : AppCompatActivity() {
     }
 
     private fun ActivityUiEntryBinding.initView() {
-        btnFragment.setOnClickListener {
+        btnTabVp2BottomSheetFragment.setOnClickListener {
+            TabVP2BottomSheetDialogFragment.newInstance()
+                .show(supportFragmentManager, "TabVP2BottomSheetDialogFragment")
+        }
+
+        btnStickBottomSheetFragment.setOnClickListener {
             StickyBottomSheetFragment.newInstance()
                 .show(supportFragmentManager, "StickyBottomSheetFragment")
         }

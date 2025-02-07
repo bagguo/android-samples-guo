@@ -12,21 +12,33 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnFragment"
+            android:id="@+id/btnTabVp2BottomSheetFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fragment" />
+            android:textAllCaps="false"
+            android:text="TabVp2BottomSheetFragment" />
+
+        <Button
+            android:id="@+id/btnStickBottomSheetFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="StickBottomSheetFragment" />
+
+
 
         <Button
             android:id="@+id/btn_recycler_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAllCaps="false"
             android:text="recycler_view" />
 
         <Button
             android:id="@+id/btn_list_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAllCaps="false"
             android:text="list_view" />
 
         <Button

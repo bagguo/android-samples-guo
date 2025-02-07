@@ -1,4 +1,4 @@
-package com.example.android_lesson.fragment;
+package com.example.android_lesson.fragment.bottomsheet;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;

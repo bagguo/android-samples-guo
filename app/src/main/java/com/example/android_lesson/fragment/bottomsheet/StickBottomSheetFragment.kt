@@ -1,4 +1,4 @@
-package com.example.android_lesson.fragment
+package com.example.android_lesson.fragment.bottomsheet
 
 import android.app.Activity
 import android.app.Dialog
@@ -53,7 +53,9 @@ class StickyBottomSheetFragment : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = StickBottomSheetDemoAdapter(initString())
+        val adapter = StickBottomSheetDemoAdapter(
+                initString()
+            )
         binding.rv.setLayoutManager(
             LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         )
