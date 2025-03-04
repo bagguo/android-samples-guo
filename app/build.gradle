@@ -162,5 +162,7 @@ dependencies {
     /*********************** wallet end**********************/
 
     //tool
+    // if u use AndroidX, use the following
+    implementation 'com.blankj:utilcodex:1.31.1'
     implementation("com.googlecode.libphonenumber:libphonenumber:8.13.38")
 }

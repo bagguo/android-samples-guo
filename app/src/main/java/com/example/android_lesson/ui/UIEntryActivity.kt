@@ -11,6 +11,7 @@ import com.example.android_lesson.R
 import com.example.android_lesson.databinding.ActivityUiEntryBinding
 import com.example.android_lesson.fragment.bottomsheet.StickyBottomSheetFragment
 import com.example.android_lesson.fragment.bottomsheet.TabVP2BottomSheetDialogFragment
+import com.example.android_lesson.ui.activity.ActivitySamplesActivity
 import com.example.android_lesson.ui.immersive.ImmersiveStatusBarActivity
 import com.example.android_lesson.ui.chapter_3.ViewActivity
 import com.example.android_lesson.ui.circleprogress.CircleViewSampleActivity
@@ -30,6 +31,7 @@ import com.example.android_lesson.ui.tablayout.IndicatorActivity
 import com.example.android_lesson.ui.tablayout.TabLayoutSimpleActivity
 import com.example.android_lesson.ui.tablayout.customtab.TabLayoutDemoActivity
 import com.example.android_lesson.ui.textview.TextViewSampleActivity
+import com.example.android_lesson.ui.toast.ToastSampleActivity
 import com.example.android_lesson.ui.toolbar.ToolbarSimpleActivity
 import com.example.android_lesson.util.callSystemShare
 
@@ -58,6 +60,10 @@ class UIEntryActivity : AppCompatActivity() {
     }
 
     private fun ActivityUiEntryBinding.initView() {
+        btnActivity.setOnClickListener {
+            ActivitySamplesActivity.launch(this@UIEntryActivity)
+        }
+
         btnTabVp2BottomSheetFragment.setOnClickListener {
             TabVP2BottomSheetDialogFragment.newInstance()
                 .show(supportFragmentManager, "TabVP2BottomSheetDialogFragment")
@@ -136,6 +142,8 @@ class UIEntryActivity : AppCompatActivity() {
             )
             startActivity(intent)
         }
+
+        btnToast.setOnClickListener { ToastSampleActivity.launch(this@UIEntryActivity) }
 
         findViewById<View>(R.id.btn_dynamic_layout).setOnClickListener { view: View? ->
             val intent = Intent(

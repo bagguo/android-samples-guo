@@ -45,4 +45,6 @@
     <dimen name="sidebar_default_dialog_text_background_width">100dp</dimen>
     <dimen name="sidebar_default_dialog_text_background_height">100dp</dimen>
 
+    <dimen name="toast_padding_horizontal">24dp</dimen>
+
 </resources>

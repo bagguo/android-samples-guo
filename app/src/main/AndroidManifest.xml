@@ -16,14 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".ui.activity.ActivitySamplesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.TransparentActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TransparentActivity" />
+        <activity
+            android:name=".ui.toast.ToastSampleActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.recyclerview.nested.NestedRecyclerViewActivity"
-            android:exported="true">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
-
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ui.immersive.ImmersiveStatusBarActivity"
             android:exported="true"
@@ -40,26 +44,10 @@
             android:taskAffinity="com.darren.affinity.sample" />
         <activity
             android:name=".activity.task.Activity1"
-            android:exported="true">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ui.loading.LoadingActivity"
-            android:exported="true">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ui.textview.classifier.TextClassifierActivity"
             android:exported="false" />
@@ -170,7 +158,7 @@
             android:name=".ui.input.SoftInputActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.input.SoftInputSampleActivity"
             android:configChanges="orientation|screenSize"

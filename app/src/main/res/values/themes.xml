@@ -15,6 +15,12 @@
         <item name="actionModeStyle">@style/CustomActionMode</item>
     </style>
 
+    <style name="Theme.TransparentActivity" parent="Theme.Androidlesson">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
     <!--    <style name="Theme.Androidsamplesdarren" parent="android:Theme.Material.Light.NoActionBar" >-->
     <style name="Theme.AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar" >
         <!-- Primary brand color. -->

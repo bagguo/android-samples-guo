@@ -12,34 +12,40 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/btn_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="activity"
+            android:textAllCaps="false" />
+
+        <Button
             android:id="@+id/btnTabVp2BottomSheetFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="TabVp2BottomSheetFragment" />
+            android:text="TabVp2BottomSheetFragment"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnStickBottomSheetFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="StickBottomSheetFragment" />
-
+            android:text="StickBottomSheetFragment"
+            android:textAllCaps="false" />
 
 
         <Button
             android:id="@+id/btn_recycler_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="recycler_view" />
+            android:text="recycler_view"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_list_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:text="list_view" />
+            android:text="list_view"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/toolbar_simple"
@@ -88,6 +94,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="dialog" />
+
+        <Button
+            android:id="@+id/btnToast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toast"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_dynamic_layout"
