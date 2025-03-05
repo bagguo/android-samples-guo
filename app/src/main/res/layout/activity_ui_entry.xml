@@ -51,49 +51,57 @@
             android:id="@+id/toolbar_simple"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="toolbar simple" />
+            android:text="toolbar simple"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_grid_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="grid_view" />
+            android:text="grid_view"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_tab_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TabLayout" />
+            android:text="TabLayout"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_tab_layout_custom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TabLayout custom" />
+            android:text="TabLayout custom"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_tab_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tab indicator" />
+            android:text="Tab indicator"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_butter_knife"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="butter knife" />
+            android:text="butter knife"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_multi_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="multi_type_adapter" />
+            android:text="multi_type_adapter"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="dialog" />
+            android:text="dialog"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnToast"
@@ -106,13 +114,15 @@
             android:id="@+id/btn_dynamic_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="btn_dynamic_layout" />
+            android:text="btn_dynamic_layout"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_constraint_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="constraint_layout"
+            android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -122,6 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="circle_view"
+            android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_constraint_layout" />
 
@@ -130,6 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="custom_view_simple"
+            android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_circle_view" />
 
@@ -138,6 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="btn_view"
+            android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_custom_view_simple" />
 
@@ -145,43 +158,57 @@
             android:id="@+id/btnTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="textview" />
+            android:text="textview"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnLoading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="loading" />
+            android:text="loading"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnSideBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Side index Bar" />
+            android:text="Side index Bar"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_soft_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="soft input" />
+            android:text="soft input"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btn_soft_input2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="soft input2" />
+            android:text="soft input2"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnImmersiveStatusBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ImmersiveStatusBar" />
+            android:text="ImmersiveStatusBar"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnSystemShare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="call System Share" />
+            android:text="call System Share"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBigScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Big Screen"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 </ScrollView>

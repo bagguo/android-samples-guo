@@ -12,6 +12,7 @@ import com.example.android_lesson.databinding.ActivityUiEntryBinding
 import com.example.android_lesson.fragment.bottomsheet.StickyBottomSheetFragment
 import com.example.android_lesson.fragment.bottomsheet.TabVP2BottomSheetDialogFragment
 import com.example.android_lesson.ui.activity.ActivitySamplesActivity
+import com.example.android_lesson.ui.bigscreen.BigScreenSamplesActivity
 import com.example.android_lesson.ui.immersive.ImmersiveStatusBarActivity
 import com.example.android_lesson.ui.chapter_3.ViewActivity
 import com.example.android_lesson.ui.circleprogress.CircleViewSampleActivity
@@ -163,6 +164,10 @@ class UIEntryActivity : AppCompatActivity() {
 
         btnSystemShare.setOnClickListener {
             "www.baidu.com".callSystemShare(this@UIEntryActivity)
+        }
+
+        btnBigScreen.setOnClickListener {
+            BigScreenSamplesActivity.launch(this@UIEntryActivity)
         }
     }
 
