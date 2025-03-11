@@ -1,20 +1,87 @@
 package com.dt.trust_wallet_web3_provider_sample
 
+import android.app.Activity
+import android.graphics.Bitmap
+import android.net.http.SslError
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.webkit.SslErrorHandler
+import android.webkit.WebView
+import android.webkit.WebViewClient
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Activity() {
+    companion object {
+        private const val DAPP_URL = "https://app.uniswap.org/"
+        private const val CHAIN_ID = 56
+        private const val RPC_URL = "https://bsc-dataseed2.binance.org"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val provderJs = loadProviderJs()
+        val initJs = loadInitJs(
+            CHAIN_ID,
+            RPC_URL
+        )
+        WebView.setWebContentsDebuggingEnabled(true)
+        val webview: WebView = findViewById(R.id.webview)
+        webview.settings.run {
+            javaScriptEnabled = true
+            domStorageEnabled = true
         }
+        WebAppInterface(this, webview, DAPP_URL).run {
+            webview.addJavascriptInterface(this, "_tw_")
+
+            val webViewClient = object : WebViewClient() {
+                override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                    super.onPageStarted(view, url, favicon)
+                    view?.evaluateJavascript(provderJs, null)
+                    view?.evaluateJavascript(initJs, null)
+                }
+
+                override fun onReceivedSslError(
+                    view: WebView?,
+                    handler: SslErrorHandler?,
+                    error: SslError?
+                ) {
+                    // TODO: verify
+                    // Ignore SSL certificate errors
+                    handler?.proceed()
+                    println(error.toString())
+                }
+            }
+            webview.webViewClient = webViewClient
+            webview.loadUrl(DAPP_URL)
+        }
+    }
+
+    private fun loadProviderJs(): String {
+        return resources.openRawResource(R.raw.trust_min).bufferedReader().use { it.readText() }
+    }
+
+    private fun loadInitJs(chainId: Int, rpcUrl: String): String {
+        val source = """
+        (function() {
+            var config = {                
+                ethereum: {
+                    chainId: $chainId,
+                    rpcUrl: "$rpcUrl"
+                },
+                solana: {
+                    cluster: "mainnet-beta",
+                },
+                isDebug: true
+            };
+            trustwallet.ethereum = new trustwallet.Provider(config);
+            trustwallet.solana = new trustwallet.SolanaProvider(config);
+            trustwallet.postMessage = (json) => {
+                window._tw_.postMessage(JSON.stringify(json));
+            }
+            window.ethereum = trustwallet.ethereum;
+        })();
+        """
+        return  source
     }
 }
