@@ -66,20 +66,44 @@ class MainActivity : Activity() {
         (function() {
             var config = {                
                 ethereum: {
-                    chainId: $chainId,
-                    rpcUrl: "$rpcUrl"
+                    address: "0xF42b63F38D019014ECCa3AB07CeDAB68e76a3516",
+                    chainId: 8922,
+                    rpcUrl: "https://rpc.alg2-test.algen.network/",
+                    networkVersion: 1,
+                    isMimo: true,
+                    isZapry: true,
+                    isDebug: true,
+                    isMetaMask: true,
                 },
                 solana: {
                     cluster: "mainnet-beta",
+                    rpcUrl: "https://fabled-cosmopolitan-snow.solana-mainnet.quiknode.pro/42611fd7321eb23f2af790453f543e65fc99e2ef",
+                    isMimo: true,
+                    isZapry: true,
+                    isDebug: true,
+                    isPhantom: true,
                 },
-                isDebug: true
+                tronLink: {
+                   rpcUrl: "https://nile.trongrid.io",
+                   address: "TJgvecXA5R4QPSQB8QqiJvNzXHgiTkJYjN",
+                   isMimo: true,
+                   isZapry: true,
+                   isDebug: true,
+                }
             };
+            
             trustwallet.ethereum = new trustwallet.Provider(config);
             trustwallet.solana = new trustwallet.SolanaProvider(config);
-            trustwallet.postMessage = (json) => {
-                window._tw_.postMessage(JSON.stringify(json));
+            trustwallet.tronLink = new trustwallet.TronProvider(config.tronLink);
+            
+            trustwallet.postMessage = (jsonString) => {
+                window._tw_.postMessage(JSON.stringify(jsonString));
             }
+                        
             window.ethereum = trustwallet.ethereum;
+            window.tronLink = trustwallet.tronLink
+            window.tron = trustwallet.tronLink
+            window.solana = trustwallet.solana
         })();
         """
         return  source
