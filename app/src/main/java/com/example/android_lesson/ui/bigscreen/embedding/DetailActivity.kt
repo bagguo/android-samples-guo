@@ -22,7 +22,8 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-
-
+        binding.btn.setOnClickListener {
+            DetailActivityStartedActivity.launch(this)
+        }
     }
 }

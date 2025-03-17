@@ -5,20 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.bigscreen.embedding.DetailActivity">
-
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".ui.bigscreen.embedding.SplitListActivityStartedActivity">
 
     <TextView
+        android:text="SplitListActivity started activity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="DetailActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

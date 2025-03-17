@@ -5,6 +5,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.util.Consumer
 import androidx.window.embedding.SplitController
@@ -31,19 +32,27 @@ class SplitListActivity : AppCompatActivity() {
         binding.rootSplitActivityLayout.setBackgroundColor(Color.parseColor("#e0f7fa"))
 
         splitController = SplitController.getInstance(this)
+
+        binding.initListener()
+    }
+
+    private fun ActivitySplitListBinding.initListener() {
+        infoButton.setOnClickListener {
+            // SplitListActivity启动的activity默认在副容器
+            SplitListActivityStartedActivity.launch(this@SplitListActivity)
+        }
     }
 
     fun onItemClick(view: View) {
-//        val text = (view as TextView).text ?: throw IllegalArgumentException
-//        val startIntent = Intent(this, SplitActivityDetail::class.java)
-//        startIntent.putExtra(EXTRA_SELECTED_ITEM, text)
-//        startActivity(startIntent)
+        val text = (view as TextView).text
+        DetailActivity.launch(this)
     }
 
     override fun onStart() {
         super.onStart()
 //        splitController.splitInfoList()
     }
+
     inner class SplitStateChangeListener : Consumer<List<SplitInfo>> {
         override fun accept(newSplitInfos: List<SplitInfo>) {
             binding.infoButton.visibility = if (newSplitInfos.isEmpty()) View.VISIBLE else View.GONE
