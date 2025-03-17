@@ -5,6 +5,7 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="corretto-11" />
         <option name="modules">
@@ -18,7 +19,6 @@
             <option value="$PROJECT_DIR$/react_native_sample" />
           </set>
         </option>
-        <option name="resolveExternalAnnotations" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

@@ -12,15 +12,12 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public abstract class BaseActivity extends AppCompatActivity {
     protected final int CODE_CLICK = 1;
-    public Context mContext;
 
-    protected int count = 0;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         Log.d("TAG", "onCreate: ----" + this.getClass().getName());
-        mContext = this;
         initData();
         initView();
         setListener();

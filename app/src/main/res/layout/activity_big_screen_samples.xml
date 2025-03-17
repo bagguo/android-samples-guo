@@ -14,4 +14,11 @@
         android:layout_height="wrap_content"
         android:text="Responsive Views"
         android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_jetpack_window_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jetpack WindowManager"
+        android:textAllCaps="false" />
 </androidx.appcompat.widget.LinearLayoutCompat>

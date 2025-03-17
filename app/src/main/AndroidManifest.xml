@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.android_lesson">
+    package="com.example.android_lesson" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -15,7 +15,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Androidlesson">
+        android:theme="@style/Theme.Androidlesson" >
+        <activity
+            android:name=".ui.bigscreen.embedding.SummaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.bigscreen.embedding.PlaceholderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.bigscreen.embedding.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.bigscreen.embedding.SplitListActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.bigscreen.BigScreenSamplesActivity"
             android:exported="false" />
@@ -25,12 +43,14 @@
             android:label="@string/title_activity_responsive_views_sample"
             android:resizeableActivity="true"
             android:theme="@style/Theme.Androidlesson.NoActionBar"
-            tools:targetApi="24">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            tools:targetApi="24" >
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".ui.activity.ActivitySamplesActivity"
@@ -92,7 +112,7 @@
         <activity android:name=".ui.dialog.DialogSampleActivity" />
         <activity
             android:name=".communication.intent.JumpActionActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
 
                 <!-- 隐式跳转action -->
@@ -166,7 +186,7 @@
         <activity android:name=".ui.live.HeartFlowActivity" />
         <activity
             android:name=".ui.textview.spannable.SpannableSampleActivity"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -184,7 +204,7 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".jetpack.JetpackSampleActivity"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -194,7 +214,7 @@
             android:exported="false" />
         <activity
             android:name=".wallet.WalletActivity"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -207,7 +227,7 @@
             android:exported="false" />
         <activity
             android:name=".webview.WebViewDemoActivity"
-            android:exported="false">
+            android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -253,26 +273,38 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-
-
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <service
             android:name=".service.bind.MyBindService"
-            android:enabled="true" />
-
+            android:enabled="true" /> <!-- 今日头条屏幕适配设计稿尺寸 -->
         <meta-data
             android:name="design_width_in_dp"
             android:value="375" />
         <meta-data
             android:name="design_height_in_dp"
-            android:value="812" />
+            android:value="812" /> <!-- 内嵌分屏 -->
+        <property
+            android:name="android.window.PROPERTY_ACTIVITY_EMBEDDING_SPLITS_ENABLED"
+            android:value="true" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge" >
+
+            <!-- Make SplitInitializer discoverable by InitializationProvider. -->
+            <meta-data
+                android:name="com.example.android_lesson.ui.bigscreen.embedding.SplitInitializer"
+                android:value="androidx.startup" />
+        </provider>
     </application>
 
 </manifest>

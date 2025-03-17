@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:window="http://schemas.android.com/apk/res-auto">
+
+    <!-- Define a split for the named activity pair. -->
+    <!--
+    为共享分屏的 activity 配置分屏选项:
+    splitRatio - 指定主要 activity 占据了任务窗口的比例 (33%)，剩余空间则留给辅助 activity。
+    splitMinWidthDp - 指定两个 activity 在屏幕上同时显示所需的最小显示宽度 (840)。单位是密度无关像素 (dp)。注意：840dp 是较大窗口大小类别的断点。
+    finishPrimaryWithSecondary - 指定当辅助容器中的所有 activity 结束时，主要分屏容器中的 activity 是否结束（永不）。
+    finishSecondaryWithPrimary - 指定当主要容器中的所有 activity 结束时，辅助分屏容器中的 activity 是否结束（始终）。
+    -->
+<!--    <SplitPairRule-->
+<!--        window:finishPrimaryWithSecondary="never"-->
+<!--        window:finishSecondaryWithPrimary="always"-->
+<!--        window:splitMinWidthDp="840"-->
+<!--        window:splitRatio="0.33">-->
+
+<!--        &lt;!&ndash; 包含一个分屏过滤器，用于定义共享任务窗口分屏的 activity。主要 activity 为 ListActivity；辅助 activity 为 DetailActivity。&ndash;&gt;-->
+<!--        <SplitPairFilter-->
+<!--            window:primaryActivityName=".ui.bigscreen.embedding.SplitListActivity"-->
+<!--            window:secondaryActivityName=".ui.bigscreen.embedding.DetailActivity" />-->
+<!--    </SplitPairRule>-->
+
+<!--    &lt;!&ndash; Automatically launch a placeholder for the detail activity. &ndash;&gt;-->
+<!--    <SplitPlaceholderRule-->
+<!--        window:placeholderActivityName=".ui.bigscreen.embedding.PlaceholderActivity"-->
+<!--        window:splitRatio="0.33"-->
+<!--        window:splitMinWidthDp="840"-->
+<!--        window:finishPrimaryWithPlaceholder="always"-->
+<!--        window:stickyPlaceholder="false">-->
+<!--        <ActivityFilter-->
+<!--            window:activityName=".ui.bigscreen.embedding.SplitListActivity"/>-->
+<!--    </SplitPlaceholderRule>-->
+</resources>
