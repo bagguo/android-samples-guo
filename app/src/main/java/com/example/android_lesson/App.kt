@@ -8,6 +8,9 @@ import com.alibaba.android.arouter.launcher.ARouter
 import com.example.android_lesson.ui.bigscreen.embedding.SplitManager
 import com.tencent.mmkv.MMKV
 
+/**
+ * 在创建应用进程时，应用子类将是实例化的第一个类
+ */
 class App : Application() {
 
     companion object {
@@ -19,9 +22,10 @@ class App : Application() {
         super.onCreate()
         mContext = this
 
-//        RuleController.getInstance(this)
-//            .setRules(RuleController.parseRules(this, R.xml.main_split_config))
-        SplitManager.createSplit(this) // WindowManager api管理分屏
+        // RuleController可有可无
+        RuleController.getInstance(this)
+            .setRules(RuleController.parseRules(this, R.xml.main_split_config))
+//        SplitManager.createSplit(this) // WindowManager api管理分屏
 
         // /data/user/0/package/files/mmkv
         MMKV.initialize(this)

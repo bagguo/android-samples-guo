@@ -9,7 +9,7 @@ android {
     compileSdkVersion rootProject.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.bagguo.samples"
+        applicationId "com.example.android_lesson"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1

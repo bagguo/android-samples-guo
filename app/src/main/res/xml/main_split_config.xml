@@ -10,26 +10,47 @@
     finishPrimaryWithSecondary - 指定当辅助容器中的所有 activity 结束时，主要分屏容器中的 activity 是否结束（永不）。
     finishSecondaryWithPrimary - 指定当主要容器中的所有 activity 结束时，辅助分屏容器中的 activity 是否结束（始终）。
     -->
-<!--    <SplitPairRule-->
-<!--        window:finishPrimaryWithSecondary="never"-->
-<!--        window:finishSecondaryWithPrimary="always"-->
-<!--        window:splitMinWidthDp="840"-->
-<!--        window:splitRatio="0.33">-->
+    <SplitPairRule
+        window:finishPrimaryWithSecondary="never"
+        window:finishSecondaryWithPrimary="always"
+        window:splitMinWidthDp="840"
+        window:splitRatio="0.33">
 
-<!--        &lt;!&ndash; 包含一个分屏过滤器，用于定义共享任务窗口分屏的 activity。主要 activity 为 ListActivity；辅助 activity 为 DetailActivity。&ndash;&gt;-->
-<!--        <SplitPairFilter-->
-<!--            window:primaryActivityName=".ui.bigscreen.embedding.SplitListActivity"-->
-<!--            window:secondaryActivityName=".ui.bigscreen.embedding.DetailActivity" />-->
-<!--    </SplitPairRule>-->
+        <!-- 包含一个分屏过滤器，用于定义共享任务窗口分屏的 activity。主要 activity 为 ListActivity；辅助 activity 为 DetailActivity。-->
+        <SplitPairFilter
+            window:primaryActivityName=".ui.bigscreen.embedding.SplitListActivity"
+            window:secondaryActivityName=".ui.bigscreen.embedding.DetailActivity" />
+    </SplitPairRule>
 
-<!--    &lt;!&ndash; Automatically launch a placeholder for the detail activity. &ndash;&gt;-->
-<!--    <SplitPlaceholderRule-->
-<!--        window:placeholderActivityName=".ui.bigscreen.embedding.PlaceholderActivity"-->
-<!--        window:splitRatio="0.33"-->
-<!--        window:splitMinWidthDp="840"-->
-<!--        window:finishPrimaryWithPlaceholder="always"-->
-<!--        window:stickyPlaceholder="false">-->
-<!--        <ActivityFilter-->
-<!--            window:activityName=".ui.bigscreen.embedding.SplitListActivity"/>-->
-<!--    </SplitPlaceholderRule>-->
+    <!-- Automatically launch a placeholder for the detail activity. -->
+    <!--
+    finishPrimaryWithPlaceholder:
+    结束placeHolder时，主容器中的activity是否也结束
+
+    stickyPlaceholder：
+    双窗格显示为单窗格时(如，折叠屏被折叠时)，占位符是否应作为顶层activity保留在屏幕上
+    -->
+    <SplitPlaceholderRule
+        window:finishPrimaryWithPlaceholder="always"
+        window:placeholderActivityName=".ui.bigscreen.embedding.PlaceholderActivity"
+        window:splitMinWidthDp="840"
+        window:splitRatio="0.33"
+        window:stickyPlaceholder="false">
+
+        <!--  包括一个 activity 过滤器，用于指定与占位符共享任务窗口分屏的 activity (ListActivity)。      -->
+        <ActivityFilter window:activityName=".ui.bigscreen.embedding.SplitListActivity" />
+    </SplitPlaceholderRule>
+
+    <!--
+    activity 规则
+    activity 规则是通用规则。可以通过 activity 规则指定需要占据整个任务窗口（即绝不会成为分屏的一部分）的 activity。
+    将使摘要 activity 填充整个任务窗口，并叠加在分屏上。返回导航操作将返回到分屏
+
+    activity 规则优先于其他分屏规则，例如分屏对规则和分屏占位符规则。
+    -->
+    <ActivityRule window:alwaysExpand="true">
+        <ActivityFilter window:activityName=".ui.bigscreen.SummaryActivity" />
+    </ActivityRule>
+
+
 </resources>
