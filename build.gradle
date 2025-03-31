@@ -24,6 +24,8 @@ allprojects {
         maven { url "https://jitpack.io" }
         // 富文本 https://github.com/zzhoujay/RichText 需要jcenter
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven {url 'https://raw.githubusercontent.com/web3user1/OpenWeb3-Android/main/aar/1.0.7-fixed.1'}
+
     }
 }
 
