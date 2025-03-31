@@ -9,3 +9,4 @@ include ':banner'
 include ':materialdesign2'
 
 include ':react_native_sample'
+include ':trust_wallet_web3_provider_sample'
