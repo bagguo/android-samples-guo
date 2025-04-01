@@ -4,6 +4,7 @@
 
     <!-- Define a split for the named activity pair. -->
     <!--
+    分屏对规则
     为共享分屏的 activity 配置分屏选项:
     splitRatio - 指定主要 activity 占据了任务窗口的比例 (33%)，剩余空间则留给辅助 activity。
     splitMinWidthDp - 指定两个 activity 在屏幕上同时显示所需的最小显示宽度 (840)。单位是密度无关像素 (dp)。注意：840dp 是较大窗口大小类别的断点。

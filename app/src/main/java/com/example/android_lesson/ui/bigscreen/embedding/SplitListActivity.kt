@@ -22,7 +22,7 @@ class SplitListActivity : AppCompatActivity() {
 
     private val binding by lazy { ActivitySplitListBinding.inflate(layoutInflater) }
 
-    private lateinit var splitController: SplitController
+//    private lateinit var splitController: SplitController
 
     val splitChangeListener = SplitStateChangeListener()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +31,7 @@ class SplitListActivity : AppCompatActivity() {
 
         binding.rootSplitActivityLayout.setBackgroundColor(Color.parseColor("#e0f7fa"))
 
-        splitController = SplitController.getInstance(this)
+//        splitController = SplitController.getInstance(this)
 
         binding.initListener()
     }

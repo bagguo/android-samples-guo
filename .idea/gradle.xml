@@ -6,7 +6,7 @@
       <GradleProjectSettings>
         <option name="testRunner" value="CHOOSE_PER_TEST" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#JAVA_HOME" />
+        <option name="gradleJvm" value="zulu-11" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/lib_login" />
             <option value="$PROJECT_DIR$/materialdesign2" />
             <option value="$PROJECT_DIR$/react_native_sample" />
+            <option value="$PROJECT_DIR$/trust_wallet_web3_provider_sample" />
           </set>
         </option>
       </GradleProjectSettings>

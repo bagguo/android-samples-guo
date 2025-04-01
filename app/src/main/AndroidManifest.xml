@@ -298,25 +298,30 @@
             android:value="375" />
         <meta-data
             android:name="design_height_in_dp"
-            android:value="812" /> <!-- activity 嵌入分屏 -->
+            android:value="812" />
+
+        <!-- activity 嵌入分屏
+        告知系统您的应用已实现 activity 嵌入
+        -->
         <property
             android:name="android.window.PROPERTY_ACTIVITY_EMBEDDING_SPLITS_ENABLED"
             android:value="true" />
         <!--
+        xml配置实现分屏
         InitializationProvider 会在应用的 onCreate() 方法执行之前发现并初始化 SplitInitializer；因此，分屏规则在应用主要 activity 启动时生效
         fixme: gdz applicationId需与包名一致，否则androidx.startup.InitializationProvider找不到
         -->
-        <provider
-            android:name="androidx.startup.InitializationProvider"
-            android:authorities="${applicationId}.androidx-startup"
-            android:exported="false"
-            tools:node="merge">
+        <!--        <provider-->
+        <!--            android:name="androidx.startup.InitializationProvider"-->
+        <!--            android:authorities="${applicationId}.androidx-startup"-->
+        <!--            android:exported="false"-->
+        <!--            tools:node="merge">-->
 
-            <!-- Make SplitInitializer discoverable by InitializationProvider. -->
-            <meta-data
-                android:name="${applicationId}.ui.bigscreen.embedding.SplitInitializer"
-                android:value="androidx.startup" />
-        </provider>
+        <!--            &lt;!&ndash; Make SplitInitializer discoverable by InitializationProvider. &ndash;&gt;-->
+        <!--            <meta-data-->
+        <!--                android:name="${applicationId}.ui.bigscreen.embedding.SplitInitializer"-->
+        <!--                android:value="androidx.startup" />-->
+        <!--        </provider>-->
     </application>
 
 </manifest>
