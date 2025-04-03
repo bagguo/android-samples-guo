@@ -3,7 +3,8 @@ rootProject.name = "android-samples-guo"
 include ':app'
 include ':lib_base'
 include ':lib_login'
-
+include ':lib_pdfium'
+include ':lib_pdfviewer'
 include ':banner'
 //include ':push'
 include ':materialdesign2'
