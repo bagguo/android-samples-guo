@@ -4,7 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.cyberflow.mimolite.common.util.ToastUtils
 import com.example.android_lesson.databinding.ActivityBigScreenSamplesBinding
+import com.example.android_lesson.ui.bigscreen.embedding.SplitListActivity
 import com.example.android_lesson.ui.bigscreen.responsiveviews.ResponsiveViewsSampleActivity
 
 class BigScreenSamplesActivity : AppCompatActivity() {
@@ -31,8 +33,11 @@ class BigScreenSamplesActivity : AppCompatActivity() {
         }
 
         btnJetpackWindowManager.setOnClickListener {
-
+            ToastUtils.show(this@BigScreenSamplesActivity, "To implements")
         }
 
+        btnActivityEmbedding.setOnClickListener {
+            SplitListActivity.launch(this@BigScreenSamplesActivity)
+        }
     }
 }

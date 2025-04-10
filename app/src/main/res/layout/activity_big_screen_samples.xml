@@ -21,4 +21,11 @@
         android:layout_height="wrap_content"
         android:text="Jetpack WindowManager"
         android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_activity_embedding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity Embedding"
+        android:textAllCaps="false" />
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.example.android_lesson.R;
 
@@ -31,5 +32,8 @@ public class JNISampleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jni_sample);
         Log.d(TAG, "onCreate: " + stringFromJni());
+
+        TextView tv = findViewById(R.id.tv);
+        tv.setText(stringFromJni());
     }
 }

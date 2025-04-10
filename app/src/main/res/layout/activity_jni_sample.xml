@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".jni.JNISampleActivity">
 
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tv"
+        android:layout_height="wrap_content"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

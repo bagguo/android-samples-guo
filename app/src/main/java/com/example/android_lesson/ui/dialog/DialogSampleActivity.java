@@ -27,11 +27,31 @@ public class DialogSampleActivity extends AppCompatActivity {
         findViewById(R.id.btn_stop_custom_progress_dialog).setOnClickListener(view -> {
             CustomProgressDialog.stopLoading();
         });
+
+        findViewById(R.id.btn_single_instance_dialog).setOnClickListener(view -> {
+            SingleInstanceDialogMgr.INSTANCE.show(
+                    DialogSampleActivity.this,
+                    "title",
+                    "这是message",
+                    "确认",
+                    "Cancel",
+                    null,
+                    null);
+
+            SingleInstanceDialogMgr.INSTANCE.show(
+                    DialogSampleActivity.this,
+                    "title 2",
+                    "这是message2",
+                    "确认2",
+                    "Cancel2",
+                    null,
+                    null);
+        });
     }
 
 
     public void showDialog(String message) {
-        CommonDialog.Builder builder = new CommonDialog.Builder(this)
+        CommonConfirmDialogJ.Builder builder = new CommonConfirmDialogJ.Builder(this)
                 .setTitle(message)
                 .setMessage(message + "是一个自定义弹窗是一个自定义弹窗是一个自定义弹窗是一个自定义弹窗是一个自定义弹窗是一个自定义弹窗是一个自定义弹窗是一个自定义弹窗是一个自定义弹窗是一个自定义弹窗是一个自定义弹窗是一个自定义弹窗是一个自定义弹窗")
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {

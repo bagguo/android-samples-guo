@@ -12,13 +12,13 @@ import android.widget.TextView;
 import com.example.android_lesson.R;
 
 @SuppressWarnings("unused")
-public class CommonDialog extends Dialog {
+public class CommonConfirmDialogJ extends Dialog {
 
-    public CommonDialog(Context context) {
+    public CommonConfirmDialogJ(Context context) {
         super(context);
     }
 
-    public CommonDialog(Context context, int theme) {
+    public CommonConfirmDialogJ(Context context, int theme) {
         super(context, theme);
     }
 
@@ -102,8 +102,8 @@ public class CommonDialog extends Dialog {
         }
 
 
-        public CommonDialog create() {
-            final CommonDialog dialog = new CommonDialog(context, R.style.CommonAlertDialog);
+        public CommonConfirmDialogJ create() {
+            final CommonConfirmDialogJ dialog = new CommonConfirmDialogJ(context, R.style.CommonAlertDialog);
             View layout = LayoutInflater.from(context).inflate(R.layout.dialog_common, null);
             ViewGroup.LayoutParams params1 = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             dialog.addContentView(layout, params1);
