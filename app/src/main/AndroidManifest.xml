@@ -18,6 +18,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
+        <activity android:name=".communication.sharedvm.CActivity" />
+        <activity
+            android:name=".communication.sharedvm.AFgm2BFgm2CActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
         <activity
             android:name=".ui.bigscreen.embedding.SplitListActivityStartedActivity"
             android:exported="false" />

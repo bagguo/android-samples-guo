@@ -43,4 +43,9 @@
     <string name="image_view_item_transform_content_description">Represents an image view in the
         item
     </string>
+
+    <string name="dialog_title">Activity Pinning</string>
+    <string name="dialog_message">Confirm to pin this activity</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_cancel">Cancel</string>
 </resources>
