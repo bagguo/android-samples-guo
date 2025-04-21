@@ -25,7 +25,7 @@ class App : Application() {
         // RuleController可有可无
 //        RuleController.getInstance(this)
 //            .setRules(RuleController.parseRules(this, R.xml.main_split_config))
-        SplitManager.createSplit(this) // WindowManager api管理分屏
+        SplitManager.createSplit() // WindowManager api管理分屏
 
         // /data/user/0/package/files/mmkv
         MMKV.initialize(this)

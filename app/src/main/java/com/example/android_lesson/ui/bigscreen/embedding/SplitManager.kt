@@ -1,7 +1,6 @@
 package com.example.android_lesson.ui.bigscreen.embedding
 
 import android.content.ComponentName
-import android.content.Context
 import android.content.Intent
 import androidx.window.embedding.ActivityFilter
 import androidx.window.embedding.ActivityRule
@@ -11,6 +10,7 @@ import androidx.window.embedding.SplitPairFilter
 import androidx.window.embedding.SplitPairRule
 import androidx.window.embedding.SplitPlaceholderRule
 import androidx.window.embedding.SplitRule
+import com.example.android_lesson.App
 
 /**
  * @title
@@ -18,7 +18,11 @@ import androidx.window.embedding.SplitRule
  */
 class SplitManager {
     companion object {
-        fun createSplit(context: Context) {
+        private const val TAG = "SplitManager"
+
+        fun createSplit() {
+            val context = App.mContext
+
             // 创建一个分屏对过滤器，将 ListActivity 和 DetailActivity 标识为共享分屏的 activity：
             val splitPairFilter = SplitPairFilter(
                 ComponentName(context, SplitListActivity::class.java),
