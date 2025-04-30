@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -13,6 +15,8 @@ import android.view.SurfaceView;
 
 import com.example.android_lesson.R;
 
+import java.io.IOException;
+
 public class VideoDemoActivity extends AppCompatActivity {
 
     public static void start(Context context){
@@ -20,9 +24,7 @@ public class VideoDemoActivity extends AppCompatActivity {
         context.startActivity(intent);
     }
 
-    private String mFilePath;
     private MediaPlayer mMediaPlayer;
-    private SurfaceView mSurfaceView;
     private SurfaceHolder mSurfaceHolder;
     private int position;
 
@@ -33,7 +35,7 @@ public class VideoDemoActivity extends AppCompatActivity {
         initButton();
 
         mMediaPlayer = new MediaPlayer();
-        mSurfaceView = findViewById(R.id.surface_view);
+        SurfaceView mSurfaceView = findViewById(R.id.surface_view);
         mSurfaceHolder = mSurfaceView.getHolder();
         mSurfaceHolder.addCallback(new SurfaceHolder.Callback2() {
             @Override
@@ -62,6 +64,12 @@ public class VideoDemoActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+    }
+
     private void initButton() {
         findViewById(R.id.btn_play).setOnClickListener(view -> {
             if (!mMediaPlayer.isPlaying()) {
@@ -83,12 +91,18 @@ public class VideoDemoActivity extends AppCompatActivity {
     }
 
     private void play() {
-        // push file to phone
-        mFilePath = "/mnt/sdcard/phone.mp4";//getExternalFilesDir().getAbsolutePath();
+        // "/mnt/sdcard/phone.mp4"; //getExternalFilesDir().getAbsolutePath();
+        AssetFileDescriptor mAfd;
+        try {
+            mAfd = getAssets().openFd("video1.mp4");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         try {
             mMediaPlayer.reset();
             mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-            mMediaPlayer.setDataSource(mFilePath);
+            mMediaPlayer.setDataSource(mAfd);
             mMediaPlayer.setDisplay(mSurfaceHolder);
             mMediaPlayer.prepare();
             mMediaPlayer.start();
