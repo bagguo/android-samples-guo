@@ -18,7 +18,6 @@ import com.example.android_lesson.dagger.DaggerActivity
 import com.example.android_lesson.databinding.ActivityMainBinding
 import com.example.android_lesson.storage.db.sqllite.SqliteTestActivity
 import com.example.android_lesson.ui.dispatcheventdemo.DispatchEventDemoActivity
-import com.example.android_lesson.ui.input.SoftInputSampleActivity
 import com.example.android_lesson.ipc.IPCTestActivity
 import com.example.android_lesson.jetpack.JetpackSampleActivity
 import com.example.android_lesson.jni.JNISampleActivity
@@ -30,7 +29,6 @@ import com.example.android_lesson.service.start.ServiceTestActivity
 import com.example.android_lesson.ui.UIEntryActivity
 import com.example.android_lesson.debug.DebugToolsManager
 import com.example.android_lesson.ui.live.HeartFlowActivity
-import com.example.android_lesson.ui.video.VideoDemoActivity
 import com.example.android_lesson.wallet.WalletActivity
 import com.example.android_lesson.webview.JavaJSCallActivity
 import com.example.android_lesson.webview.WebViewDemoActivity
@@ -77,7 +75,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnMemory.setOnClickListener { MemorySamplesActivity.start(this) }
         binding.btnMainAnimation.setOnClickListener { AnimationActivity.start(this) }
         binding.btnMainDispatchEvent.setOnClickListener { DispatchEventDemoActivity.start(this) }
-        binding.btnVideo.setOnClickListener { VideoDemoActivity.start(this) }
         binding.btnCommunication.setOnClickListener { CommunicateActivity.start(this) }
         binding.btnService.setOnClickListener { ServiceTestActivity.start(this) }
         binding.btnDagger.setOnClickListener { DaggerActivity.start(this) }

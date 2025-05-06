@@ -17,10 +17,10 @@ import com.example.android_lesson.R;
 
 import java.io.IOException;
 
-public class VideoDemoActivity extends AppCompatActivity {
+public class MediaPlayerSampleActivity extends AppCompatActivity {
 
     public static void start(Context context){
-        Intent intent = new Intent(context, VideoDemoActivity.class);
+        Intent intent = new Intent(context, MediaPlayerSampleActivity.class);
         context.startActivity(intent);
     }
 
@@ -31,7 +31,7 @@ public class VideoDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_video_demo);
+        setContentView(R.layout.activity_media_player_sample);
         initButton();
 
         mMediaPlayer = new MediaPlayer();
@@ -94,7 +94,7 @@ public class VideoDemoActivity extends AppCompatActivity {
         // "/mnt/sdcard/phone.mp4"; //getExternalFilesDir().getAbsolutePath();
         AssetFileDescriptor mAfd;
         try {
-            mAfd = getAssets().openFd("video1.mp4");
+            mAfd = getAssets().openFd("video-land.mp4");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

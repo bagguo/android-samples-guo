@@ -34,6 +34,7 @@ import com.example.android_lesson.ui.tablayout.customtab.TabLayoutDemoActivity
 import com.example.android_lesson.ui.textview.TextViewSampleActivity
 import com.example.android_lesson.ui.toast.ToastSampleActivity
 import com.example.android_lesson.ui.toolbar.ToolbarSimpleActivity
+import com.example.android_lesson.ui.video.VideoEntryActivity
 import com.example.android_lesson.util.callSystemShare
 
 class UIEntryActivity : AppCompatActivity() {
@@ -160,6 +161,7 @@ class UIEntryActivity : AppCompatActivity() {
         btnSoftInput.setOnClickListener { SoftInputSampleActivity.start(this@UIEntryActivity) }
         btnSoftInput2.setOnClickListener { SoftInputActivity.launch(this@UIEntryActivity) }
         btnImmersiveStatusBar.setOnClickListener { ImmersiveStatusBarActivity.start(this@UIEntryActivity) }
+        btnVideo.setOnClickListener { VideoEntryActivity.launch(this@UIEntryActivity) }
 
 
         btnSystemShare.setOnClickListener {

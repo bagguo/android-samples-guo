@@ -18,15 +18,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
+        <activity
+            android:name=".ui.video.VideoEntryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.video.VideoOrientationActivity"
+            android:exported="true">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
         <activity android:name=".communication.sharedvm.CActivity" />
         <activity
             android:name=".communication.sharedvm.AFgm2BFgm2CActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".ui.bigscreen.embedding.SplitListActivityStartedActivity"
@@ -49,11 +63,13 @@
         <activity
             android:name=".ui.bigscreen.embedding.SplitListActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".ui.bigscreen.BigScreenSamplesActivity"
@@ -254,7 +270,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.video.VideoDemoActivity"
+            android:name=".ui.video.MediaPlayerSampleActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true" />
         <activity
@@ -296,9 +312,9 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -312,29 +328,13 @@
         <meta-data
             android:name="design_height_in_dp"
             android:value="812" />
-
-        <!-- activity 嵌入分屏
+        <!--
+ activity 嵌入分屏
         告知系统您的应用已实现 activity 嵌入
         -->
         <property
             android:name="android.window.PROPERTY_ACTIVITY_EMBEDDING_SPLITS_ENABLED"
             android:value="true" />
-        <!--
-        xml配置实现分屏
-        InitializationProvider 会在应用的 onCreate() 方法执行之前发现并初始化 SplitInitializer；因此，分屏规则在应用主要 activity 启动时生效
-        fixme: gdz applicationId需与包名一致，否则androidx.startup.InitializationProvider找不到
-        -->
-        <!--        <provider-->
-        <!--            android:name="androidx.startup.InitializationProvider"-->
-        <!--            android:authorities="${applicationId}.androidx-startup"-->
-        <!--            android:exported="false"-->
-        <!--            tools:node="merge">-->
-
-        <!--            &lt;!&ndash; Make SplitInitializer discoverable by InitializationProvider. &ndash;&gt;-->
-        <!--            <meta-data-->
-        <!--                android:name="${applicationId}.ui.bigscreen.embedding.SplitInitializer"-->
-        <!--                android:value="androidx.startup" />-->
-        <!--        </provider>-->
     </application>
 
 </manifest>
