@@ -19,16 +19,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
+            android:name=".ui.video.VideoOrientation2Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="false"
+            android:screenOrientation="fullSensor"
+            android:exported="true" >
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
+
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.video.VideoEntryActivity"
             android:exported="false" />
         <activity
             android:name=".ui.video.VideoOrientationActivity"
             android:exported="true">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".communication.sharedvm.CActivity" />
         <activity
@@ -312,11 +327,11 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
         <service
@@ -337,4 +352,6 @@
             android:value="true" />
     </application>
 
+    <!-- 声明支持自动旋转 -->
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false"/>
 </manifest>

@@ -39,6 +39,15 @@
 
     </style>
 
+<!--
+        <item name="android:forceEnableZoom">false</item>
+-->
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:windowEnableSplitTouch">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
     <style name="dialog" parent="@android:style/Theme.Holo.Dialog">
         <!-- 是否有边框 -->
         <item name="android:windowFrame">@null</item>
