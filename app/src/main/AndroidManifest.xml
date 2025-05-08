@@ -21,15 +21,15 @@
         <activity
             android:name=".ui.video.VideoOrientation2Activity"
             android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
             android:resizeableActivity="true"
-            android:supportsPictureInPicture="false"
             android:screenOrientation="fullSensor"
-            android:exported="true" >
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
+            android:supportsPictureInPicture="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ui.video.VideoEntryActivity"
@@ -327,11 +327,13 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
 
         <service
@@ -352,6 +354,4 @@
             android:value="true" />
     </application>
 
-    <!-- 声明支持自动旋转 -->
-    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false"/>
 </manifest>
