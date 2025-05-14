@@ -164,6 +164,12 @@ dependencies {
 
     /*********************** wallet start**********************/
     implementation("org.web3j:core:4.8.7-android")
+    implementation("org.bitcoinj:bitcoinj-core:0.17") {
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk15to18'
+        exclude group: 'com.google.protobuf', module: 'protobuf-javalite'
+        exclude group: "org.slf4j", module: "slf4j-api"
+    }
+    implementation 'org.slf4j:slf4j-nop:1.7.25'
 
     /*********************** wallet end**********************/
 

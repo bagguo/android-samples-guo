@@ -29,6 +29,10 @@ allprojects {
         maven {url 'https://raw.githubusercontent.com/web3user1/OpenWeb3-Android/main/aar/1.0.7-fixed.1'}
 
     }
+
+    configurations.configureEach {
+        exclude group: "com.google.errorprone", module: "error_prone_annotations"
+    }
 }
 
 task clean(type: Delete) {

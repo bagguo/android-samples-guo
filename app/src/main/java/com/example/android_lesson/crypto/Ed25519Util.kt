@@ -20,7 +20,7 @@ import java.util.Base64
  * EdDSA（爱德华兹曲线数字签名算法）
  * 是一种使用基于扭曲爱德华兹曲线的Schnorr签名变体的数字签名方案。签名创建在EdDSA中是确定性的，其安全性是基于某些离散对数问题的难处理性，因此它比DSA和ECDSA更安全，后者要求每个签名都具有高质量的随机性。
  */
-object CryptoUtil {
+object Ed25519Util {
     /**
      * Ed25519是EdDSA签名方案，但使用SHA-512 / 256和Curve25519；它是一条安全的椭圆形曲线，比DSA，ECDSA和EdDSA 提供更好的安全性，并且具有更好的性能（人为注意）。
      */
@@ -61,8 +61,8 @@ object CryptoUtil {
 fun main() {
     val data = ""
 
-    val keyPair = CryptoUtil.generateKeyPair()
-    val signed = CryptoUtil.sign(keyPair.private, data.toByteArray())
-    CryptoUtil.verify(keyPair.public, data.toByteArray(), signed)
+    val keyPair = Ed25519Util.generateKeyPair()
+    val signed = Ed25519Util.sign(keyPair.private, data.toByteArray())
+    Ed25519Util.verify(keyPair.public, data.toByteArray(), signed)
 }
 
