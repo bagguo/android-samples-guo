@@ -27,16 +27,11 @@ class SoftInputSampleActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+//        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 
 //        getWindow().setDecorFitsSystemWindows(false)
 //        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
 //        binding.flRoot.setOnApplyWindowInsetsListener()
     }
-
-    override fun onApplyThemeResource(theme: Resources.Theme?, resid: Int, first: Boolean) {
-        super.onApplyThemeResource(theme, resid, first)
-    }
-
 }

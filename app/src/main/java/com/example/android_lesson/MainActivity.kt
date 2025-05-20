@@ -1,6 +1,7 @@
 package com.example.android_lesson
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -28,6 +29,7 @@ import com.example.android_lesson.net.rxjavaretrofit.RxjavaRetrofitTest
 import com.example.android_lesson.service.start.ServiceTestActivity
 import com.example.android_lesson.ui.UIEntryActivity
 import com.example.android_lesson.debug.DebugToolsManager
+import com.example.android_lesson.service.start.ClipboardMonitorService
 import com.example.android_lesson.ui.live.HeartFlowActivity
 import com.example.android_lesson.wallet.WalletActivity
 import com.example.android_lesson.webview.JavaJSCallActivity
@@ -90,6 +92,11 @@ class MainActivity : AppCompatActivity() {
         hanshu()
 
         setParams()
+
+        startService(
+            Intent(this, ClipboardMonitorService::class.java)
+        )
+
     }
 
     override fun onStart() {
