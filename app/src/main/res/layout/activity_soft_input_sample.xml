@@ -3,10 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fl_root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:isScrollContainer="true"
-    tools:context=".ui.input.SoftInputSampleActivity">
+    android:layout_height="match_parent">
 
     <!--fillViewport 充满视窗-->
     <ScrollView
@@ -14,27 +11,30 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-        <RelativeLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@color/purple_200"
                 android:text="iuooldc,toooo" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
                 android:layout_centerInParent="true"
+                android:background="@color/dull_blue"
                 android:text="iuooldc,dlkcpokcpold" />
 
-            <EditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/et"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_alignParentBottom="true"
                 android:hint="input" />
-        </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 </FrameLayout>

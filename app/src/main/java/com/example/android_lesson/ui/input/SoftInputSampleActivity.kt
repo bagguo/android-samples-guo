@@ -26,12 +26,5 @@ class SoftInputSampleActivity : AppCompatActivity() {
         binding = ActivitySoftInputSampleBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
-//        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
-
-//        getWindow().setDecorFitsSystemWindows(false)
-//        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-
-//        binding.flRoot.setOnApplyWindowInsetsListener()
     }
 }
