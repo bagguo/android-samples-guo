@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.bigscreen.embedding.PlaceholderActivity">
+    tools:context=".ui.largescreen.embedding.PlaceholderActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"

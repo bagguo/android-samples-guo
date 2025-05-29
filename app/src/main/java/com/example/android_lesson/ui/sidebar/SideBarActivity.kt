@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android_lesson.databinding.ActivitySideBarBinding
-import com.example.android_lesson.ui.sidebar.DLSideBar.OnTouchingLetterChangedListener
+import com.example.android_lesson.widgets.sidebar.DLSideBar.OnTouchingLetterChangedListener
 
 class SideBarActivity : AppCompatActivity() {
 

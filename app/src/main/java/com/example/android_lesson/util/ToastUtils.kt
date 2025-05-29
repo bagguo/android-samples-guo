@@ -14,7 +14,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isVisible
 import com.example.android_lesson.App
 import com.example.android_lesson.R
-import com.example.android_lesson.ui.textview.select.im.SelectUtils.Companion.dp2px
+import com.example.android_lesson.widgets.text.select.im.SelectUtils.Companion.dp2px
 import java.lang.ref.WeakReference
 
 object ToastUtils {

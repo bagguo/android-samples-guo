@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
     />
-    <com.example.android_lesson.ui.live.HeartLayout
+    <com.example.android_lesson.widgets.live.like.HeartLayout
         android:id="@+id/heart"
         android:layout_width="100dp"
         android:layout_height="240dp"
@@ -21,5 +21,5 @@
 <!--            android:layout_margin="30dp"-->
 <!--            android:background="@drawable/selector_like"-->
 <!--        />-->
-    </com.example.android_lesson.ui.live.HeartLayout>
+    </com.example.android_lesson.widgets.live.like.HeartLayout>
 </FrameLayout>

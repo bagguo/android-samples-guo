@@ -12,7 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.android_lesson.R;
 import com.example.android_lesson.ui.tablayout.customtab.MyFragment;
 import com.example.android_lesson.ui.tablayout.customtab.MyFragmentPagerAdapter;
-import com.example.android_lesson.view.indicator.DotsIndicator;
+import com.example.android_lesson.widgets.indicator.DotsIndicator;
 
 import java.util.ArrayList;
 import java.util.List;

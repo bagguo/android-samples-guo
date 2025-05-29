@@ -2,7 +2,6 @@ package com.example.android_lesson.communication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +9,6 @@ import android.util.Log;
 
 import com.example.android_lesson.R;
 import com.example.android_lesson.communication.eventbus.AActivity;
-import com.example.android_lesson.service.start.ServiceTestActivity;
 
 public class CommunicateActivity extends AppCompatActivity {
 

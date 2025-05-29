@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.android_lesson.R;
+import com.example.android_lesson.widgets.dialog.CommonConfirmDialogJ;
+import com.example.android_lesson.widgets.dialog.CustomProgressDialog;
+import com.example.android_lesson.widgets.dialog.SingleInstanceDialogMgr;
 
 
 import androidx.appcompat.app.AppCompatActivity;

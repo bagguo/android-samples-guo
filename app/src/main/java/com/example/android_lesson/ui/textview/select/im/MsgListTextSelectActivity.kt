@@ -10,6 +10,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android_lesson.R
+import com.example.android_lesson.widgets.text.select.im.MsgAdapter
+import com.example.android_lesson.widgets.text.select.im.MsgBean
+import com.example.android_lesson.widgets.text.select.im.SelectTextEvent
+import com.example.android_lesson.widgets.text.select.im.SelectTextEventBus
+import com.example.android_lesson.widgets.text.select.im.SelectTextHelper
 
 class MsgListTextSelectActivity : AppCompatActivity() {
     companion object {

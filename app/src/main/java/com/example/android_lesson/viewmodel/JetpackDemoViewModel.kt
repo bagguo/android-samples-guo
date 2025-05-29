@@ -2,7 +2,7 @@ package com.example.android_lesson.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.android_lesson.kotlin.coroutine.CoroutineSample
+import com.example.android_lesson.language.kotlin.coroutine.CoroutineSample
 import com.example.android_lesson.viewmodel.base.BaseViewModel
 import kotlinx.coroutines.launch
 

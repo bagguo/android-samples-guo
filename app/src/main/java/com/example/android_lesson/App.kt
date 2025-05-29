@@ -3,9 +3,8 @@ package com.example.android_lesson
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
-import androidx.window.embedding.RuleController
 import com.alibaba.android.arouter.launcher.ARouter
-import com.example.android_lesson.ui.bigscreen.embedding.SplitManager
+import com.example.android_lesson.ui.largescreen.embedding.SplitManager
 import com.tencent.mmkv.MMKV
 
 /**

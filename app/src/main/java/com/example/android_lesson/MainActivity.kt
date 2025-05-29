@@ -15,25 +15,25 @@ import com.bagguo.lib_base.constan.RouterTable
 import com.example.android_lesson.async.AsyncActivity
 import com.example.android_lesson.ui.animation.AnimationActivity
 import com.example.android_lesson.communication.CommunicateActivity
-import com.example.android_lesson.dagger.DaggerActivity
+import com.example.android_lesson.di.dagger.DaggerActivity
 import com.example.android_lesson.databinding.ActivityMainBinding
 import com.example.android_lesson.storage.db.sqllite.SqliteTestActivity
-import com.example.android_lesson.ui.dispatcheventdemo.DispatchEventDemoActivity
-import com.example.android_lesson.ipc.IPCTestActivity
-import com.example.android_lesson.jetpack.JetpackSampleActivity
-import com.example.android_lesson.jni.JNISampleActivity
+import com.example.android_lesson.ui.dispatchevent.DispatchEventDemoActivity
+import com.example.android_lesson.communication.ipc.IPCTestActivity
+import com.example.android_lesson.ui.jetpack.JetpackSampleActivity
+import com.example.android_lesson.ui.jni.JNISampleActivity
 import com.example.android_lesson.memory.MemorySamplesActivity
 import com.example.android_lesson.net.retrofit.RetrofitTest
 import com.example.android_lesson.net.rxjava.RxJavaTest
 import com.example.android_lesson.net.rxjavaretrofit.RxjavaRetrofitTest
-import com.example.android_lesson.service.start.ServiceTestActivity
+import com.example.android_lesson.ui.service.StartServiceTestActivity
 import com.example.android_lesson.ui.UIEntryActivity
 import com.example.android_lesson.debug.DebugToolsManager
 import com.example.android_lesson.service.start.ClipboardMonitorService
 import com.example.android_lesson.ui.live.HeartFlowActivity
 import com.example.android_lesson.wallet.WalletActivity
-import com.example.android_lesson.webview.JavaJSCallActivity
-import com.example.android_lesson.webview.WebViewDemoActivity
+import com.example.android_lesson.ui.webview.JavaJSCallActivity
+import com.example.android_lesson.ui.webview.WebViewDemoActivity
 
 class MainActivity : AppCompatActivity() {
     companion object {
@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnMainAnimation.setOnClickListener { AnimationActivity.start(this) }
         binding.btnMainDispatchEvent.setOnClickListener { DispatchEventDemoActivity.start(this) }
         binding.btnCommunication.setOnClickListener { CommunicateActivity.start(this) }
-        binding.btnService.setOnClickListener { ServiceTestActivity.start(this) }
+        binding.btnService.setOnClickListener { StartServiceTestActivity.start(this) }
         binding.btnDagger.setOnClickListener { DaggerActivity.start(this) }
         binding.btnIpc.setOnClickListener { IPCTestActivity.start(this) }
         binding.btnDb.setOnClickListener { SqliteTestActivity.start(this) }

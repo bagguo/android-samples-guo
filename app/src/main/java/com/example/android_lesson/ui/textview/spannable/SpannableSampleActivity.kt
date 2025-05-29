@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android_lesson.R
 import com.example.android_lesson.databinding.ActivitySpannableSampleBinding
+import com.example.android_lesson.widgets.text.spannable.TextSeeMoreClick
 
 
 class SpannableSampleActivity : AppCompatActivity() {

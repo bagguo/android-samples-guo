@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
-            android:name=".activity.orientation.ActivityOrientationSampleActivity"
+            android:name=".ui.activity.orientation.ActivityOrientationSampleActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -78,25 +78,25 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.bigscreen.embedding.SplitListActivityStartedActivity"
+            android:name=".ui.largescreen.embedding.SplitListActivityStartedActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.bigscreen.embedding.DetailActivityStartedActivity"
+            android:name=".ui.largescreen.embedding.DetailActivityStartedActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.bigscreen.embedding.SummaryActivity"
+            android:name=".ui.largescreen.embedding.SummaryActivity"
             android:exported="false"
             android:label="" />
         <activity
-            android:name=".ui.bigscreen.embedding.PlaceholderActivity"
+            android:name=".ui.largescreen.embedding.PlaceholderActivity"
             android:exported="false"
             android:label="" />
         <activity
-            android:name=".ui.bigscreen.embedding.DetailActivity"
+            android:name=".ui.largescreen.embedding.DetailActivity"
             android:exported="false"
             android:label="" />
         <activity
-            android:name=".ui.bigscreen.embedding.SplitListActivity"
+            android:name=".ui.largescreen.embedding.SplitListActivity"
             android:exported="true">
 
             <!-- <intent-filter> -->
@@ -107,10 +107,10 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.bigscreen.BigScreenSamplesActivity"
+            android:name=".ui.largescreen.BigScreenSamplesActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.bigscreen.responsiveviews.ResponsiveViewsSampleActivity"
+            android:name=".ui.largescreen.responsiveviews.ResponsiveViewsSampleActivity"
             android:exported="true"
             android:label="@string/title_activity_responsive_views_sample"
             android:resizeableActivity="true"
@@ -138,7 +138,7 @@
             android:name=".ui.recyclerview.nested.NestedRecyclerViewActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.immersive.ImmersiveStatusBarActivity"
+            android:name=".ui.statebar.immersive.ImmersiveStatusBarActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
@@ -148,11 +148,11 @@
             android:name=".ui.sidebar.SideBarActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.task.Activity2"
+            android:name=".ui.activity.task.Activity2"
             android:exported="false"
             android:taskAffinity="com.darren.affinity.sample" />
         <activity
-            android:name=".activity.task.Activity1"
+            android:name=".ui.activity.task.Activity1"
             android:exported="true" />
         <activity
             android:name=".ui.loading.LoadingActivity"
@@ -167,13 +167,13 @@
             android:name=".ui.textview.select.TextSelectSampleActivity"
             android:exported="false" />
         <activity
-            android:name=".webview.CustomWebViewActivity"
+            android:name=".ui.webview.CustomWebViewActivity"
             android:exported="false" />
         <activity
             android:name=".ui.textview.TextViewSampleActivity"
             android:exported="false" />
         <activity
-            android:name=".jni.JNISampleActivity"
+            android:name=".ui.jni.JNISampleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.tablayout.IndicatorActivity"
@@ -247,13 +247,13 @@
             android:label="@string/app_name" />
         <activity android:name=".ui.chapter_3.ViewActivity" />
         <activity
-            android:name=".ui.custom.CustomViewSimpleActivity"
+            android:name=".ui.customview.CustomViewSimpleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.UIEntryActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.circleprogress.CircleViewSampleActivity"
+            android:name=".ui.CircleViewSampleActivity"
             android:exported="false" />
         <activity android:name=".ui.live.HeartFlowActivity" />
         <activity
@@ -281,14 +281,14 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".jetpack.JetpackSampleActivity"
+            android:name=".ui.jetpack.JetpackSampleActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".dagger.DaggerActivity"
+            android:name=".di.dagger.DaggerActivity"
             android:exported="false" />
         <activity
             android:name=".wallet.WalletActivity"
@@ -301,10 +301,10 @@
             android:name=".wallet.ImportWalletActivity"
             android:exported="false" />
         <activity
-            android:name=".webview.JavaJSCallActivity"
+            android:name=".ui.webview.JavaJSCallActivity"
             android:exported="false" />
         <activity
-            android:name=".webview.WebViewDemoActivity"
+            android:name=".ui.webview.WebViewDemoActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -315,26 +315,26 @@
             android:configChanges="orientation|screenSize"
             android:exported="true" />
         <activity
-            android:name=".ipc.binder.bigbitmap.ReceiverBigBitmapActivity"
+            android:name=".communication.ipc.binder.bigbitmap.ReceiverBigBitmapActivity"
             android:exported="true" />
         <activity
-            android:name=".ipc.IPCTestActivity"
+            android:name=".communication.ipc.IPCTestActivity"
             android:exported="true" />
-        <activity android:name=".ipc.aidl.AIDLClientActivity" />
+        <activity android:name=".communication.ipc.aidl.AIDLClientActivity" />
         <activity
-            android:name=".service.bind.BIndServiceTestActivity"
+            android:name=".ui.service.BIndServiceTestActivity"
             android:exported="true" />
         <activity
-            android:name=".service.start.ServiceTestActivity"
+            android:name=".ui.service.StartServiceTestActivity"
             android:exported="true" />
         <activity android:name=".communication.eventbus.BActivity" />
         <activity android:name=".communication.eventbus.AActivity" />
         <activity android:name=".communication.CommunicateActivity" />
         <activity
-            android:name=".ui.dispatcheventdemo.customview.NewCardTestActivity"
+            android:name=".ui.customview.NewCardTestActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.dispatcheventdemo.DispatchEventDemoActivity"
+            android:name=".ui.dispatchevent.DispatchEventDemoActivity"
             android:exported="true" />
         <activity
             android:name=".ui.animation.AnimationActivity"
@@ -354,7 +354,7 @@
             android:name=".service.bind.MyBindService"
             android:enabled="true" />
         <service
-            android:name=".ipc.aidl.RemoteService"
+            android:name=".communication.ipc.aidl.RemoteService"
             android:enabled="true" />
         <service
             android:name=".service.start.MusicService"

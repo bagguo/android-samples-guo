@@ -7,6 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android_lesson.R
 import com.example.android_lesson.databinding.ActivityTextSelectSampleBinding
+import com.example.android_lesson.widgets.text.select.OnSelectListener
+import com.example.android_lesson.widgets.text.select.SelectableTextHelper
 
 class TextSelectSampleActivity : AppCompatActivity() {
     companion object {
