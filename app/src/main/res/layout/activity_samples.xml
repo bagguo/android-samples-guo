@@ -12,6 +12,23 @@
         android:id="@+id/btn_transparent_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="transparent activity"
-        android:textAllCaps="false" />
+        android:text="Transparent Activity"
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnFullscreenThemeActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fullscreen Theme Activity"
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnFullscreenDynamicActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fullscreen Dynamic Activity"
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
 </LinearLayout>

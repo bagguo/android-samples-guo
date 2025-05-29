@@ -15,10 +15,22 @@
         <item name="actionModeStyle">@style/CustomActionMode</item>
     </style>
 
-    <style name="Theme.TransparentActivity" parent="Theme.Androidlesson">
+    <style name="Theme.Androidlesson.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Androidlesson.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Androidlesson.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.FullscreenActivity" parent="Theme.Androidlesson.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.TransparentActivity" parent="Theme.Androidlesson.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowNoTitle">true</item>
     </style>
 
     <!--    <style name="Theme.Androidsamplesdarren" parent="android:Theme.Material.Light.NoActionBar" >-->
@@ -39,9 +51,9 @@
 
     </style>
 
-<!--
-        <item name="android:forceEnableZoom">false</item>
--->
+    <!--
+            <item name="android:forceEnableZoom">false</item>
+    -->
     <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="android:windowEnableSplitTouch">true</item>
         <item name="android:windowIsTranslucent">false</item>
@@ -64,13 +76,4 @@
         <!--弹窗背景是否变暗-->
         <item name="android:backgroundDimEnabled">false</item>
     </style>
-
-    <style name="Theme.Androidlesson.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="Theme.Androidlesson.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.Androidlesson.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

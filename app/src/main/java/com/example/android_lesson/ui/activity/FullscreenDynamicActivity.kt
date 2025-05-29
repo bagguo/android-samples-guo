@@ -1,22 +1,23 @@
 package com.example.android_lesson.ui.activity
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.example.android_lesson.R
+import com.example.android_lesson.base.activity.BaseFullScreenActivity
 
-class TransparentActivity : Activity() {
+
+class FullscreenDynamicActivity : BaseFullScreenActivity() {
     companion object {
         fun launch(context: Context) {
-            val intent = Intent(context, TransparentActivity::class.java)
-            context.startActivity(intent)
+            context.startActivity(
+                Intent(context, FullscreenDynamicActivity::class.java),
+            )
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        setContentView(R.layout.activity_transparent)
+        setContentView(R.layout.activity_fullscreen_dynamic)
     }
 }

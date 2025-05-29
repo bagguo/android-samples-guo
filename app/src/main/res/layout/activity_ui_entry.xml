@@ -15,22 +15,25 @@
             android:id="@+id/btn_activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="activity"
-            android:textAllCaps="false" />
+            android:text="Activity"
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnTabVp2BottomSheetFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TabVp2BottomSheetFragment"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnStickBottomSheetFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="StickBottomSheetFragment"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
 
         <Button
@@ -38,84 +41,96 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="recycler_view"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_list_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="list_view"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/toolbar_simple"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="toolbar simple"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_grid_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="grid_view"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_tab_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TabLayout"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_tab_layout_custom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TabLayout custom"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_tab_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tab indicator"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_butter_knife"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="butter knife"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_multi_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="multi_type_adapter"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_dialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="dialog"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnToast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Toast"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_dynamic_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="btn_dynamic_layout"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_constraint_layout"
@@ -124,7 +139,8 @@
             android:text="constraint_layout"
             android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
 
 
         <Button
@@ -134,7 +150,8 @@
             android:text="circle_view"
             android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_constraint_layout" />
+            app:layout_constraintTop_toBottomOf="@id/btn_constraint_layout"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_custom_view_simple"
@@ -143,7 +160,8 @@
             android:text="custom_view_simple"
             android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_circle_view" />
+            app:layout_constraintTop_toBottomOf="@id/btn_circle_view"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_view"
@@ -152,70 +170,80 @@
             android:text="btn_view"
             android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_custom_view_simple" />
+            app:layout_constraintTop_toBottomOf="@id/btn_custom_view_simple"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="textview"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnLoading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="loading"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnSideBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Side index Bar"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_soft_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="soft input"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btn_soft_input2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="soft input2"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnImmersiveStatusBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ImmersiveStatusBar"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnVideo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Video"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnSystemShare"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="call System Share"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnBigScreen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Big Screen"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
 </ScrollView>
