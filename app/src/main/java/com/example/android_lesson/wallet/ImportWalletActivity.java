@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 
 import com.example.android_lesson.R;
-import com.example.android_lesson.base.BaseActivity;
+import com.example.android_lesson.base.activity.BaseActivity;
 import com.example.android_lesson.util.StringUtil;
 
 import org.web3j.crypto.Bip39Wallet;

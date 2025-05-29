@@ -8,7 +8,7 @@ import android.os.Message;
 import android.view.View;
 
 import com.example.android_lesson.R;
-import com.example.android_lesson.base.BaseActivity;
+import com.example.android_lesson.base.activity.BaseActivity;
 import com.example.android_lesson.widgets.live.like.HeartLayout;
 
 

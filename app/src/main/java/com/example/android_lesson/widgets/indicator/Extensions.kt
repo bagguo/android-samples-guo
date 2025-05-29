@@ -24,7 +24,7 @@ internal fun View.setWidth(width: Int) {
     }
 }
 
-internal fun <T> ArrayList<T>.isInBounds(index: Int) = index in 0 until java.util.ArrayList.size
+internal fun <T> ArrayList<T>.isInBounds(index: Int) = index in 0 until size
 
 internal fun Context.getThemePrimaryColor(): Int {
     val value = TypedValue()

@@ -1,6 +1,5 @@
-package com.example.android_lesson.base;
+package com.example.android_lesson.base.activity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 

@@ -17,7 +17,7 @@ public class MyBindService extends Service {
     private final Random mGenerator = new Random();
 
     public class LocalBinder extends Binder {
-        MyBindService getService() {
+        public MyBindService getService() {
             // Return this instance of LocalService so clients can call public methods
             return MyBindService.this;
         }
