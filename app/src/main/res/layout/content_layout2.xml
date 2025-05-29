@@ -12,7 +12,7 @@
         android:layout_marginBottom="5dp"
         android:text="TextView" />
 
-    <com.example.android_lesson.ui.chapter_3.ui.ListViewEx
+    <com.example.guo.ui.chapter_3.ui.ListViewEx
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

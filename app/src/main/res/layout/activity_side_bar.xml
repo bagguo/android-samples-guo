@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.sidebar.SideBarActivity">
 
-    <com.example.android_lesson.widgets.sidebar.DLSideBar
+    <com.example.guo.widgets.sidebar.DLSideBar
         android:id="@+id/sideBar"
         android:layout_width="40dp"
         android:layout_height="match_parent"

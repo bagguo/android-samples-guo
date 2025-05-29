@@ -14,7 +14,7 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <com.example.android_lesson.widgets.indicator.DotsIndicator
+    <com.example.guo.widgets.indicator.DotsIndicator
         android:id="@+id/indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

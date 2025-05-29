@@ -5,17 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.customview.NewCardTestActivity">
 
-    <com.example.android_lesson.widgets.custom.NewCardView
+    <com.example.guo.widgets.custom.NewCardView
         android:id="@+id/card_view"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:background="@drawable/ic_launcher_background">
 
-        <com.example.android_lesson.widgets.custom.MyButton
+        <com.example.guo.widgets.custom.MyButton
             android:id="@+id/btn"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
             android:text="子view" />
-    </com.example.android_lesson.widgets.custom.NewCardView>
+    </com.example.guo.widgets.custom.NewCardView>
 </FrameLayout>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context="com.example.android_lesson.communication.intent.JumpActionActivity">
+    tools:context="com.example.guo.communication.intent.JumpActionActivity">
 
     <TextView
         android:id="@+id/toolbar_simple"

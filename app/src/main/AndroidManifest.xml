@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.android_lesson" >
+    package="com.example.guo" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
 
     <application
-        android:name=".App"
+        android:name="com.example.guo.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,10 +19,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson" >
         <activity
-            android:name=".ui.activity.FullscreenDynamicActivity"
+            android:name="com.example.guo.ui.activity.FullscreenDynamicActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.fragment.FragmentSamplesActivity"
+            android:name="com.example.guo.ui.fragment.FragmentSamplesActivity"
             android:exported="true" >
 
             <!-- <intent-filter> -->
@@ -33,7 +33,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.activity.orientation.ActivityOrientationSampleActivity"
+            android:name="com.example.guo.ui.activity.orientation.ActivityOrientationSampleActivity"
             android:exported="true" >
 
             <!-- <intent-filter> -->
@@ -44,7 +44,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.clipboard.ClipboardSampleActivity"
+            android:name="com.example.guo.ui.clipboard.ClipboardSampleActivity"
             android:exported="true" >
 
             <!-- <intent-filter> -->
@@ -55,7 +55,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.video.VideoOrientation2Activity"
+            android:name="com.example.guo.ui.video.VideoOrientation2Activity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true"
             android:resizeableActivity="true"
@@ -70,10 +70,10 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.video.VideoEntryActivity"
+            android:name="com.example.guo.ui.video.VideoEntryActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.video.VideoOrientationActivity"
+            android:name="com.example.guo.ui.video.VideoOrientationActivity"
             android:exported="true" >
 
             <!-- <intent-filter> -->
@@ -83,38 +83,9 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".communication.sharedvm.CActivity" />
+        <activity android:name="com.example.guo.communication.sharedvm.CActivity" />
         <activity
-            android:name=".communication.sharedvm.AFgm2BFgm2CActivity"
-            android:exported="true" >
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity
-            android:name=".ui.largescreen.embedding.SplitListActivityStartedActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.largescreen.embedding.DetailActivityStartedActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.largescreen.embedding.SummaryActivity"
-            android:exported="false"
-            android:label="" />
-        <activity
-            android:name=".ui.largescreen.embedding.PlaceholderActivity"
-            android:exported="false"
-            android:label="" />
-        <activity
-            android:name=".ui.largescreen.embedding.DetailActivity"
-            android:exported="false"
-            android:label="" />
-        <activity
-            android:name=".ui.largescreen.embedding.SplitListActivity"
+            android:name="com.example.guo.communication.sharedvm.AFgm2BFgm2CActivity"
             android:exported="true" >
 
             <!-- <intent-filter> -->
@@ -125,10 +96,39 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.largescreen.BigScreenSamplesActivity"
+            android:name="com.example.guo.ui.largescreen.embedding.SplitListActivityStartedActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.largescreen.responsiveviews.ResponsiveViewsSampleActivity"
+            android:name="com.example.guo.ui.largescreen.embedding.DetailActivityStartedActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.guo.ui.largescreen.embedding.SummaryActivity"
+            android:exported="false"
+            android:label="" />
+        <activity
+            android:name="com.example.guo.ui.largescreen.embedding.PlaceholderActivity"
+            android:exported="false"
+            android:label="" />
+        <activity
+            android:name="com.example.guo.ui.largescreen.embedding.DetailActivity"
+            android:exported="false"
+            android:label="" />
+        <activity
+            android:name="com.example.guo.ui.largescreen.embedding.SplitListActivity"
+            android:exported="true" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.example.guo.ui.largescreen.BigScreenSamplesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.guo.ui.largescreen.responsiveviews.ResponsiveViewsSampleActivity"
             android:exported="true"
             android:label="@string/title_activity_responsive_views_sample"
             android:resizeableActivity="true"
@@ -143,10 +143,10 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.activity.ActivitySamplesActivity"
+            android:name="com.example.guo.ui.activity.ActivitySamplesActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.FullScreenThemeActivity"
+            android:name="com.example.guo.ui.activity.FullScreenThemeActivity"
             android:exported="true"
             android:theme="@style/Theme.FullscreenActivity" >
 
@@ -158,62 +158,62 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.activity.TransparentActivity"
+            android:name="com.example.guo.ui.activity.TransparentActivity"
             android:exported="true"
             android:theme="@style/Theme.TransparentActivity" />
         <activity
-            android:name=".ui.toast.ToastSampleActivity"
+            android:name="com.example.guo.ui.toast.ToastSampleActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.recyclerview.nested.NestedRecyclerViewActivity"
+            android:name="com.example.guo.ui.recyclerview.nested.NestedRecyclerViewActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.statebar.immersive.ImmersiveStatusBarActivity"
+            android:name="com.example.guo.ui.statebar.immersive.ImmersiveStatusBarActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".ui.textview.linehead.TextViewLineHeadActivity"
+            android:name="com.example.guo.ui.textview.linehead.TextViewLineHeadActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.sidebar.SideBarActivity"
+            android:name="com.example.guo.ui.sidebar.SideBarActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.task.Activity2"
+            android:name="com.example.guo.ui.activity.task.Activity2"
             android:exported="false"
             android:taskAffinity="com.darren.affinity.sample" />
         <activity
-            android:name=".ui.activity.task.Activity1"
+            android:name="com.example.guo.ui.activity.task.Activity1"
             android:exported="true" />
         <activity
-            android:name=".ui.loading.LoadingActivity"
+            android:name="com.example.guo.ui.loading.LoadingActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.textview.classifier.TextClassifierActivity"
+            android:name="com.example.guo.ui.textview.classifier.TextClassifierActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.textview.select.im.MsgListTextSelectActivity"
+            android:name="com.example.guo.ui.textview.select.im.MsgListTextSelectActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.textview.select.TextSelectSampleActivity"
+            android:name="com.example.guo.ui.textview.select.TextSelectSampleActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.webview.CustomWebViewActivity"
+            android:name="com.example.guo.ui.webview.CustomWebViewActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.textview.TextViewSampleActivity"
+            android:name="com.example.guo.ui.textview.TextViewSampleActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.jni.JNISampleActivity"
+            android:name="com.example.guo.ui.jni.JNISampleActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.tablayout.IndicatorActivity"
+            android:name="com.example.guo.ui.tablayout.IndicatorActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.tablayout.TabLayoutSimpleActivity"
+            android:name="com.example.guo.ui.tablayout.TabLayoutSimpleActivity"
             android:exported="false" />
-        <activity android:name=".ui.dialog.DialogSampleActivity" />
+        <activity android:name="com.example.guo.ui.dialog.DialogSampleActivity" />
         <activity
-            android:name=".communication.intent.JumpActionActivity"
+            android:name="com.example.guo.communication.intent.JumpActionActivity"
             android:exported="true" >
             <intent-filter>
 
@@ -223,83 +223,83 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".storage.db.sqllite.SqliteTestActivity" />
+        <activity android:name="com.example.guo.storage.db.sqllite.SqliteTestActivity" />
         <activity
-            android:name=".ui.recyclerview.headerfooter.FooterActivity"
+            android:name="com.example.guo.ui.recyclerview.headerfooter.FooterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.recyclerview.multitype.MultiTypeItemActivity"
+            android:name="com.example.guo.ui.recyclerview.multitype.MultiTypeItemActivity"
             android:exported="false" />
-        <activity android:name=".ui.recyclerview.headerfooter.HeaderAndFooterUseActivity" />
+        <activity android:name="com.example.guo.ui.recyclerview.headerfooter.HeaderAndFooterUseActivity" />
         <activity
-            android:name=".ui.recyclerview.RecyclerViewEntryActivity"
+            android:name="com.example.guo.ui.recyclerview.RecyclerViewEntryActivity"
             android:exported="false" />
-        <activity android:name=".ui.recyclerview.expandable.ExpandableUseActivity" />
-        <activity android:name=".ui.toolbar.ToolbarSimpleActivity" />
+        <activity android:name="com.example.guo.ui.recyclerview.expandable.ExpandableUseActivity" />
+        <activity android:name="com.example.guo.ui.toolbar.ToolbarSimpleActivity" />
         <activity
-            android:name=".ui.tablayout.customtab.TabLayoutDemoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.recyclerview.general.RecyclerViewActivity"
+            android:name="com.example.guo.ui.tablayout.customtab.TabLayoutDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".async.rxjava.RxjavaActivity"
+            android:name="com.example.guo.ui.recyclerview.general.RecyclerViewActivity"
             android:exported="false" />
         <activity
-            android:name=".async.AsyncActivity"
+            android:name="com.example.guo.async.rxjava.RxjavaActivity"
             android:exported="false" />
         <activity
-            android:name=".memory.MemorySamplesActivity"
+            android:name="com.example.guo.async.AsyncActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ButterKnifeTestActivity"
+            android:name="com.example.guo.memory.MemorySamplesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.guo.ui.ButterKnifeTestActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:launchMode="standard" />
         <activity
-            android:name=".ui.chapter_3.TestActivity"
+            android:name="com.example.guo.ui.chapter_3.TestActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:launchMode="standard" />
         <activity
-            android:name=".ui.chapter_3.DemoActivity_1"
+            android:name="com.example.guo.ui.chapter_3.DemoActivity_1"
             android:configChanges="screenLayout"
             android:label="@string/title_scene_1"
             android:launchMode="standard" />
         <activity
-            android:name=".ui.chapter_3.DemoActivity_2"
+            android:name="com.example.guo.ui.chapter_3.DemoActivity_2"
             android:configChanges="screenLayout"
             android:label="@string/title_scene_1"
             android:launchMode="standard" />
         <activity
-            android:name=".ui.chapter_3.ThirdActivity"
+            android:name="com.example.guo.ui.chapter_3.ThirdActivity"
             android:configChanges="screenLayout"
             android:label="@string/app_name" />
-        <activity android:name=".ui.chapter_3.ViewActivity" />
+        <activity android:name="com.example.guo.ui.chapter_3.ViewActivity" />
         <activity
-            android:name=".ui.customview.CustomViewSimpleActivity"
+            android:name="com.example.guo.ui.customview.CustomViewSimpleActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.UIEntryActivity"
+            android:name="com.example.guo.ui.UIEntryActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.CircleViewSampleActivity"
+            android:name="com.example.guo.ui.CircleViewSampleActivity"
             android:exported="false" />
-        <activity android:name=".ui.live.HeartFlowActivity" />
+        <activity android:name="com.example.guo.ui.live.HeartFlowActivity" />
         <activity
-            android:name=".ui.textview.spannable.SpannableSampleActivity"
+            android:name="com.example.guo.ui.textview.spannable.SpannableSampleActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.input.SoftInputActivity"
+            android:name="com.example.guo.ui.input.SoftInputActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.input.SoftInputSampleActivity"
+            android:name="com.example.guo.ui.input.SoftInputSampleActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize" >
 
@@ -311,66 +311,66 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.jetpack.JetpackSampleActivity"
+            android:name="com.example.guo.ui.jetpack.JetpackSampleActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".di.dagger.DaggerActivity"
+            android:name="com.example.guo.di.dagger.DaggerActivity"
             android:exported="false" />
         <activity
-            android:name=".wallet.WalletActivity"
+            android:name="com.example.guo.wallet.WalletActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".wallet.ImportWalletActivity"
+            android:name="com.example.guo.wallet.ImportWalletActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.webview.JavaJSCallActivity"
+            android:name="com.example.guo.ui.webview.JavaJSCallActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.webview.WebViewDemoActivity"
+            android:name="com.example.guo.ui.webview.WebViewDemoActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.video.MediaPlayerSampleActivity"
+            android:name="com.example.guo.ui.video.MediaPlayerSampleActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true" />
         <activity
-            android:name=".communication.ipc.binder.bigbitmap.ReceiverBigBitmapActivity"
+            android:name="com.example.guo.communication.ipc.binder.bigbitmap.ReceiverBigBitmapActivity"
             android:exported="true" />
         <activity
-            android:name=".communication.ipc.IPCTestActivity"
+            android:name="com.example.guo.communication.ipc.IPCTestActivity"
             android:exported="true" />
-        <activity android:name=".communication.ipc.aidl.AIDLClientActivity" />
+        <activity android:name="com.example.guo.communication.ipc.aidl.AIDLClientActivity" />
         <activity
-            android:name=".ui.service.BIndServiceTestActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.service.StartServiceTestActivity"
-            android:exported="true" />
-        <activity android:name=".communication.eventbus.BActivity" />
-        <activity android:name=".communication.eventbus.AActivity" />
-        <activity android:name=".communication.CommunicateActivity" />
-        <activity
-            android:name=".ui.customview.NewCardTestActivity"
+            android:name="com.example.guo.ui.service.BIndServiceTestActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.dispatchevent.DispatchEventDemoActivity"
+            android:name="com.example.guo.ui.service.StartServiceTestActivity"
+            android:exported="true" />
+        <activity android:name="com.example.guo.communication.eventbus.BActivity" />
+        <activity android:name="com.example.guo.communication.eventbus.AActivity" />
+        <activity android:name="com.example.guo.communication.CommunicateActivity" />
+        <activity
+            android:name="com.example.guo.ui.customview.NewCardTestActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.animation.AnimationActivity"
+            android:name="com.example.guo.ui.dispatchevent.DispatchEventDemoActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.guo.ui.animation.AnimationActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.guo.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -380,15 +380,15 @@
         </activity>
 
         <service
-            android:name=".service.bind.MyBindService"
+            android:name="com.example.guo.service.bind.MyBindService"
             android:enabled="true" />
         <service
-            android:name=".communication.ipc.aidl.RemoteService"
+            android:name="com.example.guo.communication.ipc.aidl.RemoteService"
             android:enabled="true" />
         <service
-            android:name=".service.start.MusicService"
+            android:name="com.example.guo.service.start.MusicService"
             android:enabled="true" />
-        <service android:name=".service.start.ClipboardMonitorService" />
+        <service android:name="com.example.guo.service.start.ClipboardMonitorService" />
 
         <meta-data
             android:name="design_width_in_dp"

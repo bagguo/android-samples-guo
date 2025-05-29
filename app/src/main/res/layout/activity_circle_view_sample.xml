@@ -8,7 +8,7 @@
     tools:context=".ui.CircleViewSampleActivity">
 
 
-    <com.example.android_lesson.widgets.progressbar.circle.CircleProgress
+    <com.example.guo.widgets.progressbar.circle.CircleProgress
         android:id="@+id/circle_progress_bar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         app:value="10000"
         app:valueSize="25sp" />
 
-    <com.example.android_lesson.widgets.progressbar.circle.CircleProgress
+    <com.example.guo.widgets.progressbar.circle.CircleProgress
         android:id="@+id/circle_progress_bar2"
         android:layout_width="100dp"
         android:layout_height="200dp"
@@ -47,7 +47,7 @@
         app:value="75"
         app:valueSize="@dimen/text_size_20" />
 
-    <com.example.android_lesson.widgets.progressbar.circle.CircleProgress
+    <com.example.guo.widgets.progressbar.circle.CircleProgress
         android:id="@+id/circle_progress_bar3"
         android:layout_width="200dp"
         android:layout_height="200dp"

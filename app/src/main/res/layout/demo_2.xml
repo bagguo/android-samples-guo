@@ -5,7 +5,7 @@
     android:background="#ffffff"
     android:orientation="vertical" >
 
-    <com.example.android_lesson.ui.chapter_3.ui.HorizontalScrollViewEx2
+    <com.example.guo.ui.chapter_3.ui.HorizontalScrollViewEx2
         android:id="@+id/container"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />

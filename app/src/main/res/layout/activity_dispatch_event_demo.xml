@@ -6,12 +6,12 @@
     android:orientation="vertical"
     tools:context=".ui.dispatchevent.DispatchEventDemoActivity">
 
-    <com.example.android_lesson.widgets.dispatchevent.MyRootLinearLayout
+    <com.example.guo.widgets.dispatchevent.MyRootLinearLayout
         android:id="@+id/root_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.example.android_lesson.widgets.dispatchevent.MyLinearLayout
+        <com.example.guo.widgets.dispatchevent.MyLinearLayout
             android:id="@+id/linear_layout"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -19,13 +19,13 @@
             android:background="@color/purple_200"
             android:gravity="center">
 
-            <com.example.android_lesson.widgets.dispatchevent.MyView
+            <com.example.guo.widgets.dispatchevent.MyView
                 android:id="@+id/view"
                 android:layout_width="80dp"
                 android:layout_height="60dp"
                 android:background="@color/teal_200" />
-        </com.example.android_lesson.widgets.dispatchevent.MyLinearLayout>
-    </com.example.android_lesson.widgets.dispatchevent.MyRootLinearLayout>
+        </com.example.guo.widgets.dispatchevent.MyLinearLayout>
+    </com.example.guo.widgets.dispatchevent.MyRootLinearLayout>
 
     <Button
         android:id="@+id/dispatch_go_card_btn"

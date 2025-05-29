@@ -1,4 +1,4 @@
-<com.example.android_lesson.ui.chapter_3.ui.RevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.guo.ui.chapter_3.ui.RevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,4 +25,4 @@
 
         android:text="滑动冲突场景1-内部拦截" />
 
-</com.example.android_lesson.ui.chapter_3.ui.RevealLayout>
+</com.example.guo.ui.chapter_3.ui.RevealLayout>
