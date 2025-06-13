@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -53,11 +53,14 @@
         <item name="android:windowBackground">@android:color/white</item>
     </style>
 
-    <style name="FullScreenDialog" parent="Theme.MaterialComponents.DayNight.Dialog">
+    <style name="FullScreenDialog" parent="Theme.AppCompat.Dialog">
         <item name="android:windowIsFloating">false</item>
+        <!-- 将内容呈现到刘海区域中-->
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:ignore="NewApi">shortEdges</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
     </style>
 
     <style name="CommonAlertDialog" parent="android:style/Theme.Dialog">

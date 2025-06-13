@@ -1,7 +1,8 @@
-package com.example.guo.language.kotlin.delegation;
+package com.example.guo.designpattern.delegation;
 
 /**
  * 委托：把自己要做的事委托给别人做
+ * 使用别人的实现
  */
 class RealPrinter { //the "delegate" 被委托者
     void print() {

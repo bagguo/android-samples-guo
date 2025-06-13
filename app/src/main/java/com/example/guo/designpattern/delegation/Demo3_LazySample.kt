@@ -1,4 +1,6 @@
-package com.example.guo.oop.delegation
+@file:Suppress("ktlint:standard:filename")
+
+package com.example.guo.designpattern.delegation
 
 /**
  * Kotlin 标准库包含许多有用的委托，例如lazy、observable等
@@ -10,8 +12,8 @@ class LazySample {
 
     /**
      * 想要线程安全，请改用blockingLazy()
+     * lazy用于延迟初始化
      */
-    //lazy用于延迟初始化
     val lazyStr: String by lazy {
         println("computed!")
         "my lazy"
