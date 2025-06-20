@@ -1,31 +1,5 @@
 package com.example.guo.designpattern.delegation;
 
-/**
- * 委托：把自己要做的事委托给别人做
- * 使用别人的实现
- */
-class RealPrinter { //the "delegate" 被委托者
-    void print() {
-        System.out.print("something");
-    }
-}
-
-class Printer { //the "delegator" 委托者
-    RealPrinter p = new RealPrinter();
-
-    void print() {
-        p.print();// delegation
-    }
-}
-
-class DelegationDemo {
-
-    public static void main(String[] args) {
-        Printer printer = new Printer();
-        printer.print();
-    }
-}
-
 //demo 2 复杂的Java例子
 
 interface I {
@@ -56,7 +30,7 @@ class C implements I {
 }
 
 
- class DelegationDemo2 {
+class DelegationDemo2 {
     public static void main(String[] args) {
         C c = new C();
         c.f();     // output: A: doing f()
