@@ -12,29 +12,41 @@
         android:id="@+id/btnTextLineHead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Text Line Head" />
+        android:text="Text Line Head"
+        tools:ignore="HardcodedText" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is a sample text for selection." />
+        android:text="This is a sample text for selection."
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnTextSelect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text select" />
+        android:text="text select"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnTextSelect2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text select 2" />
+        android:text="text select 2"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnTextClassifier"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text Classifier" />
+        android:text="text Classifier"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnSpannable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spannable"
+        tools:ignore="HardcodedText" />
 </LinearLayout>

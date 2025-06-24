@@ -12,10 +12,8 @@ import com.example.guo.R
 import com.example.guo.databinding.ActivitySpannableSampleBinding
 import com.example.guo.widgets.text.spannable.TextSeeMoreClick
 
-
 class SpannableSampleActivity : AppCompatActivity() {
     companion object {
-        @JvmStatic
         fun start(context: Context) {
             val intent = Intent(context, SpannableSampleActivity::class.java)
             context.startActivity(intent)
@@ -37,28 +35,25 @@ class SpannableSampleActivity : AppCompatActivity() {
         val and = " and "
         val seeMore = "see more"
 
-
         val text = answer + and + seeMore
         val sb = SpannableStringBuilder(text)
         sb.setSpan(
             TextSeeMoreClick(),
             text.length - seeMore.length,
             text.length,
-            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+            Spanned.SPAN_EXCLUSIVE_EXCLUSIVE,
         )
 
 //        val tv1 = findViewById<TextView>(R.id.tv_style)
-        //设置点击事件，加上这句话才有效果
+        // 设置点击事件，加上这句话才有效果
         tvAnswer.movementMethod = LinkMovementMethod.getInstance()
         tvAnswer.highlightColor = resources.getColor(R.color.transparent)
         tvAnswer.text = sb
-
 
 //        val sizeLength = "f...等X人";
 //        val count = TextDrawable(sizeLength, SizeUtils.sp2px(16), context.getResources().getColor(R.color.title), Color.TRANSPARENT, 0, 0);
 //        textView.setCompoundDrawables(null, null, count, null);
 //        textView.setText(text)
-
     }
 
     /**
@@ -73,5 +68,4 @@ class SpannableSampleActivity : AppCompatActivity() {
 //        )
 //        return staticLayout.lineCount > 1
 //    }
-
 }

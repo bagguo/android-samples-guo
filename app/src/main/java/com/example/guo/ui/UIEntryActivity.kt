@@ -11,6 +11,7 @@ import com.example.guo.R
 import com.example.guo.databinding.ActivityUiEntryBinding
 import com.example.guo.ui.activity.ActivitySamplesActivity
 import com.example.guo.ui.chapter_3.ViewActivity
+import com.example.guo.ui.constraintlayout.ConstraintSampleActivity
 import com.example.guo.ui.customview.CustomViewSimpleActivity
 import com.example.guo.ui.dialog.DialogSampleActivity
 import com.example.guo.ui.dynamic.DynamicLayoutActivity
@@ -79,7 +80,7 @@ class UIEntryActivity : AppCompatActivity() {
                 .show(supportFragmentManager, "StickyBottomSheetFragment")
         }
         btnRecyclerView.setOnClickListener { RecyclerViewEntryActivity.start(this@UIEntryActivity) }
-        btnConstraintLayout.setOnClickListener { SpannableSampleActivity.start(this@UIEntryActivity) }
+        btnConstraintLayout.setOnClickListener { ConstraintSampleActivity.start(this@UIEntryActivity) }
         btnCircleView.setOnClickListener { CircleViewSampleActivity.start(this@UIEntryActivity) }
         btnCustomViewSimple.setOnClickListener { CustomViewSimpleActivity.start(this@UIEntryActivity) }
         btnView.setOnClickListener { ViewActivity.start(this@UIEntryActivity) }
