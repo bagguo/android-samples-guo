@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Text Line Head"
+        android:textAllCaps="false"
         tools:ignore="HardcodedText" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -20,20 +21,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="This is a sample text for selection."
+        android:textAllCaps="false"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnTextSelect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text select"
+        android:text="Text select"
+        android:textAllCaps="false"
         tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btnTextSelect2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text select 2"
+        android:text="Text select: IM msg list "
+        android:textAllCaps="false"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -41,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="text Classifier"
+        android:textAllCaps="false"
         tools:ignore="HardcodedText" />
 
     <Button
@@ -48,5 +53,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Spannable"
+        android:textAllCaps="false"
         tools:ignore="HardcodedText" />
 </LinearLayout>

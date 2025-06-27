@@ -16,6 +16,10 @@ import com.example.guo.widgets.text.select.im.SelectTextEvent
 import com.example.guo.widgets.text.select.im.SelectTextEventBus
 import com.example.guo.widgets.text.select.im.SelectTextHelper
 
+/**
+ * 高仿微信聊天消息列表自由复制文字，双击查看文本内容
+ * https://github.com/ITxiaoguang/SelectTextHelper
+ */
 class MsgListTextSelectActivity : AppCompatActivity() {
     companion object {
         fun start(context: Context) {
@@ -25,20 +29,21 @@ class MsgListTextSelectActivity : AppCompatActivity() {
 
         var TEXT0 =
             "各种文本演示：\n<strong><span style=\"font-size:4px; color:#ff0000\">这些都是富文本: 链接 https://github.com/ITxiaoguang/SelectTextHelper Emoji表情：\uD83D\uDE04\uD83D\uDE03 自定义本地静态表情：[Android][笑脸] 自定义本地动态表情：[好的] 网络静态图和网络动态图：</span></strong></p>" +
-                    "<p style=\"font-family:'Microsoft YaHei'; padding-top:0px; padding-bottom:0px; font-size:14px; color:rgb(63,63,63); line-height:30px\"> <span style=\"padding:0px; font-size:18px\"><img alt=\"点赞\" src=\"https://img1.baidu.com/it/u=3058377739,2376135432&fm=253&fmt=auto&app=120&f=GIF?w=185&h=185\" style=\"padding:0px; max-width:680px; overflow:hidden\"></span></p>" +
-                    "<p style=\"font-family:'Microsoft YaHei'; padding-top:0px; padding-bottom:0px; font-size:14px; color:rgb(63,63,63); line-height:30px\"> <span style=\"padding:0px; font-size:18px\"><img alt=\"动态图\" src=\"https://5b0988e595225.cdn.sohucs.com/images/20181214/ab7ec804c4994694a65d4d8432583f79.gif\" style=\"padding:0px; max-width:680px; overflow:hidden\"></span></p>" +
-                    "<span style=\"padding:0px; font-size:18px\">下demo来看你就会了</span>"
+                "<p style=\"font-family:'Microsoft YaHei'; padding-top:0px; padding-bottom:0px; font-size:14px; color:rgb(63,63,63); line-height:30px\"> <span style=\"padding:0px; font-size:18px\"><img alt=\"点赞\" src=\"https://img1.baidu.com/it/u=3058377739,2376135432&fm=253&fmt=auto&app=120&f=GIF?w=185&h=185\" style=\"padding:0px; max-width:680px; overflow:hidden\"></span></p>" +
+                "<p style=\"font-family:'Microsoft YaHei'; padding-top:0px; padding-bottom:0px; font-size:14px; color:rgb(63,63,63); line-height:30px\"> <span style=\"padding:0px; font-size:18px\"><img alt=\"动态图\" src=\"https://5b0988e595225.cdn.sohucs.com/images/20181214/ab7ec804c4994694a65d4d8432583f79.gif\" style=\"padding:0px; max-width:680px; overflow:hidden\"></span></p>" +
+                "<span style=\"padding:0px; font-size:18px\">下demo来看你就会了</span>"
         var TEXT1 = "纯文本"
-        var TEXT2 = "文本是链接 https://github.com/ITxiaoguang/SelectTextHelper\n作者QQ：929842234\n点点star"
+        var TEXT2 =
+            "文本是链接 https://github.com/ITxiaoguang/SelectTextHelper\n作者QQ：929842234\n点点star"
         var TEXT3 = "ImageSpan 静态表情：[笑脸][笑脸][瞪大眼][瞪大眼][色][色][瘪嘴][瘪嘴][酷][酷]"
         var TEXT4 = "ImageSpan动态表情 [好的] [羊驼]"
         var TEXT5 =
             "文本是表情  Emoji　　表情：\uD83D\uDE04\uD83D\uDE03\uD83D\uDE00\uD83D\uDE0A\uD83D\uDE09\uD83D\uDE0D\uD83D\uDE18\uD83D\uDCAF\uD83D\uDD18\uD83D\uDD17\uD83D\uDD31"
         var TEXT6 =
             "<strong><span style=\"font-size:4px; color:#ff0000\">富文本网络静态图和网络动态图：</span></strong></p>" +
-                    "<p style=\"font-family:'Microsoft YaHei'; padding-top:0px; padding-bottom:0px; font-size:14px; color:rgb(63,63,63); line-height:30px\"> <span style=\"padding:0px; font-size:18px\"><img alt=\"点赞\" src=\"https://img1.baidu.com/it/u=3058377739,2376135432&fm=253&fmt=auto&app=120&f=GIF?w=185&h=185\" style=\"padding:0px; max-width:680px; overflow:hidden\"></span></p>" +
-                    "<p style=\"font-family:'Microsoft YaHei'; padding-top:0px; padding-bottom:0px; font-size:14px; color:rgb(63,63,63); line-height:30px\"> <span style=\"padding:0px; font-size:18px\"><img alt=\"动态图\" src=\"https://5b0988e595225.cdn.sohucs.com/images/20181214/ab7ec804c4994694a65d4d8432583f79.gif\" style=\"padding:0px; max-width:680px; overflow:hidden\"></span></p>" +
-                    "<span style=\"padding:0px; font-size:18px\">是不是选中了还没有背景，富文本里的ImageSpan图片也需要继承com.xiaoguang.selecttext.SelectImageSpan.kt </span>"
+                "<p style=\"font-family:'Microsoft YaHei'; padding-top:0px; padding-bottom:0px; font-size:14px; color:rgb(63,63,63); line-height:30px\"> <span style=\"padding:0px; font-size:18px\"><img alt=\"点赞\" src=\"https://img1.baidu.com/it/u=3058377739,2376135432&fm=253&fmt=auto&app=120&f=GIF?w=185&h=185\" style=\"padding:0px; max-width:680px; overflow:hidden\"></span></p>" +
+                "<p style=\"font-family:'Microsoft YaHei'; padding-top:0px; padding-bottom:0px; font-size:14px; color:rgb(63,63,63); line-height:30px\"> <span style=\"padding:0px; font-size:18px\"><img alt=\"动态图\" src=\"https://5b0988e595225.cdn.sohucs.com/images/20181214/ab7ec804c4994694a65d4d8432583f79.gif\" style=\"padding:0px; max-width:680px; overflow:hidden\"></span></p>" +
+                "<span style=\"padding:0px; font-size:18px\">是不是选中了还没有背景，富文本里的ImageSpan图片也需要继承com.xiaoguang.selecttext.SelectImageSpan.kt </span>"
         var TEXT7 =
             "\uD83D\uDD14\uD83D\uDD15✡✝\uD83D\uDD2F\uD83D\uDCDB\uD83D\uDD30\uD83D\uDD31⭕✅☑✔✖❌❎➕➖➗➰➿〽✳✴❇‼⁉❓❔❕❗©®™\uD83C\uDFA6\uD83D\uDD05\uD83D\uDD06\uD83D\uDCAF\uD83D\uDD20\uD83D\uDD21\uD83D\uDD22\uD83D\uDD23\uD83D\uDD24\uD83C\uDD70\uD83C\uDD8E\uD83C\uDD71\uD83C\uDD91\uD83C\uDD92\uD83C\uDD93ℹ\uD83C\uDD94Ⓜ\uD83C\uDD95\uD83C\uDD96\uD83C\uDD7E\uD83C\uDD97\uD83C\uDD7F\uD83C\uDD98\uD83C\uDD99\uD83C\uDD9A\uD83C\uDE01\uD83C\uDE02\uD83C\uDE37\uD83C\uDE362 现已推出，其中包含最新功能和变更，供您在应用中试用。如需开始使用，请先获取 Beta 版并更新您的工具。Android 12 Beta 版现已面向用户和开发者推出，请务必测试您的应用是否兼容，并根据需要发布任何相关更新。欢迎试用新功能，并通过我们的问题跟踪器分享反馈。"
         var TEXT8 =
@@ -83,13 +88,12 @@ class MsgListTextSelectActivity : AppCompatActivity() {
         // todo 二：展示查看文本
         // val dialog = SelectTextDialog(this, TEXT6)
         // dialog.show()
-
     }
 
     private fun initInput(
         rvMsg: RecyclerView,
         adapter: MsgAdapter,
-        mList: MutableList<MsgBean>
+        mList: MutableList<MsgBean>,
     ) {
         val etInput = findViewById<EditText>(R.id.et_input)
         val tvSend = findViewById<TextView>(R.id.tv_send)
@@ -132,6 +136,4 @@ class MsgListTextSelectActivity : AppCompatActivity() {
         mList.add(MsgBean(1, false, TEXT8))
         mList.add(MsgBean(1, true, TEXT9))
     }
-
-
 }

@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.text.TextUtils
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -26,6 +27,7 @@ class MsgAdapter(private val mContext: Context, private val mList: List<MsgBean>
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
+        private const val TAG = "MsgAdapter"
         private const val VIEW_TYPE_1 = 1 // 文本
         private const val VIEW_TYPE_2 = 2 // 图片
         private const val VIEW_TYPE_3 = 3 // 链接
@@ -279,6 +281,7 @@ class MsgAdapter(private val mContext: Context, private val mList: List<MsgBean>
                  * 点击回调
                  */
                 override fun onClick(v: View?, originalContent: CharSequence?) {
+                    Log.i(TAG, "onClick: ")
                     // 拿原始文本方式
                     clickTextView(msgBean.content!!) // 推荐
                     // clickTextView(originalContent!!) // 不推荐 富文本可能被修改值 导致gif动不了

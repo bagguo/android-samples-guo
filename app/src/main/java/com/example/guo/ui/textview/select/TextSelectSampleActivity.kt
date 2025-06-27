@@ -33,7 +33,7 @@ class TextSelectSampleActivity : AppCompatActivity() {
         binding.apply {
             tv.text = "ppppppppxxxxxxxxxxxxxxxppppppppxxxxxxxxxxxxxxxppppppppxxxxxxxxxxxxxxxppppppp"
 
-            tv.setTextIsSelectable(true);
+            tv.setTextIsSelectable(true) // 长按/双击文本可选中
             mSelectableTextHelper = SelectableTextHelper.Builder(tv)
                 .setSelectedColor(resources.getColor(R.color.selected_blue))
                 .setCursorHandleSizeInDp(20f)
