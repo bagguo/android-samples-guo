@@ -1,11 +1,8 @@
 package com.example.guo.language.kotlin.enums
 
+import com.blankj.utilcode.util.GsonUtils
 import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.annotation.JsonValue
-
-fun main() {
-    println(User())
-}
 
 data class User(
     var userType: UserType = UserType.ADMIN,
@@ -29,4 +26,10 @@ enum class UserType(
             return found ?: throw IllegalArgumentException("not found IconEnum with $typeValue")
         }
     }
+}
+
+fun main() {
+    val user = User()
+    val json = GsonUtils.toJson(user)
+    println(json)
 }
