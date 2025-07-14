@@ -26,6 +26,15 @@ app:tabPaddingStart="8dp"                Tab 起始内边距
 app:tabPaddingEnd="8dp"                  Tab 结束内边距
 app:tabPaddingTop="4dp"                  Tab 顶部内边距
 app:tabPaddingBottom="4dp"               Tab 底部内边距
+
+https://blog.csdn.net/weixin_44969089/article/details/106690496
+// 去掉默认左右内间距
+app:tabPaddingEnd="0dp"
+app:tabPaddingStart="0dp"
+
+// 默认上下内间距通过设置高度来取消
+android:layout_height="38dp"
+
 app:tabInlineLabel="true"                是否标签在一行显示
 app:tabMinWidth="72dp"                   Tab 的最小宽度
 app:tabMaxWidth="200dp"                  Tab 的最大宽度

@@ -31,7 +31,7 @@
             android:id="@+id/btnTabVp2BottomSheetFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TabVp2BottomSheetFragment"
+            android:text="Tab Vp2 BottomSheetFragment"
             android:textAllCaps="false"
             tools:ignore="HardcodedText" />
 
