@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.edittext.EditTextSampleActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:autoSizeMinTextSize="14sp"
+        android:autoSizeTextType="uniform"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:inputType="numberDecimal"
+        android:lines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:textColor="#000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="999,999,999,999,99.077" />
+</androidx.constraintlayout.widget.ConstraintLayout>
