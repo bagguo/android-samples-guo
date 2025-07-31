@@ -1,8 +1,10 @@
 package com.example.guo.wallet
 
+import android.content.Context
 import android.os.Environment
 import android.text.TextUtils
 import android.util.Log
+import com.example.guo.App
 import com.example.guo.util.FileUtil
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.web3j.abi.FunctionEncoder
@@ -326,7 +328,7 @@ class ETHWalletHelper {
         private const val GAS_LIMIT = "3000000"
 
         @JvmField
-        var PATH: File = File(Environment.getExternalStorageDirectory().path)
+        var PATH: File = App.mContext.getDir("guo-wallet", Context.MODE_PRIVATE)
 
         // Environment.getExternalStorageDirectory().getPath()  // /storage/emulated/0
         @Volatile
