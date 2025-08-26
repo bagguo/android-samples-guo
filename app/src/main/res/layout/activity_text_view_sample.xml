@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.textview.TextViewSampleActivity">
+    tools:context=".ui.view.layout.textview.TextViewSampleActivity">
 
     <!--文本换行sample-->
     <Button

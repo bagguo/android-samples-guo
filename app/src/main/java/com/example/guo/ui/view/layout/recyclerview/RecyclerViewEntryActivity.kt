@@ -1,0 +1,41 @@
+package com.example.guo.ui.view.layout.recyclerview
+
+import android.content.Context
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.guo.databinding.ActivityRecyclerViewEntryBinding
+import com.example.guo.ui.view.layout.recyclerview.expandable.ExpandableUseActivity
+import com.example.guo.ui.view.layout.recyclerview.headerfooter.HeaderAndFooterUseActivity
+import com.example.guo.ui.view.layout.recyclerview.general.RecyclerViewActivity
+import com.example.guo.ui.view.layout.recyclerview.nested.NestedRecyclerViewActivity
+
+/**
+ * 1. RecyclerView
+ * 2. ExpandableItem的recyclerView
+ * 3. 有HeaderAndFooter的recyclerView
+ * 4.
+ */
+class RecyclerViewEntryActivity : AppCompatActivity() {
+    companion object {
+        @JvmStatic
+        fun start(context: Context) {
+            val intent = Intent(context, RecyclerViewEntryActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
+
+    private lateinit var mBinding: ActivityRecyclerViewEntryBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        mBinding = ActivityRecyclerViewEntryBinding.inflate(layoutInflater)
+        setContentView(mBinding.root)
+
+        mBinding.ryBtn.setOnClickListener { RecyclerViewActivity.start(this) }
+        mBinding.expandableRyBtn.setOnClickListener { ExpandableUseActivity.start(this) }
+        mBinding.headerFooterRyBtn.setOnClickListener { HeaderAndFooterUseActivity.start(this) }
+        mBinding.nestedRvBtn.setOnClickListener { NestedRecyclerViewActivity.start(this) }
+
+    }
+}

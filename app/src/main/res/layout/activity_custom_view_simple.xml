@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.customview.CustomViewSimpleActivity">
+    tools:context=".ui.view.customview.CustomViewSimpleActivity">
 
     <!--view里面绘制一个圆-->
     <com.example.guo.widgets.custom.SketchView

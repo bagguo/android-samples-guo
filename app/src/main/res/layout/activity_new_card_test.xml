@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.customview.NewCardTestActivity">
+    tools:context=".ui.view.customview.NewCardTestActivity">
 
     <com.example.guo.widgets.custom.NewCardView
         android:id="@+id/card_view"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.dispatchevent.DispatchEventDemoActivity">
+    tools:context=".ui.view.dispatchevent.DispatchEventDemoActivity">
 
     <com.example.guo.widgets.dispatchevent.MyRootLinearLayout
         android:id="@+id/root_ll"

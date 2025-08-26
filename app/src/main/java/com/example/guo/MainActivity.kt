@@ -13,12 +13,12 @@ import androidx.core.app.ActivityCompat
 import com.alibaba.android.arouter.launcher.ARouter
 import com.bagguo.lib_base.constan.RouterTable
 import com.example.guo.async.AsyncActivity
-import com.example.guo.ui.animation.AnimationActivity
+import com.example.guo.ui.view.animation.AnimationActivity
 import com.example.guo.communication.CommunicateActivity
 import com.example.guo.di.dagger.DaggerActivity
 import com.example.guo.databinding.ActivityMainBinding
 import com.example.guo.storage.db.sqllite.SqliteTestActivity
-import com.example.guo.ui.dispatchevent.DispatchEventDemoActivity
+import com.example.guo.ui.view.dispatchevent.DispatchEventDemoActivity
 import com.example.guo.communication.ipc.IPCTestActivity
 import com.example.guo.ui.jetpack.JetpackSampleActivity
 import com.example.guo.ui.jni.JNISampleActivity

@@ -9,7 +9,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".ui.textview.linehead.TextViewLineHeadActivity">
+        tools:context=".ui.view.layout.textview.linehead.TextViewLineHeadActivity">
 
         <!--换行策略使用simple-->
         <TextView

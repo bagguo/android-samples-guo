@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.constraintlayout.ConstraintSampleActivity">
+    tools:context=".ui.view.layout.constraintlayout.ConstraintSampleActivity">
 
     <!-- 百分比偏移
         layout_constraintHorizontal_bias

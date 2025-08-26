@@ -15,8 +15,8 @@ import androidx.annotation.StringRes
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.guo.R
-import com.example.guo.ui.textview.select.im.SelectTextPopAdapter
-import com.example.guo.ui.textview.select.im.SelectTextPopAdapter.onClickItemListener
+import com.example.guo.ui.view.layout.textview.select.im.SelectTextPopAdapter
+import com.example.guo.ui.view.layout.textview.select.im.SelectTextPopAdapter.onClickItemListener
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import java.util.*

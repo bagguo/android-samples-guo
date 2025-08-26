@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
-            android:name=".ui.edittext.EditTextSampleActivity"
+            android:name=".ui.view.layout.edittext.EditTextSampleActivity"
             android:exported="true">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
@@ -28,7 +28,7 @@
 <!--            </intent-filter>-->
         </activity>
         <activity
-            android:name=".ui.constraintlayout.ConstraintSampleActivity"
+            android:name=".ui.view.layout.constraintlayout.ConstraintSampleActivity"
             android:exported="true">
 
             <!-- <intent-filter> -->
@@ -182,17 +182,17 @@
             android:exported="true"
             android:theme="@style/Theme.TransparentActivity" />
         <activity
-            android:name=".ui.toast.ToastSampleActivity"
+            android:name=".ui.view.toast.ToastSampleActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.recyclerview.nested.NestedRecyclerViewActivity"
+            android:name=".ui.view.layout.recyclerview.nested.NestedRecyclerViewActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.statebar.immersive.ImmersiveStatusBarActivity"
+            android:name=".ui.view.immersive.ImmersiveStatusBarActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".ui.textview.linehead.TextViewLineHeadActivity"
+            android:name=".ui.view.layout.textview.linehead.TextViewLineHeadActivity"
             android:exported="false" />
         <activity
             android:name=".ui.sidebar.SideBarActivity"
@@ -205,13 +205,13 @@
             android:name=".ui.activity.task.Activity1"
             android:exported="true" />
         <activity
-            android:name=".ui.loading.LoadingActivity"
+            android:name=".ui.view.loading.LoadingActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.textview.classifier.TextClassifierActivity"
+            android:name=".ui.view.layout.textview.classifier.TextClassifierActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.textview.select.im.MsgListTextSelectActivity"
+            android:name=".ui.view.layout.textview.select.im.MsgListTextSelectActivity"
             android:exported="true">
 
             <!-- <intent-filter> -->
@@ -222,22 +222,22 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.textview.select.TextSelectSampleActivity"
+            android:name=".ui.view.layout.textview.select.TextSelectSampleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.webview.CustomWebViewActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.textview.TextViewSampleActivity"
+            android:name=".ui.view.layout.textview.TextViewSampleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.jni.JNISampleActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.tablayout.IndicatorActivity"
+            android:name=".ui.view.layout.tablayout.IndicatorActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.tablayout.TabLayoutSimpleActivity"
+            android:name=".ui.view.layout.tablayout.TabLayoutSimpleActivity"
             android:exported="false" />
         <activity android:name=".ui.dialog.DialogSampleActivity" />
         <activity
@@ -253,22 +253,22 @@
         </activity>
         <activity android:name=".storage.db.sqllite.SqliteTestActivity" />
         <activity
-            android:name=".ui.recyclerview.headerfooter.FooterActivity"
+            android:name=".ui.view.layout.recyclerview.headerfooter.FooterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.recyclerview.multitype.MultiTypeItemActivity"
+            android:name=".ui.view.layout.recyclerview.multitype.MultiTypeItemActivity"
             android:exported="false" />
-        <activity android:name=".ui.recyclerview.headerfooter.HeaderAndFooterUseActivity" />
+        <activity android:name=".ui.view.layout.recyclerview.headerfooter.HeaderAndFooterUseActivity" />
         <activity
-            android:name=".ui.recyclerview.RecyclerViewEntryActivity"
+            android:name=".ui.view.layout.recyclerview.RecyclerViewEntryActivity"
             android:exported="false" />
-        <activity android:name=".ui.recyclerview.expandable.ExpandableUseActivity" />
-        <activity android:name=".ui.toolbar.ToolbarSimpleActivity" />
+        <activity android:name=".ui.view.layout.recyclerview.expandable.ExpandableUseActivity" />
+        <activity android:name=".ui.view.layout.toolbar.ToolbarSimpleActivity" />
         <activity
-            android:name=".ui.tablayout.customtab.TabLayoutDemoActivity"
+            android:name=".ui.view.layout.tablayout.customtab.TabLayoutDemoActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.recyclerview.general.RecyclerViewActivity"
+            android:name=".ui.view.layout.recyclerview.general.RecyclerViewActivity"
             android:exported="false" />
         <activity
             android:name=".async.rxjava.RxjavaActivity"
@@ -305,7 +305,7 @@
             android:label="@string/app_name" />
         <activity android:name=".ui.chapter_3.ViewActivity" />
         <activity
-            android:name=".ui.customview.CustomViewSimpleActivity"
+            android:name=".ui.view.customview.CustomViewSimpleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.UIEntryActivity"
@@ -315,19 +315,19 @@
             android:exported="false" />
         <activity android:name=".ui.live.HeartFlowActivity" />
         <activity
-            android:name=".ui.textview.spannable.SpannableSampleActivity"
+            android:name=".ui.view.layout.textview.spannable.SpannableSampleActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.input.SoftInputActivity"
+            android:name=".ui.view.input.SoftInputActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.input.SoftInputSampleActivity"
+            android:name=".ui.view.input.SoftInputSampleActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
 
@@ -389,13 +389,13 @@
         <activity android:name=".communication.eventbus.AActivity" />
         <activity android:name=".communication.CommunicateActivity" />
         <activity
-            android:name=".ui.customview.NewCardTestActivity"
+            android:name=".ui.view.customview.NewCardTestActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.dispatchevent.DispatchEventDemoActivity"
+            android:name=".ui.view.dispatchevent.DispatchEventDemoActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.animation.AnimationActivity"
+            android:name=".ui.view.animation.AnimationActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.recyclerview.headerfooter.FooterActivity">
+    tools:context=".ui.view.layout.recyclerview.headerfooter.FooterActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
