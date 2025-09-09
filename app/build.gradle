@@ -110,6 +110,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.7.0'
     //====
     implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.github.corouteam:GlideToVectorYou:v2.0.0'
 
     //====
     implementation 'com.alibaba:fastjson:1.2.28.odps'
