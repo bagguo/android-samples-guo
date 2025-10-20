@@ -30,7 +30,8 @@
         </activity>
         <activity
             android:name=".activity.StartActivity"
-            android:theme="@style/StartActivityTheme">
+            android:theme="@style/StartActivityTheme"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

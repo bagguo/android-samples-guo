@@ -103,6 +103,7 @@ dependencies {
 //    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     implementation 'com.zzhoujay.richtext:richtext:3.0.8'
     implementation 'com.github.princekin-f:EasyFloat:2.0.4'
+    implementation 'com.github.donkingliang:ConsecutiveScroller:4.6.4'
 
 
     //=====
