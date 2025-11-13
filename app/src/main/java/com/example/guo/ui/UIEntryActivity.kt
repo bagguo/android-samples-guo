@@ -10,31 +10,32 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.guo.R
 import com.example.guo.databinding.ActivityUiEntryBinding
 import com.example.guo.ui.activity.ActivitySamplesActivity
+import com.example.guo.ui.anim.SlideInOutSampleActivity
 import com.example.guo.ui.chapter_3.ViewActivity
-import com.example.guo.ui.view.layout.constraintlayout.ConstraintSampleActivity
-import com.example.guo.ui.view.customview.CustomViewSimpleActivity
 import com.example.guo.ui.dialog.DialogSampleActivity
 import com.example.guo.ui.dynamic.DynamicLayoutActivity
 import com.example.guo.ui.fragment.FragmentSamplesActivity
 import com.example.guo.ui.fragment.bottomsheet.StickyBottomSheetFragment
 import com.example.guo.ui.fragment.bottomsheet.TabVP2BottomSheetDialogFragment
-import com.example.guo.ui.view.layout.gridview.GridViewDemoActivity
+import com.example.guo.ui.largescreen.BigScreenSamplesActivity
+import com.example.guo.ui.multitype.normal.NormalActivity
+import com.example.guo.ui.sidebar.SideBarActivity
+import com.example.guo.ui.video.VideoEntryActivity
+import com.example.guo.ui.view.customview.CustomViewSimpleActivity
+import com.example.guo.ui.view.immersive.ImmersiveStatusBarActivity
 import com.example.guo.ui.view.input.SoftInputActivity
 import com.example.guo.ui.view.input.SoftInputSampleActivity
-import com.example.guo.ui.largescreen.BigScreenSamplesActivity
+import com.example.guo.ui.view.layout.constraintlayout.ConstraintSampleActivity
+import com.example.guo.ui.view.layout.gridview.GridViewDemoActivity
 import com.example.guo.ui.view.layout.listview.ListViewDemoActivity
-import com.example.guo.ui.view.loading.LoadingActivity
-import com.example.guo.ui.multitype.normal.NormalActivity
 import com.example.guo.ui.view.layout.recyclerview.RecyclerViewEntryActivity
-import com.example.guo.ui.sidebar.SideBarActivity
-import com.example.guo.ui.view.immersive.ImmersiveStatusBarActivity
 import com.example.guo.ui.view.layout.tablayout.IndicatorActivity
 import com.example.guo.ui.view.layout.tablayout.TabLayoutSimpleActivity
 import com.example.guo.ui.view.layout.tablayout.customtab.TabLayoutDemoActivity
 import com.example.guo.ui.view.layout.textview.TextViewSampleActivity
-import com.example.guo.ui.view.toast.ToastSampleActivity
 import com.example.guo.ui.view.layout.toolbar.ToolbarSimpleActivity
-import com.example.guo.ui.video.VideoEntryActivity
+import com.example.guo.ui.view.loading.LoadingActivity
+import com.example.guo.ui.view.toast.ToastSampleActivity
 import com.example.guo.util.callSystemShare
 
 class UIEntryActivity : AppCompatActivity() {
@@ -78,6 +79,11 @@ class UIEntryActivity : AppCompatActivity() {
                 .newInstance()
                 .show(supportFragmentManager, "StickyBottomSheetFragment")
         }
+
+        btnAnim.setOnClickListener {
+            SlideInOutSampleActivity.launch(this@UIEntryActivity)
+        }
+
         btnRecyclerView.setOnClickListener { RecyclerViewEntryActivity.start(this@UIEntryActivity) }
         btnConstraintLayout.setOnClickListener { ConstraintSampleActivity.start(this@UIEntryActivity) }
         btnCircleView.setOnClickListener { CircleViewSampleActivity.start(this@UIEntryActivity) }

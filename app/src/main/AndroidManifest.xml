@@ -19,13 +19,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidlesson">
         <activity
-            android:name=".ui.view.toolbar.collapsing.CollapsingToolbarTopBarSampleActivity"
-            android:exported="true" >
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
+            android:name=".ui.anim.SlideInOutSampleActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".ui.view.toolbar.collapsing.CollapsingToolbarTopBarSampleActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".ui.consecutivescroller.ConsecutiveScrollerSampleActivity"
