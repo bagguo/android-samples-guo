@@ -37,12 +37,12 @@ class BFragment : Fragment() {
                     ): Boolean {
                         if (e1 == null || e2 == null) return false
 
-                        val diffX = e2.x - e1.x
+                        val diffX = e2.x - e1.x // pos2 - pos1 > 0 左 -> 右
                         val diffY = e2.y - e1.y
 
                         // 检测是否主要是水平滑动
                         if (abs(diffX) > abs(diffY) && abs(diffX) > SWIPE_THRESHOLD && abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
-                            if (diffX > 0 && e1.x < 150) { // 从左边缘滑动
+                            if (diffX > 150) { // 左滑超过150px 生效
                                 parentFragmentManager.popBackStack()
                                 return true
                             }

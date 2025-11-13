@@ -3,9 +3,10 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go to BFragment" />
+        android:textSize="19sp"
+        android:text="左滑打开新fragment" />
 </FrameLayout>

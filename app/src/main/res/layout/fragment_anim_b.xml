@@ -6,9 +6,9 @@
     android:gravity="center">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Swipe from left edge to go back"
+        android:text="右滑退出当前fragment"
         android:textColor="@android:color/white"
         android:textSize="18sp"/>
 </FrameLayout>
