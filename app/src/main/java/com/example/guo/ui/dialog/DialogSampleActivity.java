@@ -8,6 +8,7 @@ import com.example.guo.R;
 import com.example.guo.widgets.dialog.CommonConfirmDialogJ;
 import com.example.guo.widgets.dialog.CustomProgressDialog;
 import com.example.guo.widgets.dialog.SingleInstanceDialogMgr;
+import com.example.guo.widgets.dialog.slideinoutbottom.SlideInOutBottomDialog;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,6 +51,12 @@ public class DialogSampleActivity extends AppCompatActivity {
                     null,
                     null);
         });
+
+        findViewById(R.id.btnSlideInOutBottomDialog).setOnClickListener(view -> {
+            SlideInOutBottomDialog slideInOutBottomDialog = new SlideInOutBottomDialog(DialogSampleActivity.this);
+            slideInOutBottomDialog.show();
+        });
+
     }
 
 

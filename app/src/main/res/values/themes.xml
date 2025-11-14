@@ -76,4 +76,16 @@
         <!--弹窗背景是否变暗-->
         <item name="android:backgroundDimEnabled">false</item>
     </style>
+
+    <style name="BottomSlideDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+
+        <!-- 关键：设置进出场动画 -->
+        <item name="android:windowAnimationStyle">@style/BottomSlideDialogAnim</item>
+
+        <!-- 背景透明，否则会有白框 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
 </resources>

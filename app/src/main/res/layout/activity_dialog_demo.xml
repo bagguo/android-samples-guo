@@ -10,26 +10,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Common Confirm Dialog"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btn_show_custom_progress_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Show custom progress dialog"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btn_stop_custom_progress_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Stop custom progress dialog"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btn_single_instance_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Single Instance Dialog"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnSlideInOutBottomDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slide In Out Bottom Dialog"
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
 </androidx.appcompat.widget.LinearLayoutCompat>
