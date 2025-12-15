@@ -23,7 +23,9 @@
             <include layout="@layout/header" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
-        <!--吸顶view-->
+        <!--吸顶view
+        内层固定的悬浮窗
+        -->
         <include layout="@layout/inside_fixed_bar" />
     </com.google.android.material.appbar.AppBarLayout>
 

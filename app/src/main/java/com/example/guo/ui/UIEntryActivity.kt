@@ -36,7 +36,8 @@ import com.example.guo.ui.view.layout.textview.TextViewSampleActivity
 import com.example.guo.ui.view.layout.toolbar.ToolbarSimpleActivity
 import com.example.guo.ui.view.loading.LoadingActivity
 import com.example.guo.ui.view.toast.ToastSampleActivity
-import com.example.guo.ui.view.toolbar.collapsing.CollapsingToolbarTopBarSampleActivity
+import com.example.guo.ui.view.topbar.CollapsingPinedSampleActivity
+import com.example.guo.ui.view.topbar.TopbarSamplesActivity
 import com.example.guo.util.callSystemShare
 
 class UIEntryActivity : AppCompatActivity() {
@@ -176,7 +177,7 @@ class UIEntryActivity : AppCompatActivity() {
         btnTextView.setOnClickListener { TextViewSampleActivity.start(this@UIEntryActivity) }
         btnLoading.setOnClickListener { LoadingActivity.start(this@UIEntryActivity) }
         btnSideBar.setOnClickListener { SideBarActivity.start(this@UIEntryActivity) }
-        btnTopBar.setOnClickListener { CollapsingToolbarTopBarSampleActivity.launch(this@UIEntryActivity) }
+        btnTopBar.setOnClickListener { TopbarSamplesActivity.launch(this@UIEntryActivity) }
         btnSoftInput.setOnClickListener { SoftInputSampleActivity.start(this@UIEntryActivity) }
         btnSoftInput2.setOnClickListener { SoftInputActivity.launch(this@UIEntryActivity) }
         btnImmersiveStatusBar.setOnClickListener { ImmersiveStatusBarActivity.start(this@UIEntryActivity) }
