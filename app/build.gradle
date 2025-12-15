@@ -30,10 +30,35 @@ android {
         }
     }
 
+    def f = project.rootProject.file("keystore/keystore.jks")
+
+    signingConfigs {
+        release {
+            storeFile file(f)
+            storePassword '111111'
+            keyAlias 'samplesguo'
+            keyPassword '111111'
+        }
+        debug {
+            storeFile file(f)
+            storePassword '111111'
+            keyAlias 'samplesguo'
+            keyPassword '111111'
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
         }
     }
 
