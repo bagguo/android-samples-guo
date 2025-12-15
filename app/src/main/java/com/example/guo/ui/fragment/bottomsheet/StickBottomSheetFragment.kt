@@ -91,7 +91,7 @@ class StickyBottomSheetFragment : BottomSheetDialogFragment() {
     }
 
     private fun setupRatio(dialog: BottomSheetDialog) {
-        val bottomSheet = dialog.findViewById<FrameLayout>(R.id.design_bottom_sheet) ?: return
+        val bottomSheet = dialog.findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet) ?: return
 
         //Retrieve button parameters
         buttonLp = binding.btn.layoutParams as ConstraintLayout.LayoutParams

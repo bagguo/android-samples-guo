@@ -20,6 +20,17 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
+# 忽略 Java SE/桌面类
+-dontwarn java.awt.**
+-dontwarn javax.lang.model.**
+-dontwarn javax.ws.rs.**
+-dontwarn org.bouncycastle.jsse.**
+-dontwarn org.conscrypt.**
+-dontwarn org.openjsse.**
+-dontwarn com.google.errorprone.annotations.**
+-dontwarn springfox.documentation.**
+
+
 # EventBus
 -keepattributes *Annotation*
 -keepclassmembers class * {

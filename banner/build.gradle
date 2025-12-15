@@ -3,6 +3,8 @@ plugins {
 }
 
 android {
+    namespace = "com.example.banner"
+
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
 

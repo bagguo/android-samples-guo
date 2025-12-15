@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    namespace 'com.example.push'
     compileSdkVersion rootProject.compileSdkVersion
 
     defaultConfig {

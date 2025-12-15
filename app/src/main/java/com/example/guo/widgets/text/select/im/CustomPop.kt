@@ -150,7 +150,7 @@ class CustomPop(
             popupWindow!!.setBackgroundDrawable(BitmapDrawable())
         }
         // 动画
-        popupWindow?.animationStyle = R.style.Base_Animation_AppCompat_Dialog
+        popupWindow?.animationStyle = R.style.PopupAnimation
     }
 
     private fun updateListView() {

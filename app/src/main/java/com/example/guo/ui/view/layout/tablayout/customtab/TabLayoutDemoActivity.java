@@ -58,7 +58,7 @@ public class TabLayoutDemoActivity extends AppCompatActivity {
                 View view = tab.getCustomView();
                 assert view != null;
                 Drawable drawable = ContextCompat.getDrawable(TabLayoutDemoActivity.this
-                        , R.drawable.common_bg_round_primary);
+                        , com.bagguo.lib_base.R.drawable.common_bg_round_primary);
                 view.findViewById(R.id.tab_item_tv2).setBackground(drawable);
             }
 

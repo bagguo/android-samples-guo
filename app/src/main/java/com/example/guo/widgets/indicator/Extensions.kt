@@ -28,7 +28,13 @@ internal fun <T> ArrayList<T>.isInBounds(index: Int) = index in 0 until size
 
 internal fun Context.getThemePrimaryColor(): Int {
     val value = TypedValue()
-    this.theme.resolveAttribute(R.attr.colorPrimary, value, true)
+    theme.resolveAttribute(
+        com.google.android.material.R.attr.colorPrimary,
+        value,
+        true,
+    )
+    val color = value.data
+    this.theme.resolveAttribute(color, value, true)
     return value.data
 }
 
