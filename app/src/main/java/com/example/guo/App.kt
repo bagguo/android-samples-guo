@@ -21,6 +21,7 @@ open class App : Application() {
         super.onCreate()
         mContext = this
 
+        // Thread.sleep(10 * 1000)
         // RuleController可有可无
 //        RuleController.getInstance(this)
 //            .setRules(RuleController.parseRules(this, R.xml.main_split_config))
