@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      Debug sourceSet override: swap Application to DebugApp and register early-init provider.
+      Release merges only src/main and keeps android:name=".App" with no demo provider.
+    -->
+    <application
+        android:name=".DebugApp"
+        tools:replace="android:name">
+
+        <provider
+            android:name=".startup.StartupDemoContentProvider"
+            android:authorities="${applicationId}.startup.demo"
+            android:exported="false"
+            android:initOrder="100" />
+    </application>
+</manifest>

@@ -10,7 +10,7 @@ import com.tencent.mmkv.MMKV
 /**
  * 在创建应用进程时，应用子类将是实例化的第一个类
  */
-class App : Application() {
+open class App : Application() {
 
     companion object {
         @SuppressLint("StaticFieldLeak")
